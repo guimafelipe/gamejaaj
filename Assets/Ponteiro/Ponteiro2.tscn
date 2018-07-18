@@ -122,4 +122,6 @@ reverb_bus_uniformity = 0.0
 shape = SubResource( 3 )
 disabled = false
 
+[connection signal="body_entered" from="Area" to="." method="_on_Area_body_entered"]
+
 

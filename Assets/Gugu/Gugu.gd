@@ -33,7 +33,7 @@ func set_hp(value):
 
 func take_damage(value):
 	if(value >= 0):
-		print('ai')
+		$EffectsPlayer.play("OnDamage")
 		lifes = max(0, lifes - value)
 
 

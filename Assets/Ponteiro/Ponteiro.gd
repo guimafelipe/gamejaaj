@@ -3,6 +3,7 @@ extends Spatial
 const Player = preload('res://Assets/Gugu/Gugu.gd')
 const UP = Vector3(0,1,0)
 const angular_speed = 2*PI/3
+const dmg = 1
 
 func _ready():
 	pass
@@ -16,4 +17,4 @@ func update_angle(delta):
 
 func _on_Area_body_entered(body):
 	if(body is Player):
-		body.take_damage(1)
+		body.take_damage(dmg)
