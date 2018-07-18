@@ -1,0 +1,80 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://Teste/TestMap.gd" type="Script" id=1]
+[ext_resource path="res://Assets/Gugu/Gugu.tscn" type="PackedScene" id=2]
+
+[sub_resource type="BoxShape" id=1]
+
+extents = Vector3( 1, 1, 1 )
+
+[sub_resource type="CubeMesh" id=2]
+
+custom_aabb = AABB( 0, 0, 0, 0, 0, 0 )
+size = Vector3( 2, 2, 2 )
+subdivide_width = 0
+subdivide_height = 0
+subdivide_depth = 0
+
+[node name="TestMap" type="Spatial" index="0"]
+
+script = ExtResource( 1 )
+
+[node name="Gugu" parent="." index="0" instance=ExtResource( 2 )]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.187806, 7.35985 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="Centro" type="Position3D" parent="." index="1"]
+
+transform = Transform( 15.6667, 0, 0, 0, 1, 0, 0, 0, 19.7554, 0, -0.187806, 0 )
+
+[node name="Floor" type="StaticBody" parent="." index="2"]
+
+transform = Transform( 15.6667, 0, 0, 0, 1, 0, 0, 0, 19.7554, 0, -0.5, 0 )
+input_ray_pickable = true
+input_capture_on_drag = false
+collision_layer = 1
+collision_mask = 1
+friction = 1.0
+bounce = 0.0
+constant_linear_velocity = Vector3( 0, 0, 0 )
+constant_angular_velocity = Vector3( 0, 0, 0 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="CollisionShape" type="CollisionShape" parent="Floor" index="0"]
+
+shape = SubResource( 1 )
+disabled = false
+
+[node name="MeshInstance" type="MeshInstance" parent="Floor/CollisionShape" index="0"]
+
+layers = 1
+material_override = null
+cast_shadow = 1
+extra_cull_margin = 0.0
+use_in_baked_light = false
+lod_min_distance = 0.0
+lod_min_hysteresis = 0.0
+lod_max_distance = 0.0
+lod_max_hysteresis = 0.0
+mesh = SubResource( 2 )
+skeleton = NodePath("..")
+material/0 = null
+
+[node name="Camera" type="Camera" parent="." index="3"]
+
+transform = Transform( 1, 0, 0, 0, 0.883196, 0.469003, 0, -0.469003, 0.883196, 0, 7.52352, 14.7173 )
+keep_aspect = 1
+cull_mask = 1048575
+environment = null
+h_offset = 0.0
+v_offset = 0.0
+doppler_tracking = 0
+projection = 0
+current = false
+fov = 70.0
+size = 1.0
+near = 0.05
+far = 100.0
+
+
