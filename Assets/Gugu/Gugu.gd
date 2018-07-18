@@ -17,7 +17,7 @@ var must_rotate # check only if it's moving to rotate mesh
 
 
 func _ready():
-	pass
+	self.angle = atan2(translation.x, translation.z)
 
 func _process(delta):
 	pass
@@ -35,9 +35,9 @@ func _physics_process(delta):
 	#var camera = $Target/Camera
 	#var cam_xform = camera.get_global_transform()
 	if (Input.is_action_pressed("move_left")):
-		angle -= delta * angularSpeed
-	if (Input.is_action_pressed("move_right")):
 		angle += delta * angularSpeed
+	if (Input.is_action_pressed("move_right")):
+		angle -= delta * angularSpeed
 	
 	# Testar também setar a posição manualmente
 	var pos_before = self.global_transform.origin
@@ -48,9 +48,11 @@ func _physics_process(delta):
 	
 	# self.translate(pos_var)
 	
+	self.translation = pos_after
+	
 	velocity.y += gravity * delta
-	velocity.x = pos_var.x
-	velocity.z = pos_var.z
+	velocity.x = 0
+	velocity.z = 0
 	
 	if velocity.y > 0:
 		gravity = -20

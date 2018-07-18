@@ -1,7 +1,81 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://Teste/TestMap.gd" type="Script" id=1]
 [ext_resource path="res://Assets/Gugu/Gugu.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Assets/Camera/BasePivot.tscn" type="PackedScene" id=3]
+
+[sub_resource type="CubeMesh" id=5]
+
+custom_aabb = AABB( 0, 0, 0, 0, 0, 0 )
+size = Vector3( 2, 2, 2 )
+subdivide_width = 0
+subdivide_height = 0
+subdivide_depth = 0
+
+[sub_resource type="SpatialMaterial" id=3]
+
+render_priority = 0
+flags_transparent = false
+flags_unshaded = false
+flags_vertex_lighting = false
+flags_no_depth_test = false
+flags_use_point_size = false
+flags_world_triplanar = false
+flags_fixed_size = false
+flags_albedo_tex_force_srgb = false
+vertex_color_use_as_albedo = false
+vertex_color_is_srgb = false
+params_diffuse_mode = 0
+params_specular_mode = 0
+params_blend_mode = 0
+params_cull_mode = 0
+params_depth_draw_mode = 0
+params_line_width = 1.0
+params_point_size = 1.0
+params_billboard_mode = 0
+params_grow = false
+params_use_alpha_scissor = false
+albedo_color = Color( 0.871094, 0.775818, 0, 1 )
+metallic = 0.0
+metallic_specular = 0.5
+metallic_texture_channel = 0
+roughness = 0.0
+roughness_texture_channel = 0
+emission_enabled = true
+emission = Color( 0.992188, 0.930176, 0, 1 )
+emission_energy = 3.0
+emission_operator = 0
+emission_on_uv2 = false
+normal_enabled = false
+rim_enabled = false
+clearcoat_enabled = false
+anisotropy_enabled = false
+ao_enabled = false
+depth_enabled = false
+subsurf_scatter_enabled = false
+transmission_enabled = false
+refraction_enabled = false
+detail_enabled = false
+uv1_scale = Vector3( 1, 1, 1 )
+uv1_offset = Vector3( 0, 0, 0 )
+uv1_triplanar = false
+uv1_triplanar_sharpness = 1.0
+uv2_scale = Vector3( 1, 1, 1 )
+uv2_offset = Vector3( 0, 0, 0 )
+uv2_triplanar = false
+uv2_triplanar_sharpness = 1.0
+proximity_fade_enable = false
+distance_fade_enable = false
+_sections_unfolded = [ "Emission" ]
+
+[sub_resource type="CapsuleMesh" id=4]
+
+material = SubResource( 3 )
+custom_aabb = AABB( 0, 0, 0, 0, 0, 0 )
+radius = 1.0
+mid_height = 1.0
+radial_segments = 64
+rings = 8
 
 [sub_resource type="BoxShape" id=1]
 
@@ -21,16 +95,76 @@ script = ExtResource( 1 )
 
 [node name="Gugu" parent="." index="0" instance=ExtResource( 2 )]
 
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.187806, 7.35985 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 9.39079 )
 _sections_unfolded = [ "Transform" ]
 
-[node name="Centro" type="Position3D" parent="." index="1"]
+[node name="BasePivot" parent="." index="1" instance=ExtResource( 3 )]
 
-transform = Transform( 15.6667, 0, 0, 0, 1, 0, 0, 0, 19.7554, 0, -0.187806, 0 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 9.01734 )
 
-[node name="Floor" type="StaticBody" parent="." index="2"]
+[node name="Spatial" type="Spatial" parent="BasePivot" index="0"]
 
-transform = Transform( 15.6667, 0, 0, 0, 1, 0, 0, 0, 19.7554, 0, -0.5, 0 )
+transform = Transform( 0.999999, 0, 0, 0, 0.999999, 0, 0, 0, 1, 0, 7.40313, 9.68034 )
+
+[node name="Camera" type="Camera" parent="BasePivot/Spatial" index="0"]
+
+transform = Transform( 0.0638295, 0, 0, 0, 0.896681, 0.103263, 0, -0.279561, 0.331212, 0, 0.0421333, 0.00582695 )
+keep_aspect = 1
+cull_mask = 1048575
+environment = null
+h_offset = 0.0
+v_offset = 0.0
+doppler_tracking = 0
+projection = 0
+current = true
+fov = 70.0
+size = 1.0
+near = 0.05
+far = 100.0
+_sections_unfolded = [ "Transform", "Visibility" ]
+
+[node name="MeshInstance" type="MeshInstance" parent="BasePivot/Spatial" index="1"]
+
+layers = 1
+material_override = null
+cast_shadow = 1
+extra_cull_margin = 0.0
+use_in_baked_light = false
+lod_min_distance = 0.0
+lod_min_hysteresis = 0.0
+lod_max_distance = 0.0
+lod_max_hysteresis = 0.0
+mesh = SubResource( 5 )
+skeleton = NodePath("..")
+material/0 = null
+_sections_unfolded = [ "Transform" ]
+
+[node name="Centro" type="Position3D" parent="." index="2"]
+
+editor/display_folded = true
+_sections_unfolded = [ "Transform" ]
+
+[node name="MeshInstance" type="MeshInstance" parent="Centro" index="0"]
+
+transform = Transform( 1, 0, 0, 0, -1.62921e-07, -1, 0, 1, -1.62921e-07, 0, 1.24747, 0 )
+layers = 1
+material_override = null
+cast_shadow = 1
+extra_cull_margin = 0.0
+use_in_baked_light = false
+lod_min_distance = 0.0
+lod_min_hysteresis = 0.0
+lod_max_distance = 0.0
+lod_max_hysteresis = 0.0
+mesh = SubResource( 4 )
+skeleton = NodePath("..")
+material/0 = null
+_sections_unfolded = [ "Transform" ]
+
+[node name="Floor" type="StaticBody" parent="." index="3"]
+
+editor/display_folded = true
+transform = Transform( 15.6667, 0, 0, 0, 1, 0, 0, 0, 19.7554, 0, -1, 0 )
 input_ray_pickable = true
 input_capture_on_drag = false
 collision_layer = 1
@@ -61,9 +195,9 @@ mesh = SubResource( 2 )
 skeleton = NodePath("..")
 material/0 = null
 
-[node name="Camera" type="Camera" parent="." index="3"]
+[node name="Camera" type="Camera" parent="." index="4"]
 
-transform = Transform( 1, 0, 0, 0, 0.883196, 0.469003, 0, -0.469003, 0.883196, 0, 7.52352, 14.7173 )
+transform = Transform( 1, 0, 0, 0, 0.951742, 0.306898, 0, -0.306898, 0.951742, 0, 6.43855, 20.7156 )
 keep_aspect = 1
 cull_mask = 1048575
 environment = null

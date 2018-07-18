@@ -15,7 +15,7 @@ mid_height = 1.0
 radial_segments = 64
 rings = 8
 
-[node name="Gugu" type="KinematicBody" index="0"]
+[node name="Gugu" type="KinematicBody"]
 
 input_ray_pickable = true
 input_capture_on_drag = false
