@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=2]
 
-[ext_resource path="res://Assets/Ponteiro/Ponteiro.gd" type="Script" id=1]
+[ext_resource path="res://Assets/Ponteiro/Ponteiro2.gd" type="Script" id=1]
 
 [sub_resource type="CylinderMesh" id=1]
 
@@ -11,7 +11,7 @@ height = 2.0
 radial_segments = 64
 rings = 4
 
-[sub_resource type="SpatialMaterial" id=2]
+[sub_resource type="SpatialMaterial" id=4]
 
 render_priority = 0
 flags_transparent = false
@@ -34,15 +34,15 @@ params_point_size = 1.0
 params_billboard_mode = 0
 params_grow = false
 params_use_alpha_scissor = false
-albedo_color = Color( 0.730503, 0.0888824, 0.910156, 1 )
+albedo_color = Color( 0.0888824, 0.910156, 0.101715, 1 )
 metallic = 0.0
 metallic_specular = 0.5
 metallic_texture_channel = 0
 roughness = 0.0
 roughness_texture_channel = 0
 emission_enabled = true
-emission = Color( 0.980469, 0, 0.89621, 1 )
-emission_energy = 8.0
+emission = Color( 0, 0.980469, 0.084259, 1 )
+emission_energy = 13.96
 emission_operator = 0
 emission_on_uv2 = false
 normal_enabled = false
@@ -65,14 +65,14 @@ uv2_triplanar = false
 uv2_triplanar_sharpness = 1.0
 proximity_fade_enable = false
 distance_fade_enable = false
-_sections_unfolded = [ "Albedo" ]
+_sections_unfolded = [ "Albedo", "Emission" ]
 
 [sub_resource type="CapsuleShape" id=3]
 
 radius = 1.0
 height = 1.0
 
-[node name="Ponteiro" type="Spatial"]
+[node name="Ponteiro2" type="Spatial"]
 
 script = ExtResource( 1 )
 
@@ -90,7 +90,7 @@ lod_max_distance = 0.0
 lod_max_hysteresis = 0.0
 mesh = SubResource( 1 )
 skeleton = NodePath("..")
-material/0 = SubResource( 2 )
+material/0 = SubResource( 4 )
 _sections_unfolded = [ "Geometry", "Transform", "material" ]
 
 [node name="Area" type="Area" parent="." index="1"]
@@ -121,7 +121,5 @@ reverb_bus_uniformity = 0.0
 
 shape = SubResource( 3 )
 disabled = false
-
-[connection signal="body_entered" from="Area" to="." method="_on_Area_body_entered"]
 
 

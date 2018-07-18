@@ -33,6 +33,7 @@ func set_hp(value):
 
 func take_damage(value):
 	if(value >= 0):
+		print('ai')
 		lifes = max(0, lifes - value)
 
 
