@@ -9,6 +9,8 @@ func _ready():
 
 func set_center(new_center):
 	self.center_pos = new_center
+	if($BaseCamPos/Camera):
+		$BaseCamPos/Camera.set_center(new_center)
 
 func set_player(new_player):
 	player = new_player
