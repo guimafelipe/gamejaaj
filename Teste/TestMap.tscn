@@ -1,15 +1,14 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://Teste/TestMap.gd" type="Script" id=1]
 [ext_resource path="res://Assets/Gugu/Gugu.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Assets/Camera/BasePivot.tscn" type="PackedScene" id=3]
-[ext_resource path="res://Assets/Camera/Camera.gd" type="Script" id=4]
-[ext_resource path="res://Assets/Ambient/Ambient.tscn" type="PackedScene" id=5]
-[ext_resource path="res://Assets/Ponteiro/Ponteiro.tscn" type="PackedScene" id=6]
-[ext_resource path="res://Assets/Ponteiro/Ponteiro2.tscn" type="PackedScene" id=7]
-[ext_resource path="res://Assets/Ponteiro/Ponteiro3.tscn" type="PackedScene" id=8]
-[ext_resource path="res://Assets/Ponteiro/Ponteiro4.tscn" type="PackedScene" id=9]
-[ext_resource path="res://Assets/Ponteiro/Ponteiro5.tscn" type="PackedScene" id=10]
+[ext_resource path="res://Assets/Ambient/Ambient.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Assets/Ponteiro/Ponteiro.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Assets/Ponteiro/Ponteiro2.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Assets/Ponteiro/Ponteiro3.tscn" type="PackedScene" id=7]
+[ext_resource path="res://Assets/Ponteiro/Ponteiro4.tscn" type="PackedScene" id=8]
+[ext_resource path="res://Assets/Ponteiro/Ponteiro5.tscn" type="PackedScene" id=9]
 
 [node name="TestMap" type="Spatial" index="0"]
 
@@ -22,31 +21,7 @@ _sections_unfolded = [ "Transform" ]
 
 [node name="BasePivot" parent="." index="1" instance=ExtResource( 3 )]
 
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 9.01734 )
-
-[node name="BaseCamPos" type="Spatial" parent="BasePivot" index="0"]
-
-transform = Transform( 0.999999, 0, 0, 0, 0.999999, 0, 0, 0, 1, 0, 7.40313, 9.68034 )
-
-[node name="Camera" type="Camera" parent="BasePivot/BaseCamPos" index="0"]
-
-transform = Transform( 0.0638295, 0, 0, 0, 0.896681, 0.103263, 0, -0.279561, 0.331212, 0, 0.0421333, 0.00582695 )
-keep_aspect = 1
-cull_mask = 1048575
-environment = null
-h_offset = 0.0
-v_offset = 0.0
-doppler_tracking = 0
-projection = 0
-current = true
-fov = 70.0
-size = 1.0
-near = 0.05
-far = 100.0
-script = ExtResource( 4 )
-_sections_unfolded = [ "Transform", "Visibility" ]
-
-[node name="Ambient" parent="." index="2" instance=ExtResource( 5 )]
+[node name="Ambient" parent="." index="2" instance=ExtResource( 4 )]
 
 [node name="Camera" type="Camera" parent="." index="3"]
 
@@ -64,28 +39,24 @@ size = 1.0
 near = 0.05
 far = 100.0
 
-[node name="Ponteiro" parent="." index="4" instance=ExtResource( 6 )]
+[node name="Ponteiro" parent="." index="4" instance=ExtResource( 5 )]
 
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0 )
-visible = false
 
-[node name="Ponteiro2" parent="." index="5" instance=ExtResource( 7 )]
+[node name="Ponteiro2" parent="." index="5" instance=ExtResource( 6 )]
 
 transform = Transform( 0.258819, 0, -0.965926, 0, 1, 0, 0.965926, 0, 0.258819, 0, 1, 0 )
-visible = false
 _sections_unfolded = [ "Transform", "Visibility" ]
 
-[node name="Ponteiro3" parent="." index="6" instance=ExtResource( 8 )]
+[node name="Ponteiro3" parent="." index="6" instance=ExtResource( 7 )]
 
 transform = Transform( -0.997992, 0, 0.0633479, 0, 1, 0, -0.0633479, 0, -0.997992, 0, 1, 0 )
-visible = false
 
-[node name="Ponteiro4" parent="." index="7" instance=ExtResource( 9 )]
+[node name="Ponteiro4" parent="." index="7" instance=ExtResource( 8 )]
 
 transform = Transform( -1.62921e-07, 0, 1, 0, 1, 0, -1, 0, -1.62921e-07, 0, 1, 0 )
-visible = false
 
-[node name="Ponteiro5" parent="." index="8" instance=ExtResource( 10 )]
+[node name="Ponteiro5" parent="." index="8" instance=ExtResource( 9 )]
 
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0 )
 
