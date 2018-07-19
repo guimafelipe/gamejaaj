@@ -1,30 +1,6 @@
 [gd_scene load_steps=6 format=2]
 
-[sub_resource type="GDScript" id=5]
-
-script/source = "extends Spatial
-
-const Player = preload('res://Assets/Gugu/Gugu.gd')
-const UP = Vector3(0,1,0)
-
-#Basta herdar dessa classe e mudar as constantes
-const angular_speed = 2*PI/3
-const dmg = 1
-
-func _ready():
-	$PonteiroMov.play('Idle')
-
-func _physics_process(delta):
-	var new_angle = update_angle(delta)
-	# rotate_y(new_angle)
-
-func update_angle(delta):
-	return delta * angular_speed
-
-func _on_Area_body_entered(body):
-	if(body is Player):
-		body.take_damage(dmg)
-"
+[ext_resource path="res://Assets/Ponteiro/Ponteiro4.gd" type="Script" id=1]
 
 [sub_resource type="CylinderMesh" id=1]
 
@@ -35,7 +11,7 @@ height = 2.0
 radial_segments = 64
 rings = 4
 
-[sub_resource type="SpatialMaterial" id=7]
+[sub_resource type="SpatialMaterial" id=4]
 
 render_priority = 0
 flags_transparent = false
@@ -65,8 +41,8 @@ metallic_texture_channel = 0
 roughness = 0.0
 roughness_texture_channel = 0
 emission_enabled = true
-emission = Color( 0, 0.882812, 1, 1 )
-emission_energy = 8.0
+emission = Color( 1, 0.5625, 0, 1 )
+emission_energy = 13.96
 emission_operator = 0
 emission_on_uv2 = false
 normal_enabled = false
@@ -96,29 +72,43 @@ _sections_unfolded = [ "Albedo", "Emission" ]
 radius = 1.0
 height = 1.0
 
-[sub_resource type="Animation" id=6]
+[sub_resource type="Animation" id=5]
 
-resource_name = "Idle"
-length = 2.0
-loop = true
+resource_name = "Move"
+length = 10.0
+loop = false
 step = 0.1
 tracks/0/type = "value"
 tracks/0/path = NodePath(".:rotation_degrees")
 tracks/0/interp = 1
-tracks/0/loop_wrap = true
+tracks/0/loop_wrap = false
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = {
-"times": PoolRealArray( 0.5, 1.5, 4 ),
-"transitions": PoolRealArray( -4, -4, 1 ),
+"times": PoolRealArray( 0, 4 ),
+"transitions": PoolRealArray( -6, 1 ),
 "update": 0,
-"values": [ Vector3( 0, 60, 0 ), Vector3( 0, -60, 0 ), Vector3( 0, 360, 0 ) ]
+"values": [ Vector3( 0, 0, 0 ), Vector3( 0, 90, 0 ) ]
+}
+tracks/1/type = "method"
+tracks/1/path = NodePath(".")
+tracks/1/interp = 1
+tracks/1/loop_wrap = false
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 9.2 ),
+"transitions": PoolRealArray( 1 ),
+"values": [ {
+"args": [  ],
+"method": "start_move"
+} ]
 }
 
-[node name="Ponteiro3" type="Spatial"]
+[node name="Ponteiro4" type="Spatial"]
 
-transform = Transform( 0.500012, 0, -0.866018, 0, 1, 0, 0.866018, 0, 0.500012, 0, 0, 0 )
-script = SubResource( 5 )
+transform = Transform( -1.62921e-07, 0, 1, 0, 1, 0, -1, 0, -1.62921e-07, 0, 0, 0 )
+script = ExtResource( 1 )
 _sections_unfolded = [ "Transform" ]
 
 [node name="MeshInstance" type="MeshInstance" parent="." index="0"]
@@ -135,7 +125,7 @@ lod_max_distance = 0.0
 lod_max_hysteresis = 0.0
 mesh = SubResource( 1 )
 skeleton = NodePath("..")
-material/0 = SubResource( 7 )
+material/0 = SubResource( 4 )
 _sections_unfolded = [ "Geometry", "Transform", "material" ]
 
 [node name="Area" type="Area" parent="." index="1"]
@@ -168,14 +158,14 @@ reverb_bus_uniformity = 0.0
 shape = SubResource( 3 )
 disabled = false
 
-[node name="PonteiroMov" type="AnimationPlayer" parent="." index="2"]
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." index="2"]
 
 root_node = NodePath("..")
 autoplay = ""
 playback_process_mode = 1
 playback_default_blend_time = 0.0
 playback_speed = 1.0
-anims/Idle = SubResource( 6 )
+anims/Move = SubResource( 5 )
 blend_times = [  ]
 
 [connection signal="body_entered" from="Area" to="." method="_on_Area_body_entered"]

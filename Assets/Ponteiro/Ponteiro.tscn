@@ -93,7 +93,7 @@ tracks/0/keys = {
 
 [node name="Ponteiro" type="Spatial"]
 
-transform = Transform( -0.232391, 0, 0.972622, 0, 1, 0, -0.972622, 0, -0.232391, 0, 0, 0 )
+transform = Transform( 1, 0, 6.51683e-07, 0, 1, 0, -6.51683e-07, 0, 1, 0, 0, 0 )
 script = ExtResource( 1 )
 _sections_unfolded = [ "Transform" ]
 

@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://Teste/TestMap.gd" type="Script" id=1]
 [ext_resource path="res://Assets/Gugu/Gugu.tscn" type="PackedScene" id=2]
@@ -6,6 +6,7 @@
 [ext_resource path="res://Assets/Ponteiro/Ponteiro.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Assets/Ponteiro/Ponteiro2.tscn" type="PackedScene" id=5]
 [ext_resource path="res://Assets/Ponteiro/Ponteiro3.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Assets/Ponteiro/Ponteiro4.tscn" type="PackedScene" id=7]
 
 [sub_resource type="SpatialMaterial" id=1]
 
@@ -197,9 +198,14 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0 )
 [node name="Ponteiro2" parent="." index="6" instance=ExtResource( 5 )]
 
 transform = Transform( 0.258819, 0, -0.965926, 0, 1, 0, 0.965926, 0, 0.258819, 0, 1, 0 )
+_sections_unfolded = [ "Transform", "Visibility" ]
 
 [node name="Ponteiro3" parent="." index="7" instance=ExtResource( 6 )]
 
 transform = Transform( -0.997992, 0, 0.0633479, 0, 1, 0, -0.0633479, 0, -0.997992, 0, 1, 0 )
+
+[node name="Ponteiro4" parent="." index="8" instance=ExtResource( 7 )]
+
+transform = Transform( -1.62921e-07, 0, 1, 0, 1, 0, -1, 0, -1.62921e-07, 0, 1, 0 )
 
 

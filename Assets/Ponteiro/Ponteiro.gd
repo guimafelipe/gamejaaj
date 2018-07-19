@@ -8,14 +8,8 @@ const angular_speed = 2*PI/3
 const dmg = 1
 
 func _ready():
-	$PonteiroMov.play('Idle')
-
-func _physics_process(delta):
-	var new_angle = update_angle(delta)
-	# rotate_y(new_angle)
-
-func update_angle(delta):
-	return delta * angular_speed
+	if($PonteiroMov):
+		$PonteiroMov.play('Idle')
 
 func _on_Area_body_entered(body):
 	if(body is Player):
