@@ -1,6 +1,7 @@
 [gd_scene load_steps=6 format=2]
 
-[ext_resource path="res://Assets/Ponteiro/Ponteiro5.gd" type="Script" id=1]
+[ext_resource path="res://Assets/Ponteiros/PonteiroMeias/PonteiroMeias.gd" type="Script" id=1]
+
 
 [sub_resource type="CylinderMesh" id=1]
 
@@ -41,7 +42,7 @@ metallic_texture_channel = 0
 roughness = 0.0
 roughness_texture_channel = 0
 emission_enabled = true
-emission = Color( 0.0107422, 0, 0.0859375, 1 )
+emission = Color( 1, 0.5625, 0, 1 )
 emission_energy = 13.96
 emission_operator = 0
 emission_on_uv2 = false
@@ -75,29 +76,29 @@ height = 1.0
 [sub_resource type="Animation" id=4]
 
 resource_name = "Move"
-length = 1.5
+length = 10.0
 loop = false
 step = 0.1
 tracks/0/type = "value"
-tracks/0/path = NodePath(".:transform")
+tracks/0/path = NodePath(".:rotation_degrees")
 tracks/0/interp = 1
-tracks/0/loop_wrap = true
+tracks/0/loop_wrap = false
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = {
-"times": PoolRealArray( 0, 0.8, 1.5 ),
-"transitions": PoolRealArray( 2, 0.5, 1 ),
+"times": PoolRealArray( 0, 4 ),
+"transitions": PoolRealArray( -6, 1 ),
 "update": 0,
-"values": [ Transform( 0.313525, 0, 0.94958, 0, 1, 0, -0.94958, 0, 0.313525, 0, 0, 0 ), Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 ), Transform( 0.834739, 0, -0.550646, 0, 1, 0, 0.550646, 0, 0.834739, 0, 0, 0 ) ]
+"values": [ Vector3( 0, 0, 0 ), Vector3( 0, 90, 0 ) ]
 }
 tracks/1/type = "method"
 tracks/1/path = NodePath(".")
 tracks/1/interp = 1
-tracks/1/loop_wrap = true
+tracks/1/loop_wrap = false
 tracks/1/imported = false
 tracks/1/enabled = true
 tracks/1/keys = {
-"times": PoolRealArray( 1.5 ),
+"times": PoolRealArray( 9.2 ),
 "transitions": PoolRealArray( 1 ),
 "values": [ {
 "args": [  ],
@@ -105,9 +106,9 @@ tracks/1/keys = {
 } ]
 }
 
-[node name="Ponteiro5" type="Spatial"]
+[node name="PonteiroMeias" type="Spatial"]
 
-transform = Transform( 0.99361, 0, 0.112863, 0, 1, 0, -0.112863, 0, 0.99361, 0, 0, 0 )
+transform = Transform( -1.62921e-07, 0, 1, 0, 1, 0, -1, 0, -1.62921e-07, 0, 0, 0 )
 script = ExtResource( 1 )
 _sections_unfolded = [ "Transform" ]
 
@@ -158,7 +159,7 @@ reverb_bus_uniformity = 0.0
 shape = SubResource( 3 )
 disabled = false
 
-[node name="PonteiroMov" type="AnimationPlayer" parent="." index="2"]
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." index="2"]
 
 root_node = NodePath("..")
 autoplay = ""

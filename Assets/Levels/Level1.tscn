@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Assets/Ambient/Ambient.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Assets/Gugu/Gugu.tscn" type="PackedScene" id=2]
+
+[node name="Level1" type="Spatial"]
+
+_sections_unfolded = [ "Transform" ]
+
+[node name="Ambient" parent="." index="0" instance=ExtResource( 1 )]
+
+editor/display_folded = false
+
+[node name="Gugu" parent="." index="1" instance=ExtResource( 2 )]
+
+transform = Transform( 0.835978, 0, 0.548763, 0, 1, 0, -0.548763, 0, 0.835978, 0, 0, 9.5 )
+_sections_unfolded = [ "Transform" ]
+
+

@@ -1,4 +1,4 @@
-extends "res://Assets/Ponteiro/Ponteiro.gd"
+extends "res://Assets/Ponteiros/PonteiroBase/Ponteiro.gd"
 
 var player
 var curr_angle
