@@ -11,6 +11,11 @@ func _ready():
 	if($PonteiroMov):
 		$PonteiroMov.play('Idle')
 
+func restart_movement():
+	if($PonteiroMov):
+		$PonteiroMov.stop(true)
+		$PonteiroMov.play("Idle")
+
 func _on_Area_body_entered(body):
 	if(body is Player):
 		body.take_damage(dmg)

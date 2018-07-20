@@ -21,21 +21,39 @@ var is_moving # check if it's moving and animation not playing to enable walk an
 var must_rotate # check only if it's moving to rotate mesh
 
 # Variables related to player state
+const MAX_HP = 3
 var lifes = 3
+var invulnerable = true
+signal died
 
 func _ready():
 	self.angle = atan2(translation.x, translation.z)
+	reset_hp()
 
 # Hp fuctions
+func reset_hp():
+	set_hp(MAX_HP)
+	start_invulnerability()
+
 func set_hp(value):
 	if(value >= 0):
 		self.lifes = value
 
 func take_damage(value):
-	if(value >= 0):
-		$EffectsPlayer.play("OnDamage")
+	if invulnerable: return
+	if(value >= 0 and lifes > 0):
 		lifes = max(0, lifes - value)
+	if(lifes == 0):
+		emit_signal('died')
+	else:
+		start_invulnerability()
 
+func start_invulnerability():
+	$EffectsPlayer.play("OnDamage")
+	invulnerable = true
+
+func remove_invulnerability():
+	invulnerable = false
 
 # Player movimentation
 func set_center(new_center):

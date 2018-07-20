@@ -1,15 +1,26 @@
-extends Node
+extends Spatial
 
 onready var player = $Gugu
 onready var cutscene_manager = $Cutscene
-onready var center = $Ambient/Centro
+onready var center = $Ambient/Centro.global_transform.origin
+onready var player_spawn = $PlayerSpawn.global_transform.origin
 
 func _ready():
-	pass
+	player.set_center(center)
+	$BasePivot.set_center(center)
+	$BasePivot.set_player(player)
+
+func restart_level():
+	level_setup()
+
+func restart_pointers():
+	for pointer in $Ponteiros.get_children():
+		pointer.restart_movement()
 
 func level_setup():
-	# this vary level by level
-	print('not implemented')
+	player.transform.origin = player_spawn
+	player.reset_hp()
+	restart_pointers()
 
 func start_cutscene():
 	cutscene_manager.start()

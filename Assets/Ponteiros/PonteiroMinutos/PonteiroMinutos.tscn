@@ -2,8 +2,6 @@
 
 [ext_resource path="res://Assets/Ponteiros/PonteiroMinutos/PonteiroMinutos.gd" type="Script" id=1]
 
-
-
 [sub_resource type="CylinderMesh" id=1]
 
 custom_aabb = AABB( 0, 0, 0, 0, 0, 0 )
@@ -93,7 +91,7 @@ tracks/0/keys = {
 "values": [ Vector3( 0, 0, 0 ), Vector3( 0, 180, 0 ), Vector3( 0, 360, 0 ) ]
 }
 
-[node name="PonteiroHoras" type="Spatial"]
+[node name="PonteiroMinutos" type="Spatial"]
 
 transform = Transform( -0.941384, 0, -0.337337, 0, 1, 0, 0.337337, 0, -0.941384, 0, 0, 0 )
 script = ExtResource( 1 )

@@ -70,7 +70,7 @@ _sections_unfolded = [ "Detail", "Distance Fade", "Parameters", "Proximity Fade"
 [sub_resource type="Animation" id=4]
 
 resource_name = "OnDamage"
-length = 1.0
+length = 1.5
 loop = false
 step = 0.12
 tracks/0/type = "value"
@@ -80,10 +80,24 @@ tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = {
-"times": PoolRealArray( 0, 0.12, 0.24, 0.36, 0.48, 0.6, 0.72, 0.84, 0.96 ),
-"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
+"times": PoolRealArray( 0, 0.12, 0.24, 0.36, 0.48, 0.6, 0.72, 0.84, 0.96, 1.08, 1.2, 1.32, 1.44 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
 "update": 1,
-"values": [ true, false, true, false, true, false, true, false, true ]
+"values": [ true, false, true, false, true, false, true, false, true, false, true, false, true ]
+}
+tracks/1/type = "method"
+tracks/1/path = NodePath(".")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 1.44 ),
+"transitions": PoolRealArray( 1 ),
+"values": [ {
+"args": [  ],
+"method": "remove_invulnerability"
+} ]
 }
 
 [node name="Gugu" type="KinematicBody"]
@@ -110,6 +124,7 @@ _sections_unfolded = [ "Transform" ]
 
 [node name="MeshInstance" type="MeshInstance" parent="CollisionShape" index="0"]
 
+visible = false
 layers = 1
 material_override = null
 cast_shadow = 1
