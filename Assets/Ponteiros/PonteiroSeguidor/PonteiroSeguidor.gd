@@ -11,7 +11,7 @@ func _ready():
 
 func start_move():
 	if(player == null):
-		return;
+		return
 	var player_pos = player.global_transform.origin
 	player_pos.y = global_transform.origin.y
 	var midle_transform = global_transform.looking_at(player_pos, UP)
