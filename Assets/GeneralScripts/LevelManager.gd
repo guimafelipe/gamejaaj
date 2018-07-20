@@ -18,7 +18,7 @@ func restart_pointers():
 		pointer.restart_movement()
 
 func level_setup():
-	player.transform.origin = player_spawn
+	player.reset_position(player_spawn)
 	player.reset_hp()
 	restart_pointers()
 

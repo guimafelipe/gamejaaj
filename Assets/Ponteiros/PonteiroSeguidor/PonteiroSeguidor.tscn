@@ -2,7 +2,6 @@
 
 [ext_resource path="res://Assets/Ponteiros/PonteiroSeguidor/PonteiroSeguidor.gd" type="Script" id=1]
 
-
 [sub_resource type="CylinderMesh" id=1]
 
 custom_aabb = AABB( 0, 0, 0, 0, 0, 0 )
@@ -80,7 +79,7 @@ length = 1.5
 loop = false
 step = 0.1
 tracks/0/type = "value"
-tracks/0/path = NodePath(".:transform")
+tracks/0/path = NodePath(".:global_transform")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/imported = false

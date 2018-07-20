@@ -1,11 +1,10 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://Assets/Levels/Level1.gd" type="Script" id=1]
 [ext_resource path="res://Assets/Ambient/Ambient.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Assets/Gugu/Gugu.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Assets/Camera/BasePivot.tscn" type="PackedScene" id=4]
-[ext_resource path="res://Assets/Ponteiros/PonteiroBase/Ponteiro.tscn" type="PackedScene" id=5]
-[ext_resource path="res://Assets/Ponteiros/PonteiroPendulo/PonteiroPendulo.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Assets/Ponteiros/PonteiroSeguidor/PonteiroSeguidor.tscn" type="PackedScene" id=5]
 
 [node name="Level1" type="Spatial" index="0"]
 
@@ -37,13 +36,7 @@ _sections_unfolded = [ "Transform" ]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0 )
 _sections_unfolded = [ "Transform" ]
 
-[node name="Ponteiro" parent="Ponteiros" index="0" instance=ExtResource( 5 )]
-
-_sections_unfolded = [ "Pause", "Transform" ]
-
-[node name="PonteiroPendulo" parent="Ponteiros" index="1" instance=ExtResource( 6 )]
-
-transform = Transform( -1, 0, -3.25841e-07, 0, 1, 0, 3.25841e-07, 0, -1, 0, 0, 0 )
+[node name="PonteiroSeguidor" parent="Ponteiros" index="0" instance=ExtResource( 5 )]
 
 [connection signal="died" from="Gugu" to="." method="_on_Gugu_died"]
 

@@ -30,6 +30,11 @@ func _ready():
 	self.angle = atan2(translation.x, translation.z)
 	reset_hp()
 
+func reset_position(spawn_position):
+	transform.origin = spawn_position
+	self.angle = atan2(translation.x, translation.z)
+
+
 # Hp fuctions
 func reset_hp():
 	set_hp(MAX_HP)

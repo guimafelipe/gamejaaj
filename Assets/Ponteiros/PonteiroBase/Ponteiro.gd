@@ -8,10 +8,13 @@ const angular_speed = 2*PI/3
 const dmg = 1
 
 func _ready():
-	if($PonteiroMov):
-		$PonteiroMov.play('Idle')
+	initial_setup()
+
+func initial_setup():
+	restart_movement()
 
 func restart_movement():
+	print('mae')
 	if($PonteiroMov):
 		$PonteiroMov.stop(true)
 		$PonteiroMov.play("Idle")

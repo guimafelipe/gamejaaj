@@ -1,12 +1,19 @@
 extends "res://Assets/Ponteiros/PonteiroBase/Ponteiro.gd"
 
 var player
-var curr_angle
 var animator
+var original_transform
 
-func _ready():
+func initial_setup():
+	player = get_node('../../Gugu')
 	animator = $PonteiroMov
-	player = get_node("../Gugu")
+	original_transform = global_transform
+	restart_movement()
+
+func restart_movement():
+	animator.stop(true)
+	if original_transform:
+		global_transform = original_transform
 	start_move()
 
 func start_move():
