@@ -13,8 +13,11 @@ func _ready():
 func initial_setup():
 	restart_movement()
 
+func stop_movement():
+	if($PonteiroMov):
+		$PonteiroMov.stop(false)
+
 func restart_movement():
-	print('mae')
 	if($PonteiroMov):
 		$PonteiroMov.stop(true)
 		$PonteiroMov.play("Idle")

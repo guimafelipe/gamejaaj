@@ -1,42 +1,54 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://Assets/Levels/Level1.gd" type="Script" id=1]
 [ext_resource path="res://Assets/Ambient/Ambient.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Assets/Gugu/Gugu.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Assets/Camera/BasePivot.tscn" type="PackedScene" id=4]
-[ext_resource path="res://Assets/Ponteiros/PonteiroSeguidor/PonteiroSeguidor.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Assets/Ponteiros/PonteiroBase/Ponteiro.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Assets/Ponteiros/PonteiroMinutos/PonteiroMinutos.tscn" type="PackedScene" id=6]
 
 [node name="Level1" type="Spatial" index="0"]
 
 script = ExtResource( 1 )
 _sections_unfolded = [ "Transform" ]
 
-[node name="Manager" type="Node" parent="." index="0"]
+[node name="LevelTimer" type="Timer" parent="." index="0"]
 
-[node name="Cutscene" type="Node" parent="." index="1"]
+process_mode = 1
+wait_time = 30.0
+one_shot = true
+autostart = false
 
-[node name="Ambient" parent="." index="2" instance=ExtResource( 2 )]
+[node name="Manager" type="Node" parent="." index="1"]
+
+[node name="Cutscene" type="Node" parent="." index="2"]
+
+[node name="Ambient" parent="." index="3" instance=ExtResource( 2 )]
 
 editor/display_folded = false
 
-[node name="Gugu" parent="." index="3" instance=ExtResource( 3 )]
+[node name="Gugu" parent="." index="4" instance=ExtResource( 3 )]
 
 transform = Transform( 0.835978, 0, 0.548763, 0, 1, 0, -0.548763, 0, 0.835978, 0, 0, 9.5 )
 _sections_unfolded = [ "Transform" ]
 
-[node name="BasePivot" parent="." index="4" instance=ExtResource( 4 )]
+[node name="BasePivot" parent="." index="5" instance=ExtResource( 4 )]
 
-[node name="PlayerSpawn" type="Position3D" parent="." index="5"]
+[node name="PlayerSpawn" type="Position3D" parent="." index="6"]
 
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 9.5 )
 _sections_unfolded = [ "Transform" ]
 
-[node name="Ponteiros" type="Spatial" parent="." index="6"]
+[node name="Ponteiros" type="Spatial" parent="." index="7"]
 
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0 )
 _sections_unfolded = [ "Transform" ]
 
-[node name="PonteiroSeguidor" parent="Ponteiros" index="0" instance=ExtResource( 5 )]
+[node name="Ponteiro" parent="Ponteiros" index="0" instance=ExtResource( 5 )]
+
+[node name="PonteiroMinutos" parent="Ponteiros" index="1" instance=ExtResource( 6 )]
+
+[connection signal="timeout" from="LevelTimer" to="." method="_on_LevelTimer_timeout"]
 
 [connection signal="died" from="Gugu" to="." method="_on_Gugu_died"]
 

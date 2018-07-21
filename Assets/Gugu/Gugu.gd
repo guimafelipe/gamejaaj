@@ -26,6 +26,9 @@ var lifes = 3
 var invulnerable = true
 signal died
 
+# Variables for game flow control
+var can_move = false
+
 func _ready():
 	self.angle = atan2(translation.x, translation.z)
 	reset_hp()
@@ -49,9 +52,15 @@ func take_damage(value):
 	if(value >= 0 and lifes > 0):
 		lifes = max(0, lifes - value)
 	if(lifes == 0):
+		can_move = false
+		# Play death animation here
 		emit_signal('died')
 	else:
 		start_invulnerability()
+
+func liberate_movement():
+	start_invulnerability()
+	can_move = true
 
 func start_invulnerability():
 	$EffectsPlayer.play("OnDamage")
@@ -70,17 +79,15 @@ func _physics_process(delta):
 	#var camera = $Target/Camera
 	#var cam_xform = camera.get_global_transform()
 	var old_angle = angle
-	if (Input.is_action_pressed("move_left")):
+	if (can_move and Input.is_action_pressed("move_left")):
 		angle -= delta * angularSpeed
-	if (Input.is_action_pressed("move_right")):
+	if (can_move and Input.is_action_pressed("move_right")):
 		angle += delta * angularSpeed
 	
 	# Testar também setar a posição manualmente
 	pos_before = self.global_transform.origin
 	pos_after = Vector3(rotation_center.x + rotation_radius * sin(angle),
 		pos_before.y, rotation_center.z + rotation_radius * cos(angle))
-	
-	# self.translation = pos_after
 	
 	velocity.y += gravity * delta
 	if(angle != old_angle):
@@ -98,7 +105,7 @@ func _physics_process(delta):
 	
 	velocity = move_and_slide(velocity, Vector3(0, 1, 0))
 	
-	if is_on_floor() and Input.is_action_pressed("jump"):
+	if can_move and is_on_floor() and Input.is_action_pressed("jump"):
 		velocity.y = 10 #jump
 
 	var hitCount = get_slide_count()
