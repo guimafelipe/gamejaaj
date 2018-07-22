@@ -23,7 +23,7 @@ func start_level():
 func restart_level():
 	level_setup()
 	$CountdownTimer.start()
-	$UI/GameplayUI.set_countdown_timer($CountdownTimer)
+	$UI.set_countdown_timer($CountdownTimer)
 	# 3 seconds countdown here
 
 func restart_pointers():
@@ -37,17 +37,15 @@ func level_setup():
 		pointer.reset_position()
 
 func start_cutscene():
-	$UI/PlayerUI.set_visible(false)
-	$UI/SurviveTimeUI.set_visible(false)
+	$UI.enter_cutscene()
 	$Cutscene/CutsceneAnim.play("Cutscene")
 
 func on_cutscene_ended():
 	$Cutscene/CutsceneAnim.stop()
 	level_setup()
-	$UI/PlayerUI.set_visible(true)
-	$UI/SurviveTimeUI.set_visible(true)
+	$UI.enter_gameplay()
 	$CountdownTimer.start()
-	$UI/GameplayUI.set_countdown_timer($CountdownTimer)
+	$UI.set_countdown_timer($CountdownTimer)
 
 func level_win():
 	player.can_move = false
@@ -71,7 +69,7 @@ func on_countdown_ended():
 	restart_pointers()
 	player.liberate_movement()
 	$LevelTimer.start()
-	$UI/SurviveTimeUI.set_countdown_timer($LevelTimer)
+	$UI.set_survive_timer($LevelTimer)
 
 func on_lose_anim_ended():
 	restart_level()
