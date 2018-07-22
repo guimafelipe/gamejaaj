@@ -1,15 +1,162 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=15 format=2]
 
 [ext_resource path="res://Assets/Levels/Level1.gd" type="Script" id=1]
 [ext_resource path="res://Assets/Timers/LevelTimer.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Assets/Timers/CountdownTimer.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Assets/Timers/LoseAnimTimer.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Assets/Timers/WinAnimTimer.tscn" type="PackedScene" id=5]
-[ext_resource path="res://Assets/Ambient/Ambient.tscn" type="PackedScene" id=6]
-[ext_resource path="res://Assets/Gugu/Gugu.tscn" type="PackedScene" id=7]
-[ext_resource path="res://Assets/Camera/BasePivot.tscn" type="PackedScene" id=8]
-[ext_resource path="res://Assets/Ponteiros/PonteiroBase/Ponteiro.tscn" type="PackedScene" id=9]
-[ext_resource path="res://Assets/Ponteiros/PonteiroMinutos/PonteiroMinutos.tscn" type="PackedScene" id=10]
+[ext_resource path="res://icon.png" type="Texture" id=6]
+[ext_resource path="res://Assets/Ambient/Ambient.tscn" type="PackedScene" id=7]
+[ext_resource path="res://Assets/Gugu/Gugu.tscn" type="PackedScene" id=8]
+[ext_resource path="res://Assets/Camera/BasePivot.tscn" type="PackedScene" id=9]
+[ext_resource path="res://Assets/Ponteiros/PonteiroBase/Ponteiro.tscn" type="PackedScene" id=10]
+[ext_resource path="res://Assets/Ponteiros/PonteiroMinutos/PonteiroMinutos.tscn" type="PackedScene" id=11]
+
+[sub_resource type="Animation" id=1]
+
+resource_name = "Cutscene"
+length = 13.0
+loop = false
+step = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("../Ponteiros/Ponteiro:transform")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Transform( -0.466956, 0, 0.884281, 0, 1, 0, -0.884281, 0, -0.466956, 0, 0, 0 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("../Ponteiros/PonteiroMinutos:transform")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 1.5 ),
+"transitions": PoolRealArray( 0, 1 ),
+"update": 0,
+"values": [ Transform( -0.0291238, 0, 0.999576, 0, 1, 0, -0.999576, 0, -0.0291238, 0, 0, 0 ), Transform( 0.0472897, 0, 0.998881, 0, 1, 0, -0.998881, 0, 0.0472897, 0, 0, 0 ) ]
+}
+tracks/2/type = "method"
+tracks/2/path = NodePath("..")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 12.9 ),
+"transitions": PoolRealArray( 1 ),
+"values": [ {
+"args": [  ],
+"method": "on_cutscene_ended"
+} ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("../GnomoChefe:visible")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0, 10 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ true, false ]
+}
+tracks/4/type = "method"
+tracks/4/path = NodePath("Camera")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0, 12.9 ),
+"transitions": PoolRealArray( 1, 1 ),
+"values": [ {
+"args": [  ],
+"method": "make_current"
+}, {
+"args": [  ],
+"method": "clear_current"
+} ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("Camera:transform")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0, 3.5, 5.5 ),
+"transitions": PoolRealArray( 0, 0, 1 ),
+"update": 0,
+"values": [ Transform( 1, 0, 0, 0, -1.62921e-07, 1, 0, -1, -1.62921e-07, 0, 15.3269, 0 ), Transform( 0.917631, -0.264101, 0.296992, 0.113384, 0.890182, 0.44127, -0.380917, -0.371249, 0.846804, 4.19678, 4.71064, -3.41039 ), Transform( -0.547807, -0.314514, 0.775234, -0.0320735, 0.933858, 0.356204, -0.835989, 0.170267, -0.521662, 3.21459, 4.71064, 5.08845 ) ]
+}
+
+[sub_resource type="CapsuleMesh" id=2]
+
+custom_aabb = AABB( 0, 0, 0, 0, 0, 0 )
+radius = 1.0
+mid_height = 1.0
+radial_segments = 64
+rings = 8
+
+[sub_resource type="SpatialMaterial" id=3]
+
+render_priority = 0
+flags_transparent = false
+flags_unshaded = false
+flags_vertex_lighting = false
+flags_no_depth_test = false
+flags_use_point_size = false
+flags_world_triplanar = false
+flags_fixed_size = false
+flags_albedo_tex_force_srgb = false
+vertex_color_use_as_albedo = false
+vertex_color_is_srgb = false
+params_diffuse_mode = 0
+params_specular_mode = 0
+params_blend_mode = 0
+params_cull_mode = 0
+params_depth_draw_mode = 0
+params_line_width = 1.0
+params_point_size = 1.0
+params_billboard_mode = 0
+params_grow = false
+params_use_alpha_scissor = false
+albedo_color = Color( 0.0292969, 0.5, 0.0366516, 1 )
+metallic = 0.0
+metallic_specular = 0.5
+metallic_texture_channel = 0
+roughness = 0.0
+roughness_texture_channel = 0
+emission_enabled = false
+normal_enabled = false
+rim_enabled = false
+clearcoat_enabled = false
+anisotropy_enabled = false
+ao_enabled = false
+depth_enabled = false
+subsurf_scatter_enabled = false
+transmission_enabled = false
+refraction_enabled = false
+detail_enabled = false
+uv1_scale = Vector3( 1, 1, 1 )
+uv1_offset = Vector3( 0, 0, 0 )
+uv1_triplanar = false
+uv1_triplanar_sharpness = 1.0
+uv2_scale = Vector3( 1, 1, 1 )
+uv2_offset = Vector3( 0, 0, 0 )
+uv2_triplanar = false
+uv2_triplanar_sharpness = 1.0
+proximity_fade_enable = false
+distance_fade_enable = false
+_sections_unfolded = [ "Albedo" ]
 
 [node name="Level1" type="Spatial" index="0"]
 
@@ -19,6 +166,8 @@ _sections_unfolded = [ "Transform" ]
 [node name="LevelTimer" parent="." index="0" instance=ExtResource( 2 )]
 
 [node name="CountdownTimer" parent="." index="1" instance=ExtResource( 3 )]
+
+wait_time = 3.0
 
 [node name="LoseAnimTimer" parent="." index="2" instance=ExtResource( 4 )]
 
@@ -31,30 +180,111 @@ one_shot = true
 
 [node name="Cutscene" type="Node" parent="." index="5"]
 
-[node name="Ambient" parent="." index="6" instance=ExtResource( 6 )]
+[node name="Camera" type="Camera" parent="Cutscene" index="0"]
+
+transform = Transform( 1, 0, 0, 0, 0, 1, 0, -1, 0, 0, 15.3269, 0 )
+keep_aspect = 1
+cull_mask = 1048575
+environment = null
+h_offset = 0.0
+v_offset = 0.0
+doppler_tracking = 0
+projection = 0
+current = false
+fov = 70.0
+size = 1.0
+near = 0.05
+far = 100.0
+_sections_unfolded = [ "Transform" ]
+
+[node name="CutsceneAnim" type="AnimationPlayer" parent="Cutscene" index="1"]
+
+root_node = NodePath("..")
+autoplay = ""
+playback_process_mode = 1
+playback_default_blend_time = 0.0
+playback_speed = 1.0
+anims/Cutscene = SubResource( 1 )
+blend_times = [  ]
+
+[node name="GnomoChefe" type="MeshInstance" parent="." index="6"]
+
+transform = Transform( 1, 0, 0, 0, 0.000345306, -1, 0, 1, 0.000345306, -0.0228529, 1.10621, -8.94316 )
+visible = false
+layers = 1
+material_override = null
+cast_shadow = 1
+extra_cull_margin = 0.0
+use_in_baked_light = false
+lod_min_distance = 0.0
+lod_min_hysteresis = 0.0
+lod_max_distance = 0.0
+lod_max_hysteresis = 0.0
+mesh = SubResource( 2 )
+skeleton = NodePath("..")
+material/0 = SubResource( 3 )
+_sections_unfolded = [ "Transform", "Visibility", "material" ]
+
+[node name="Sprite3D" type="Sprite3D" parent="." index="7"]
+
+transform = Transform( 2, 0, 0, 0, -3.25841e-07, -1, 0, 2, -1.62921e-07, -0.0228529, 0.1, -8.94316 )
+layers = 1
+material_override = null
+cast_shadow = 1
+extra_cull_margin = 0.0
+use_in_baked_light = false
+lod_min_distance = 0.0
+lod_min_hysteresis = 0.0
+lod_max_distance = 0.0
+lod_max_hysteresis = 0.0
+centered = true
+offset = Vector2( 0, 0 )
+flip_h = false
+flip_v = false
+modulate = Color( 1, 1, 1, 1 )
+opacity = 1.0
+pixel_size = 0.01
+axis = 2
+transparent = true
+shaded = false
+double_sided = true
+alpha_cut = 0
+texture = ExtResource( 6 )
+vframes = 1
+hframes = 1
+frame = 0
+region_enabled = false
+region_rect = Rect2( 0, 0, 0, 0 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="Ambient" parent="." index="8" instance=ExtResource( 7 )]
 
 editor/display_folded = false
 
-[node name="Gugu" parent="." index="7" instance=ExtResource( 7 )]
+[node name="Gugu" parent="." index="9" instance=ExtResource( 8 )]
 
 transform = Transform( 0.835978, 0, 0.548763, 0, 1, 0, -0.548763, 0, 0.835978, 0, 0, 9.5 )
 _sections_unfolded = [ "Transform" ]
 
-[node name="BasePivot" parent="." index="8" instance=ExtResource( 8 )]
+[node name="BasePivot" parent="." index="10" instance=ExtResource( 9 )]
 
-[node name="PlayerSpawn" type="Position3D" parent="." index="9"]
+[node name="PlayerSpawn" type="Position3D" parent="." index="11"]
 
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 9.5 )
 _sections_unfolded = [ "Transform" ]
 
-[node name="Ponteiros" type="Spatial" parent="." index="10"]
+[node name="Ponteiros" type="Spatial" parent="." index="12"]
 
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0 )
 _sections_unfolded = [ "Transform" ]
 
-[node name="Ponteiro" parent="Ponteiros" index="0" instance=ExtResource( 9 )]
+[node name="Ponteiro" parent="Ponteiros" index="0" instance=ExtResource( 10 )]
 
-[node name="PonteiroMinutos" parent="Ponteiros" index="1" instance=ExtResource( 10 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
+
+[node name="PonteiroMinutos" parent="Ponteiros" index="1" instance=ExtResource( 11 )]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
 
 [connection signal="timeout" from="LevelTimer" to="." method="_on_LevelTimer_timeout"]
 

@@ -18,7 +18,7 @@ func _ready():
 func start_level():
 	#cutscene call here
 	# 3 seconds countdown here
-	$CountdownTimer.start()
+	start_cutscene()
 
 func restart_level():
 	level_setup()
@@ -36,7 +36,12 @@ func level_setup():
 		pointer.reset_position()
 
 func start_cutscene():
-	cutscene_manager.start()
+	$Cutscene/CutsceneAnim.play("Cutscene")
+
+func on_cutscene_ended():
+	$Cutscene/CutsceneAnim.stop()
+	level_setup()
+	$CountdownTimer.start()
 
 func level_win():
 	player.can_move = false
