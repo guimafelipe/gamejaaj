@@ -1,0 +1,10 @@
+[gd_scene format=2]
+
+[node name="LevelTimer" type="Timer"]
+
+process_mode = 1
+wait_time = 30.0
+one_shot = true
+autostart = false
+
+

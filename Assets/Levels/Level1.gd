@@ -8,7 +8,6 @@ func _ready():
 	.start_level()
 
 func _on_Gugu_died():
-	$LevelTimer.stop()
 	.on_player_died()
 
 func restart_level():
@@ -18,4 +17,3 @@ func restart_level():
 
 func _on_LevelTimer_timeout():
 	print("Gugu won")
-	.level_win()

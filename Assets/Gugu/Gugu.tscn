@@ -124,7 +124,6 @@ _sections_unfolded = [ "Transform" ]
 
 [node name="MeshInstance" type="MeshInstance" parent="CollisionShape" index="0"]
 
-visible = false
 layers = 1
 material_override = null
 cast_shadow = 1

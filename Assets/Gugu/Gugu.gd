@@ -23,7 +23,7 @@ var must_rotate # check only if it's moving to rotate mesh
 # Variables related to player state
 const MAX_HP = 3
 var lifes = 3
-var invulnerable = true
+var invulnerable = false
 signal died
 
 # Variables for game flow control
@@ -37,11 +37,9 @@ func reset_position(spawn_position):
 	transform.origin = spawn_position
 	self.angle = atan2(translation.x, translation.z)
 
-
 # Hp fuctions
 func reset_hp():
 	set_hp(MAX_HP)
-	start_invulnerability()
 
 func set_hp(value):
 	if(value >= 0):

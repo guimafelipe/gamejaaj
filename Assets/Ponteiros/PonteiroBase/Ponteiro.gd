@@ -7,15 +7,21 @@ const UP = Vector3(0,1,0)
 const angular_speed = 2*PI/3
 const dmg = 1
 
+onready var initial_transform = global_transform
+
 func _ready():
 	initial_setup()
 
 func initial_setup():
-	restart_movement()
+	pass
+	#restart_movement()
 
 func stop_movement():
 	if($PonteiroMov):
 		$PonteiroMov.stop(false)
+
+func reset_position():
+	global_transform = initial_transform
 
 func restart_movement():
 	if($PonteiroMov):

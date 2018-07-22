@@ -8,7 +8,7 @@ func initial_setup():
 	player = get_node('../../Gugu')
 	animator = $PonteiroMov
 	original_transform = global_transform
-	restart_movement()
+	#restart_movement()
 
 func restart_movement():
 	animator.stop(true)
