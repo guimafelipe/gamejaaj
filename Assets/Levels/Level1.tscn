@@ -1,7 +1,7 @@
 [gd_scene load_steps=16 format=2]
 
 [ext_resource path="res://Assets/Levels/Level1.gd" type="Script" id=1]
-[ext_resource path="res://Assets/UI/PlayerUI/PlayerUI.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Assets/UI/UI.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Assets/Timers/LevelTimer.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Assets/Timers/CountdownTimer.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Assets/Timers/LoseAnimTimer.tscn" type="PackedScene" id=5]
@@ -164,7 +164,9 @@ _sections_unfolded = [ "Albedo" ]
 script = ExtResource( 1 )
 _sections_unfolded = [ "Transform" ]
 
-[node name="PlayerUI" parent="." index="0" instance=ExtResource( 2 )]
+[node name="UI" parent="." index="0" instance=ExtResource( 2 )]
+
+editor/display_folded = false
 
 [node name="LevelTimer" parent="." index="1" instance=ExtResource( 3 )]
 
@@ -292,6 +294,5 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
 
 [connection signal="died" from="Gugu" to="." method="_on_Gugu_died"]
 
-[connection signal="lifes_update" from="Gugu" to="PlayerUI" method="_on_Gugu_lifes_update"]
 
-
+[editable path="UI"]

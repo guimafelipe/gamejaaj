@@ -1,0 +1,54 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://Assets/UI/PlayerUI/PlayerUI.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Assets/UI/PlayerUI/PlayerUI.gd" type="Script" id=2]
+[ext_resource path="res://Assets/UI/GameplayUI/GameplayUI.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Assets/UI/GameplayUI/GameplayUI.gd" type="Script" id=4]
+
+[node name="UI" type="Control"]
+
+editor/display_folded = true
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+
+[node name="PlayerUI" type="Control" parent="." index="0" instance=ExtResource( 1 )]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_group_": true,
+"_edit_lock_": true
+}
+
+[node name="GameplayUI" type="Control" parent="." index="1" instance=ExtResource( 3 )]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+script = ExtResource( 4 )
+
+

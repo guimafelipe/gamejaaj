@@ -1,11 +1,11 @@
 extends Spatial
 
 onready var player = $Gugu
-onready var cutscene_manager = $Cutscene
 onready var center = $Ambient/Centro.global_transform.origin
 onready var player_spawn = $PlayerSpawn.global_transform.origin
 
 func _ready():
+	# This node has all below dependencies to work
 	player.set_center(center)
 	$BasePivot.set_center(center)
 	$BasePivot.set_player(player)
@@ -17,13 +17,13 @@ func _ready():
 	start_level()
 
 func start_level():
-	#cutscene call here
-	# 3 seconds countdown here
+	# call only once per level play
 	start_cutscene()
 
 func restart_level():
 	level_setup()
 	$CountdownTimer.start()
+	$UI/GameplayUI.set_countdown_timer($CountdownTimer)	
 	# 3 seconds countdown here
 
 func restart_pointers():
@@ -43,6 +43,7 @@ func on_cutscene_ended():
 	$Cutscene/CutsceneAnim.stop()
 	level_setup()
 	$CountdownTimer.start()
+	$UI/GameplayUI.set_countdown_timer($CountdownTimer)
 
 func level_win():
 	player.can_move = false
