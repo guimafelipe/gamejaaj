@@ -37,11 +37,15 @@ func level_setup():
 		pointer.reset_position()
 
 func start_cutscene():
+	$UI/PlayerUI.set_visible(false)
+	$UI/SurviveTimeUI.set_visible(false)
 	$Cutscene/CutsceneAnim.play("Cutscene")
 
 func on_cutscene_ended():
 	$Cutscene/CutsceneAnim.stop()
 	level_setup()
+	$UI/PlayerUI.set_visible(true)
+	$UI/SurviveTimeUI.set_visible(true)
 	$CountdownTimer.start()
 	$UI/GameplayUI.set_countdown_timer($CountdownTimer)
 

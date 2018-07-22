@@ -16,7 +16,7 @@
 [sub_resource type="Animation" id=1]
 
 resource_name = "Cutscene"
-length = 13.0
+length = 20.0
 loop = false
 step = 0.1
 tracks/0/type = "value"
@@ -24,7 +24,7 @@ tracks/0/path = NodePath("../Ponteiros/Ponteiro:transform")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/imported = false
-tracks/0/enabled = false
+tracks/0/enabled = true
 tracks/0/keys = {
 "times": PoolRealArray( 0 ),
 "transitions": PoolRealArray( 1 ),
@@ -50,7 +50,7 @@ tracks/2/loop_wrap = true
 tracks/2/imported = false
 tracks/2/enabled = true
 tracks/2/keys = {
-"times": PoolRealArray( 12.9 ),
+"times": PoolRealArray( 19.9 ),
 "transitions": PoolRealArray( 1 ),
 "values": [ {
 "args": [  ],
@@ -64,7 +64,7 @@ tracks/3/loop_wrap = true
 tracks/3/imported = false
 tracks/3/enabled = true
 tracks/3/keys = {
-"times": PoolRealArray( 0, 10 ),
+"times": PoolRealArray( 0, 15.7 ),
 "transitions": PoolRealArray( 1, 1 ),
 "update": 1,
 "values": [ true, false ]
@@ -76,7 +76,7 @@ tracks/4/loop_wrap = true
 tracks/4/imported = false
 tracks/4/enabled = true
 tracks/4/keys = {
-"times": PoolRealArray( 0, 12.9 ),
+"times": PoolRealArray( 0, 19.9 ),
 "transitions": PoolRealArray( 1, 1 ),
 "values": [ {
 "args": [  ],
@@ -93,10 +93,42 @@ tracks/5/loop_wrap = true
 tracks/5/imported = false
 tracks/5/enabled = true
 tracks/5/keys = {
-"times": PoolRealArray( 0, 3.5, 5.5 ),
-"transitions": PoolRealArray( 0, 0, 1 ),
+"times": PoolRealArray( 0, 2.9, 3, 5, 7, 8.5 ),
+"transitions": PoolRealArray( 1, 0, 0, 0, 0, 0 ),
 "update": 0,
-"values": [ Transform( 1, 0, 0, 0, -1.62921e-07, 1, 0, -1, -1.62921e-07, 0, 15.3269, 0 ), Transform( 0.917631, -0.264101, 0.296992, 0.113384, 0.890182, 0.44127, -0.380917, -0.371249, 0.846804, 4.19678, 4.71064, -3.41039 ), Transform( -0.547807, -0.314514, 0.775234, -0.0320735, 0.933858, 0.356204, -0.835989, 0.170267, -0.521662, 3.21459, 4.71064, 5.08845 ) ]
+"values": [ Transform( 1, 0, 0, 0, -1.62921e-07, 1, 0, -1, -1.62921e-07, 0, 15.3269, 0 ), Transform( 1, 0, 0, 0, -1.62921e-07, 1, 0, -1, -1.62921e-07, 0, 16.8496, 0 ), Transform( -0.689166, -0.319746, 0.650241, 0, 0.897374, 0.44127, -0.724604, 0.304108, -0.61844, 4.19678, 4.71064, 3.65246 ), Transform( 0.917631, -0.264101, 0.296992, 0.113384, 0.890182, 0.44127, -0.380917, -0.371249, 0.846804, 4.19678, 4.71064, -3.41039 ), Transform( -0.547807, -0.314514, 0.775234, -0.0320735, 0.933858, 0.356204, -0.835989, 0.170267, -0.521662, 3.21459, 4.71064, 5.08845 ), Transform( 0.917631, -0.264101, 0.296992, 0.113384, 0.890182, 0.44127, -0.380917, -0.371249, 0.846804, 4.19678, 4.71064, -3.41039 ) ]
+}
+tracks/6/type = "method"
+tracks/6/path = NodePath("../UI/GameplayUI")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/keys = {
+"times": PoolRealArray( 0, 3, 5, 7, 8.5, 12.5, 19.9 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1 ),
+"values": [ {
+"args": [  ],
+"method": "start_subtitles"
+}, {
+"args": [ "(zzz ... zzz)" ],
+"method": "set_subtitle"
+}, {
+"args": [ "Caramba Gugu! Pare de dormir!" ],
+"method": "set_subtitle"
+}, {
+"args": [ "Foi mal!!!" ],
+"method": "set_subtitle"
+}, {
+"args": [ "O supervisor ficou sugado! Vamos ter que te ensinar uma lição pra ver se tu para de dormir em serviço!" ],
+"method": "set_subtitle"
+}, {
+"args": [ "Faça uns exercícios pulando os ponteiros que você deveria estar monitorando! Você vai precisar usar as teclas A e D para correr e a Barra de Espaço para pular! Boa sorte seu preguiçoso!" ],
+"method": "set_subtitle"
+}, {
+"args": [  ],
+"method": "end_subtitles"
+} ]
 }
 
 [sub_resource type="CapsuleMesh" id=2]
@@ -166,8 +198,6 @@ _sections_unfolded = [ "Transform" ]
 
 [node name="UI" parent="." index="0" instance=ExtResource( 2 )]
 
-editor/display_folded = true
-
 [node name="LevelTimer" parent="." index="1" instance=ExtResource( 3 )]
 
 [node name="CountdownTimer" parent="." index="2" instance=ExtResource( 4 )]
@@ -185,11 +215,9 @@ one_shot = true
 
 [node name="Cutscene" type="Node" parent="." index="6"]
 
-editor/display_folded = true
-
 [node name="Camera" type="Camera" parent="Cutscene" index="0"]
 
-transform = Transform( 0.917631, -0.264101, 0.296992, 0.113384, 0.890182, 0.44127, -0.380917, -0.371249, 0.846804, 4.19678, 4.71064, -3.41039 )
+transform = Transform( 1, 0, 0, 0, -1.62921e-07, 1, 0, -1, -1.62921e-07, 0, 16.8496, 0 )
 keep_aspect = 1
 cull_mask = 1048575
 environment = null

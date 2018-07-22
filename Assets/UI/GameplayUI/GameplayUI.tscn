@@ -36,7 +36,7 @@ tracks/1/keys = {
 [sub_resource type="Animation" id=1]
 
 resource_name = "ShowSubs"
-length = 1.0
+length = 10.0
 loop = false
 step = 0.1
 tracks/0/type = "value"
@@ -109,10 +109,9 @@ size_flags_horizontal = 1
 size_flags_vertical = 4
 custom_colors/font_color = Color( 1, 0.867188, 0, 1 )
 custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
-text = "Caramba Gugu! Vá trabalhar!"
 align = 1
 valign = 1
-percent_visible = 1.0
+percent_visible = 0.0
 lines_skipped = 0
 max_lines_visible = -1
 _sections_unfolded = [ "Anchor", "Theme", "custom_colors", "custom_fonts" ]
