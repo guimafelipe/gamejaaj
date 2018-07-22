@@ -25,6 +25,7 @@ const MAX_HP = 3
 var lifes = 3
 var invulnerable = false
 signal died
+signal lifes_update(lifes)
 
 # Variables for game flow control
 var can_move = false
@@ -44,6 +45,7 @@ func reset_hp():
 func set_hp(value):
 	if(value >= 0):
 		self.lifes = value
+		emit_signal("lifes_update", lifes)
 
 func take_damage(value):
 	if invulnerable: return
@@ -55,6 +57,7 @@ func take_damage(value):
 		emit_signal('died')
 	else:
 		start_invulnerability()
+	emit_signal("lifes_update", lifes)
 
 func liberate_movement():
 	start_invulnerability()

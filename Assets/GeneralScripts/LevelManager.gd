@@ -14,6 +14,7 @@ func _ready():
 	$WinAnimTimer.connect("timeout", self, "on_win_anim_ended")
 	$LoseAnimTimer.connect("timeout", self, "on_lose_anim_ended")
 	player.connect("died", self, "on_player_died")
+	start_level()
 
 func start_level():
 	#cutscene call here
@@ -64,6 +65,7 @@ func on_player_died():
 func on_countdown_ended():
 	restart_pointers()
 	player.liberate_movement()
+	$LevelTimer.start()
 
 func on_lose_anim_ended():
 	restart_level()
