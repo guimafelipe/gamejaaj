@@ -23,7 +23,7 @@ func start_level():
 func restart_level():
 	level_setup()
 	$CountdownTimer.start()
-	$UI/GameplayUI.set_countdown_timer($CountdownTimer)	
+	$UI/GameplayUI.set_countdown_timer($CountdownTimer)
 	# 3 seconds countdown here
 
 func restart_pointers():
@@ -67,6 +67,7 @@ func on_countdown_ended():
 	restart_pointers()
 	player.liberate_movement()
 	$LevelTimer.start()
+	$UI/SurviveTimeUI.set_countdown_timer($LevelTimer)
 
 func on_lose_anim_ended():
 	restart_level()

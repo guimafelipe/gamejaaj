@@ -166,7 +166,7 @@ _sections_unfolded = [ "Transform" ]
 
 [node name="UI" parent="." index="0" instance=ExtResource( 2 )]
 
-editor/display_folded = false
+editor/display_folded = true
 
 [node name="LevelTimer" parent="." index="1" instance=ExtResource( 3 )]
 
@@ -184,6 +184,8 @@ one_shot = true
 [node name="Manager" type="Node" parent="." index="5"]
 
 [node name="Cutscene" type="Node" parent="." index="6"]
+
+editor/display_folded = true
 
 [node name="Camera" type="Camera" parent="Cutscene" index="0"]
 
