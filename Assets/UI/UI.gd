@@ -17,3 +17,9 @@ func set_countdown_timer(timer):
 
 func set_survive_timer(timer):
 	$SurviveTimeUI.set_countdown_timer(timer)
+
+func set_subtitle(text):
+	$SubtitlesUI.set_subtitle(text)
+
+func end_subtitles():
+	$SubtitlesUI.end_subtitles()
