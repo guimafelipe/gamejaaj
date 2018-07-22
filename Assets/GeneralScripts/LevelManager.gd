@@ -10,6 +10,7 @@ onready var level_timer = $Timers/LevelTimer
 onready var winanim_timer = $Timers/WinAnimTimer
 onready var loseanim_timer = $Timers/LoseAnimTimer
 
+const SURVIVAL_TIME = 30
 
 func _ready():
 	# This node has all below dependencies to work
@@ -23,6 +24,7 @@ func _ready():
 func connect_timers():
 	countdown_timer.connect("timeout", self, "on_countdown_ended")
 	level_timer.connect("timeout", self, "level_win")
+	level_timer.set_wait_time(SURVIVAL_TIME)
 	winanim_timer.connect("timeout", self, "on_win_anim_ended")
 	loseanim_timer.connect("timeout", self, "on_lose_anim_ended")
 
@@ -46,16 +48,15 @@ func level_setup():
 	for pointer in $Ponteiros.get_children():
 		pointer.reset_position()
 
+
 func start_cutscene():
 	$UI.enter_cutscene()
 	$Cutscene/CutsceneAnim.play("Cutscene")
 
 func on_cutscene_ended():
 	$Cutscene/CutsceneAnim.stop()
-	level_setup()
 	$UI.enter_gameplay()
-	countdown_timer.start()
-	$UI.set_countdown_timer(countdown_timer)
+	restart_level()
 
 func level_win():
 	player.can_move = false

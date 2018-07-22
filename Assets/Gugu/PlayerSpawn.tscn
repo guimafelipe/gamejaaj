@@ -1,0 +1,8 @@
+[gd_scene format=2]
+
+[node name="PlayerSpawn" type="Position3D"]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 9.5 )
+_sections_unfolded = [ "Transform" ]
+
+

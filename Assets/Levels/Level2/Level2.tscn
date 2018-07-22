@@ -1,0 +1,104 @@
+[gd_scene load_steps=10 format=2]
+
+[ext_resource path="res://Assets/Levels/Level2/Level2.gd" type="Script" id=1]
+[ext_resource path="res://Assets/UI/UI.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Assets/Timers/Timers.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Assets/Ambient/Ambient.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Assets/Gugu/Gugu.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Assets/Camera/BasePivot.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Assets/Gugu/PlayerSpawn.tscn" type="PackedScene" id=7]
+[ext_resource path="res://Assets/Ponteiros/PonteiroBussola/PonteiroBussola.tscn" type="PackedScene" id=8]
+
+[sub_resource type="Animation" id=1]
+
+resource_name = "Cutscene"
+length = 8.0
+loop = false
+step = 0.1
+tracks/0/type = "method"
+tracks/0/path = NodePath("..")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 8 ),
+"transitions": PoolRealArray( 1 ),
+"values": [ {
+"args": [  ],
+"method": "on_cutscene_ended"
+} ]
+}
+tracks/1/type = "method"
+tracks/1/path = NodePath("Camera")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 8 ),
+"transitions": PoolRealArray( 1, 1 ),
+"values": [ {
+"args": [  ],
+"method": "make_current"
+}, {
+"args": [  ],
+"method": "clear_current"
+} ]
+}
+
+[node name="Level2" type="Spatial" index="0"]
+
+script = ExtResource( 1 )
+
+[node name="UI" parent="." index="0" instance=ExtResource( 2 )]
+
+[node name="Timers" parent="." index="1" instance=ExtResource( 3 )]
+
+[node name="Cutscene" type="Node" parent="." index="2"]
+
+[node name="Camera" type="Camera" parent="Cutscene" index="0"]
+
+transform = Transform( -0.351034, 0.32159, -0.879406, 0, 0.939172, 0.343446, 0.936363, 0.120561, -0.329681, -5.74161, 5.35676, 6.86379 )
+keep_aspect = 1
+cull_mask = 1048575
+environment = null
+h_offset = 0.0
+v_offset = 0.0
+doppler_tracking = 0
+projection = 0
+current = false
+fov = 70.0
+size = 1.0
+near = 0.05
+far = 100.0
+_sections_unfolded = [ "Transform" ]
+
+[node name="CutsceneAnim" type="AnimationPlayer" parent="Cutscene" index="1"]
+
+root_node = NodePath("..")
+autoplay = ""
+playback_process_mode = 1
+playback_default_blend_time = 0.0
+playback_speed = 1.0
+anims/Cutscene = SubResource( 1 )
+blend_times = [  ]
+
+[node name="Ambient" parent="." index="3" instance=ExtResource( 4 )]
+
+[node name="Gugu" parent="." index="4" instance=ExtResource( 5 )]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 10 )
+
+[node name="BasePivot" parent="." index="5" instance=ExtResource( 6 )]
+
+[node name="PlayerSpawn" parent="." index="6" instance=ExtResource( 7 )]
+
+[node name="Ponteiros" type="Spatial" parent="." index="7"]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="PonteiroBussola" parent="Ponteiros" index="0" instance=ExtResource( 8 )]
+
+
