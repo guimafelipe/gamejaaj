@@ -143,7 +143,8 @@ transform = Transform( 1, 0, 0, 0, 0.000345306, -1, 0, 1, 0.000345306, -19.1771,
 
 [node name="Gugu" parent="." index="7" instance=ExtResource( 7 )]
 
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 9.03571 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 9.5 )
+_sections_unfolded = [ "Transform" ]
 
 [node name="PlayerSpawn" parent="." index="8" instance=ExtResource( 8 )]
 
