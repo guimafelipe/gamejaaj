@@ -2,7 +2,6 @@
 
 [ext_resource path="res://Assets/Ponteiros/PonteiroMeias/PonteiroMeias.gd" type="Script" id=1]
 
-
 [sub_resource type="CylinderMesh" id=1]
 
 custom_aabb = AABB( 0, 0, 0, 0, 0, 0 )
@@ -106,7 +105,7 @@ tracks/1/keys = {
 } ]
 }
 
-[node name="PonteiroMeias" type="Spatial"]
+[node name="PonteiroMeias" type="Spatial" index="0"]
 
 transform = Transform( -1.62921e-07, 0, 1, 0, 1, 0, -1, 0, -1.62921e-07, 0, 0, 0 )
 script = ExtResource( 1 )

@@ -3,10 +3,22 @@ extends "res://Assets/Ponteiros/PonteiroBase/Ponteiro.gd"
 ### Ponteiro da cotação das meias roubadas
 
 onready var animator = $AnimationPlayer
+var original_angle
 var old_angle
 
 func _ready():
-	old_angle = rotation.y
+	original_angle = rotation_degrees.y
+	old_angle = rotation_degrees.y
+
+func reset_position():
+	.reset_position()
+	rotation_degrees.y = original_angle
+
+func stop_movement():
+	animator.stop(false)
+
+func restart_movement():
+	old_angle = rotation_degrees.y
 	start_move()
 
 func start_move():
