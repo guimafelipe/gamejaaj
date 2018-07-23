@@ -1,4 +1,4 @@
-extends Control
+extends MarginContainer
 
 func enter_cutscene():
 	$PlayerUI.set_visible(false)
