@@ -1,0 +1,68 @@
+[gd_scene load_steps=2 format=2]
+
+[sub_resource type="Animation" id=1]
+
+resource_name = "Cutscene"
+length = 1.0
+loop = false
+step = 0.1
+tracks/0/type = "method"
+tracks/0/path = NodePath("Camera")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"values": [ {
+"args": [  ],
+"method": "make_current"
+}, {
+"args": [  ],
+"method": "clear_current"
+} ]
+}
+tracks/1/type = "method"
+tracks/1/path = NodePath("..")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 1 ),
+"transitions": PoolRealArray( 1 ),
+"values": [ {
+"args": [  ],
+"method": "on_cutscene_ended"
+} ]
+}
+
+[node name="Cutscene" type="Node"]
+
+[node name="CutsceneAnim" type="AnimationPlayer" parent="." index="0"]
+
+root_node = NodePath("..")
+autoplay = ""
+playback_process_mode = 1
+playback_default_blend_time = 0.0
+playback_speed = 1.0
+anims/Cutscene = SubResource( 1 )
+blend_times = [  ]
+
+[node name="Camera" type="Camera" parent="." index="1"]
+
+keep_aspect = 1
+cull_mask = 1048575
+environment = null
+h_offset = 0.0
+v_offset = 0.0
+doppler_tracking = 0
+projection = 0
+current = false
+fov = 70.0
+size = 1.0
+near = 0.05
+far = 100.0
+
+
