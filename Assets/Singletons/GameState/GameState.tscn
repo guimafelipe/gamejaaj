@@ -2,7 +2,7 @@
 
 [ext_resource path="res://Assets/Singletons/GameState/GameState.gd" type="Script" id=1]
 
-[node name="GameState" type="Node"]
+[node name="GameState" type="Node" index="0"]
 
 script = ExtResource( 1 )
 
