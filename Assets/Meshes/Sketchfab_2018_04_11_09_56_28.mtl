@@ -1,0 +1,79 @@
+# Blender MTL File: 'Sketchfab_2018_04_11_09_56_28.blend'
+# Material Count: 7
+
+newmtl cover1
+Ns 96.078431
+Ka 1.000000 1.000000 1.000000
+Kd 0.001457 0.050408 0.169785
+Ks 0.164234 0.164234 0.164234
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd D:\Blender_tests\!_Uchus_!\30_lowpoly\AO_books.png
+
+newmtl cover1.001
+Ns 96.078431
+Ka 1.000000 1.000000 1.000000
+Kd 0.431584 0.001214 0.002941
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd D:\Blender_tests\!_Uchus_!\30_lowpoly\AO_books.png
+
+newmtl cover1.002
+Ns 96.078431
+Ka 1.000000 1.000000 1.000000
+Kd 0.175621 0.378825 0.578444
+Ks 0.120438 0.120438 0.120438
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd D:\Blender_tests\!_Uchus_!\30_lowpoly\AO_books.png
+
+newmtl paper1
+Ns 96.078431
+Ka 1.000000 1.000000 1.000000
+Kd 0.661444 0.521696 0.374461
+Ks 0.025547 0.025547 0.025547
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd D:\Blender_tests\!_Uchus_!\30_lowpoly\AO_books.png
+
+newmtl paper1.001
+Ns 96.078431
+Ka 1.000000 1.000000 1.000000
+Kd 0.751970 0.593096 0.425710
+Ks 0.032847 0.032847 0.032847
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd D:\Blender_tests\!_Uchus_!\30_lowpoly\AO_books.png
+
+newmtl paper1.002
+Ns 96.078431
+Ka 1.000000 1.000000 1.000000
+Kd 0.684793 0.637645 0.573667
+Ks 0.142336 0.142336 0.142336
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd D:\Blender_tests\!_Uchus_!\30_lowpoly\AO_books.png
+
+newmtl torez
+Ns 96.078431
+Ka 1.000000 1.000000 1.000000
+Kd 0.402309 0.072673 0.048997
+Ks 0.120438 0.120438 0.120438
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd D:\Blender_tests\!_Uchus_!\30_lowpoly\AO_books.png
