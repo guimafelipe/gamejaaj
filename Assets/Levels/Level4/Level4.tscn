@@ -106,6 +106,7 @@ tracks/5/keys = {
 [node name="Level4" type="Spatial" index="0"]
 
 script = ExtResource( 1 )
+LEVEL = 4
 
 [node name="UI" parent="." index="0" instance=ExtResource( 2 )]
 

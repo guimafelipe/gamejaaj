@@ -11,6 +11,7 @@ onready var winanim_timer = $Timers/WinAnimTimer
 onready var loseanim_timer = $Timers/LoseAnimTimer
 
 const SURVIVAL_TIME = 30
+export var LEVEL = 1
 
 func _ready():
 	# This node has all below dependencies to work
@@ -83,6 +84,7 @@ func on_lose_anim_ended():
 
 func on_win_anim_ended():
 	print("win anim ended")
+	SceneLoader.goto_level(LEVEL + 1)
 
 func _process(delta):
 	if(Input.is_action_just_pressed("pause")):

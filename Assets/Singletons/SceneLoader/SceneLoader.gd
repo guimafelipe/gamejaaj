@@ -41,7 +41,8 @@ func _process(delta):
 			set_new_scene(resource)
 			break
 		elif err == OK:
-			update_progress()
+			#update_progress()
+			pass
 		else:
 			show_error()
 			loader = null
@@ -50,3 +51,14 @@ func _process(delta):
 func set_new_scene(scene_resource):
 	current_scene = scene_resource.instance()
 	get_node('/root').add_child(current_scene)
+
+func goto_level(level):
+	var level_path = "res://Assets/Levels/Level" + str(level) + "/Level" \
+	 + str(level) + ".tscn"
+	goto_scene(level_path)
+
+func goto_levels_menu():
+	goto_scene("res://Assets/Menus/LevelsMenu/LevelsMenu.tscn")
+
+func goto_main_menu():
+	goto_scene("res://Assets/Menus/MainMenu/MainMenu.tscn")
