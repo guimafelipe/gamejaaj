@@ -35,7 +35,7 @@ func _process(delta):
 	while OS.get_ticks_msec() < t + time_max:
 		var err = loader.poll()
 		
-		if err == ERR_FILE_OF:
+		if err == ERR_FILE_EOF:
 			var resource = loader.get_resource()
 			loader = null
 			set_new_scene(resource)
