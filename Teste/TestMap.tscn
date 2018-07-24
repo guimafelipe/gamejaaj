@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://Teste/TestMap.gd" type="Script" id=1]
 [ext_resource path="res://Assets/Gugu/Gugu.tscn" type="PackedScene" id=2]
@@ -9,6 +9,7 @@
 [ext_resource path="res://Assets/Ponteiros/PonteiroPendulo/PonteiroPendulo.tscn" type="PackedScene" id=7]
 [ext_resource path="res://Assets/Ponteiros/PonteiroMeias/PonteiroMeias.tscn" type="PackedScene" id=8]
 [ext_resource path="res://Assets/Ponteiros/PonteiroSeguidor/PonteiroSeguidor.tscn" type="PackedScene" id=9]
+[ext_resource path="res://Teste/Teste2/Decoratives.tscn" type="PackedScene" id=10]
 
 [node name="TestMap" type="Spatial"]
 
@@ -22,6 +23,8 @@ _sections_unfolded = [ "Transform" ]
 [node name="BasePivot" parent="." index="1" instance=ExtResource( 3 )]
 
 [node name="Ambient" parent="." index="2" instance=ExtResource( 4 )]
+
+visible = false
 
 [node name="Camera" type="Camera" parent="." index="3"]
 
@@ -63,5 +66,7 @@ visible = false
 
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0 )
 visible = false
+
+[node name="Decoratives" parent="." index="9" instance=ExtResource( 10 )]
 
 

@@ -2,6 +2,11 @@
 
 [ext_resource path="res://Assets/Meshes/WhiteGnomes/SittingGnomeWhite.dae" type="PackedScene" id=1]
 
-[node name="GnomeWhiteSitting" index="0" instance=ExtResource( 1 )]
+[node name="GnomeWhiteSitting" instance=ExtResource( 1 )]
+
+[node name="Armature" parent="." index="0"]
+
+transform = Transform( 0.65, -7.85992e-08, -1.01724e-09, 7.85992e-08, 0.65, -1.11215e-11, 1.01724e-09, 1.11214e-11, 0.65, -5.96046e-08, 2.38419e-07, 0 )
+_sections_unfolded = [ "Transform" ]
 
 

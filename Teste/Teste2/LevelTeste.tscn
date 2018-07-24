@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=20 format=2]
 
 [ext_resource path="res://Teste/Teste2/LevelTeste.gd" type="Script" id=1]
 [ext_resource path="res://Assets/UI/UI.tscn" type="PackedScene" id=2]
@@ -10,6 +10,93 @@
 [ext_resource path="res://Assets/Gugu/Gugu.tscn" type="PackedScene" id=8]
 [ext_resource path="res://Assets/Ponteiros/PonteiroBussola/PonteiroBussola.tscn" type="PackedScene" id=9]
 [ext_resource path="res://Assets/Ponteiros/PonteiroMinutos/PonteiroMinutos.tscn" type="PackedScene" id=10]
+[ext_resource path="res://Assets/Decoratives/MainClock/MainClock.tscn" type="PackedScene" id=11]
+[ext_resource path="res://Assets/Decoratives/WoodenTable/WoodenTable.tscn" type="PackedScene" id=12]
+[ext_resource path="res://Assets/Decoratives/AlarmClock/AlarmClock.tscn" type="PackedScene" id=13]
+[ext_resource path="res://Assets/Decoratives/PaperBall/PaperBall.tscn" type="PackedScene" id=14]
+[ext_resource path="res://Assets/Decoratives/Books/Books.tscn" type="PackedScene" id=15]
+[ext_resource path="res://Assets/Decoratives/PottedPlant/PottedPlant.tscn" type="PackedScene" id=16]
+[ext_resource path="res://Assets/Decoratives/PaperOrigami/PaperOrigami.tscn" type="PackedScene" id=17]
+[ext_resource path="res://Assets/Decoratives/GnomeWhite/GnomeWhiteSitting.tscn" type="PackedScene" id=18]
+
+[sub_resource type="Environment" id=1]
+
+background_mode = 1
+background_sky_custom_fov = 0.0
+background_color = Color( 0.105469, 0.0506873, 0.0107117, 1 )
+background_energy = 1.0
+background_canvas_max_layer = 0
+ambient_light_color = Color( 1, 1, 1, 1 )
+ambient_light_energy = 1.0
+ambient_light_sky_contribution = 1.0
+fog_enabled = false
+fog_color = Color( 0.5, 0.6, 0.7, 1 )
+fog_sun_color = Color( 1, 0.9, 0.7, 1 )
+fog_sun_amount = 0.0
+fog_depth_enabled = true
+fog_depth_begin = 10.0
+fog_depth_curve = 1.0
+fog_transmit_enabled = false
+fog_transmit_curve = 1.0
+fog_height_enabled = false
+fog_height_min = 0.0
+fog_height_max = 100.0
+fog_height_curve = 1.0
+tonemap_mode = 0
+tonemap_exposure = 1.0
+tonemap_white = 1.0
+auto_exposure_enabled = false
+auto_exposure_scale = 0.4
+auto_exposure_min_luma = 0.05
+auto_exposure_max_luma = 8.0
+auto_exposure_speed = 0.5
+ss_reflections_enabled = false
+ss_reflections_max_steps = 64
+ss_reflections_fade_in = 0.15
+ss_reflections_fade_out = 2.0
+ss_reflections_depth_tolerance = 0.2
+ss_reflections_roughness = true
+ssao_enabled = false
+ssao_radius = 1.0
+ssao_intensity = 1.0
+ssao_radius2 = 0.0
+ssao_intensity2 = 1.0
+ssao_bias = 0.01
+ssao_light_affect = 0.0
+ssao_color = Color( 0, 0, 0, 1 )
+ssao_quality = 0
+ssao_blur = 3
+ssao_edge_sharpness = 4.0
+dof_blur_far_enabled = false
+dof_blur_far_distance = 10.0
+dof_blur_far_transition = 5.0
+dof_blur_far_amount = 0.1
+dof_blur_far_quality = 1
+dof_blur_near_enabled = false
+dof_blur_near_distance = 2.0
+dof_blur_near_transition = 1.0
+dof_blur_near_amount = 0.1
+dof_blur_near_quality = 1
+glow_enabled = false
+glow_levels/1 = false
+glow_levels/2 = false
+glow_levels/3 = true
+glow_levels/4 = false
+glow_levels/5 = true
+glow_levels/6 = false
+glow_levels/7 = false
+glow_intensity = 0.8
+glow_strength = 1.0
+glow_bloom = 0.0
+glow_blend_mode = 2
+glow_hdr_threshold = 1.0
+glow_hdr_scale = 2.0
+glow_bicubic_upscale = false
+adjustment_enabled = false
+adjustment_brightness = 1.0
+adjustment_contrast = 1.0
+adjustment_saturation = 1.0
+_sections_unfolded = [ "Background" ]
 
 [node name="LevelTeste" type="Spatial" index="0"]
 
@@ -20,6 +107,8 @@ script = ExtResource( 1 )
 [node name="Timers" parent="." index="1" instance=ExtResource( 3 )]
 
 [node name="Ambient" parent="." index="2" instance=ExtResource( 4 )]
+
+visible = false
 
 [node name="BasePivot" parent="." index="3" instance=ExtResource( 5 )]
 
@@ -32,13 +121,104 @@ script = ExtResource( 1 )
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 9.5 )
 _sections_unfolded = [ "Transform" ]
 
-[node name="Ponteiros" type="Spatial" parent="." index="7"]
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." index="7"]
 
+environment = SubResource( 1 )
+
+[node name="Ponteiros" type="Spatial" parent="." index="8"]
+
+editor/display_folded = true
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0 )
 _sections_unfolded = [ "Transform" ]
 
 [node name="PonteiroBussola" parent="Ponteiros" index="0" instance=ExtResource( 9 )]
 
 [node name="PonteiroMinutos" parent="Ponteiros" index="1" instance=ExtResource( 10 )]
+
+[node name="Decoratives" type="Spatial" parent="." index="9"]
+
+_sections_unfolded = [ "Transform" ]
+
+[node name="MainClock" parent="Decoratives" index="0" instance=ExtResource( 11 )]
+
+transform = Transform( 8, 0, 0, 0, 8, 0, 0, 0, 8, 0, -2, 0 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="WoodenTable" parent="Decoratives" index="1" instance=ExtResource( 12 )]
+
+transform = Transform( 50, 0, 0, 0, 50, 0, 0, 0, 50, 0, -38, 0 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="DirectionalLight" type="DirectionalLight" parent="Decoratives" index="2"]
+
+transform = Transform( 1, 0, 0, 0, -0.422618, 0.906308, 0, -0.906308, -0.422618, 0, 14, 0 )
+layers = 1
+light_color = Color( 1, 1, 1, 1 )
+light_energy = 1.0
+light_indirect_energy = 1.0
+light_negative = false
+light_specular = 0.5
+light_bake_mode = 1
+light_cull_mask = -1
+shadow_enabled = false
+shadow_color = Color( 0, 0, 0, 1 )
+shadow_bias = 0.1
+shadow_contact = 0.0
+shadow_reverse_cull_face = false
+editor_only = false
+directional_shadow_mode = 2
+directional_shadow_split_1 = 0.1
+directional_shadow_split_2 = 0.2
+directional_shadow_split_3 = 0.5
+directional_shadow_blend_splits = false
+directional_shadow_normal_bias = 0.8
+directional_shadow_bias_split_scale = 0.25
+directional_shadow_depth_range = 0
+directional_shadow_max_distance = 200.0
+
+[node name="AlarmClock" parent="Decoratives" index="3" instance=ExtResource( 13 )]
+
+transform = Transform( 5.65685, 0, -5.65685, 0, 8, 0, 5.65685, 0, 5.65685, -25, 0, -13 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="PaperBall" parent="Decoratives" index="4" instance=ExtResource( 14 )]
+
+transform = Transform( 5, 0, 0, 0, 5, 0, 0, 0, 5, 27, 3, 14 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="Books" parent="Decoratives" index="5" instance=ExtResource( 15 )]
+
+transform = Transform( 8.15677, 0, 3.80356, 0, 9, 0, -3.80356, 0, 8.15677, 38, 0, -4 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="PottedPlant" parent="Decoratives" index="6" instance=ExtResource( 16 )]
+
+transform = Transform( 10, 0, 0, 0, 10, 0, 0, 0, 10, -36, 0, 5 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="PaperOrigami" parent="Decoratives" index="7" instance=ExtResource( 17 )]
+
+transform = Transform( 2.86788, 0, 4.09576, 0, 5, 0, -4.09576, 0, 2.86788, -20, 0, 14 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="GnomeWhiteSitting" parent="Decoratives" index="8" instance=ExtResource( 18 )]
+
+transform = Transform( -0.031795, 0, -0.999494, 0, 1, 0, 0.999494, 0, -0.031795, 30, 8.55226, -2 )
+
+[node name="GnomeWhiteSitting2" parent="Decoratives" index="9" instance=ExtResource( 18 )]
+
+transform = Transform( -0.534765, 0, -0.845001, 0, 1, 0, 0.845001, 0, -0.534765, 26.4797, 5.55123, 13.4018 )
+
+[node name="GnomeWhiteSitting3" parent="Decoratives" index="10" instance=ExtResource( 18 )]
+
+transform = Transform( -0.499785, 0, 0.866149, 0, 1, 0, -0.866149, 0, -0.499785, -16.6876, 3.54272, 10.1103 )
+
+[node name="GnomeWhiteSitting4" parent="Decoratives" index="11" instance=ExtResource( 18 )]
+
+transform = Transform( -0.0708022, 0, 0.99749, 0, 1, 0, -0.99749, 0, -0.0708022, -31.3082, 8.85852, 4.68838 )
+
+[node name="GnomeWhiteSitting5" parent="Decoratives" index="12" instance=ExtResource( 18 )]
+
+transform = Transform( 0.702892, 0, 0.711296, 0, 1, 0, -0.711296, 0, 0.702892, -23.3365, 12.5501, -10.9894 )
 
 
