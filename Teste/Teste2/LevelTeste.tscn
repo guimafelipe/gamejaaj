@@ -1,0 +1,44 @@
+[gd_scene load_steps=11 format=2]
+
+[ext_resource path="res://Teste/Teste2/LevelTeste.gd" type="Script" id=1]
+[ext_resource path="res://Assets/UI/UI.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Assets/Timers/Timers.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Assets/Ambient/Ambient.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Assets/Camera/BasePivot.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Assets/Cutscenes/Cutscene.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Assets/Gugu/PlayerSpawn.tscn" type="PackedScene" id=7]
+[ext_resource path="res://Assets/Gugu/Gugu.tscn" type="PackedScene" id=8]
+[ext_resource path="res://Assets/Ponteiros/PonteiroBussola/PonteiroBussola.tscn" type="PackedScene" id=9]
+[ext_resource path="res://Assets/Ponteiros/PonteiroMinutos/PonteiroMinutos.tscn" type="PackedScene" id=10]
+
+[node name="LevelTeste" type="Spatial" index="0"]
+
+script = ExtResource( 1 )
+
+[node name="UI" parent="." index="0" instance=ExtResource( 2 )]
+
+[node name="Timers" parent="." index="1" instance=ExtResource( 3 )]
+
+[node name="Ambient" parent="." index="2" instance=ExtResource( 4 )]
+
+[node name="BasePivot" parent="." index="3" instance=ExtResource( 5 )]
+
+[node name="Cutscene" parent="." index="4" instance=ExtResource( 6 )]
+
+[node name="PlayerSpawn" parent="." index="5" instance=ExtResource( 7 )]
+
+[node name="Gugu" parent="." index="6" instance=ExtResource( 8 )]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 9.5 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="Ponteiros" type="Spatial" parent="." index="7"]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="PonteiroBussola" parent="Ponteiros" index="0" instance=ExtResource( 9 )]
+
+[node name="PonteiroMinutos" parent="Ponteiros" index="1" instance=ExtResource( 10 )]
+
+
