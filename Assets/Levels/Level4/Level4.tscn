@@ -1,18 +1,19 @@
-[gd_scene load_steps=15 format=2]
+[gd_scene load_steps=16 format=2]
 
 [ext_resource path="res://Assets/Levels/Level4/Level4.gd" type="Script" id=1]
 [ext_resource path="res://Assets/UI/UI.tscn" type="PackedScene" id=2]
-[ext_resource path="res://Assets/Timers/Timers.tscn" type="PackedScene" id=3]
-[ext_resource path="res://Assets/Ambient/Ambient.tscn" type="PackedScene" id=4]
-[ext_resource path="res://Assets/Camera/BasePivot.tscn" type="PackedScene" id=5]
-[ext_resource path="res://Assets/Gnomos/Gnomo.tscn" type="PackedScene" id=6]
-[ext_resource path="res://Assets/Gugu/Gugu.tscn" type="PackedScene" id=7]
-[ext_resource path="res://Assets/Gugu/PlayerSpawn.tscn" type="PackedScene" id=8]
-[ext_resource path="res://Assets/Ponteiros/PonteiroBase/Ponteiro.tscn" type="PackedScene" id=9]
-[ext_resource path="res://Assets/Ponteiros/PonteiroBussola/PonteiroBussola.tscn" type="PackedScene" id=10]
-[ext_resource path="res://Assets/Ponteiros/PonteiroMeias/PonteiroMeias.tscn" type="PackedScene" id=11]
-[ext_resource path="res://Assets/Ponteiros/PonteiroMinutos/PonteiroMinutos.tscn" type="PackedScene" id=12]
-[ext_resource path="res://Assets/Ponteiros/PonteiroPendulo/PonteiroPendulo.tscn" type="PackedScene" id=13]
+[ext_resource path="res://Assets/UI/PauseUI/PauseUI.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Assets/Timers/Timers.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Assets/Ambient/Ambient.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Assets/Camera/BasePivot.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Assets/Gnomos/Gnomo.tscn" type="PackedScene" id=7]
+[ext_resource path="res://Assets/Gugu/Gugu.tscn" type="PackedScene" id=8]
+[ext_resource path="res://Assets/Gugu/PlayerSpawn.tscn" type="PackedScene" id=9]
+[ext_resource path="res://Assets/Ponteiros/PonteiroBase/Ponteiro.tscn" type="PackedScene" id=10]
+[ext_resource path="res://Assets/Ponteiros/PonteiroBussola/PonteiroBussola.tscn" type="PackedScene" id=11]
+[ext_resource path="res://Assets/Ponteiros/PonteiroMeias/PonteiroMeias.tscn" type="PackedScene" id=12]
+[ext_resource path="res://Assets/Ponteiros/PonteiroMinutos/PonteiroMinutos.tscn" type="PackedScene" id=13]
+[ext_resource path="res://Assets/Ponteiros/PonteiroPendulo/PonteiroPendulo.tscn" type="PackedScene" id=14]
 
 [sub_resource type="Animation" id=1]
 
@@ -102,15 +103,20 @@ tracks/5/keys = {
 "values": [ Transform( -0.866026, 0, 0.5, 0, 1, 0, -0.5, 0, -0.866026, 0, 0, 0 ), Transform( -0.866025, 0, -0.5, 0, 1, 0, 0.5, 0, -0.866025, 0, 0, 0 ), Transform( -0.866026, 0, 0.5, 0, 1, 0, -0.5, 0, -0.866026, 0, 0, 0 ) ]
 }
 
-[node name="Level4" type="Spatial"]
+[node name="Level4" type="Spatial" index="0"]
 
 script = ExtResource( 1 )
+LEVEL = 4
 
 [node name="UI" parent="." index="0" instance=ExtResource( 2 )]
 
-[node name="Timers" parent="." index="1" instance=ExtResource( 3 )]
+[node name="PauseUI" parent="." index="1" instance=ExtResource( 3 )]
 
-[node name="Cutscene" type="Node" parent="." index="2"]
+[node name="Timers" parent="." index="2" instance=ExtResource( 4 )]
+
+[node name="Cutscene" type="Node" parent="." index="3"]
+
+editor/display_folded = true
 
 [node name="CutsceneAnim" type="AnimationPlayer" parent="Cutscene" index="0"]
 
@@ -139,35 +145,35 @@ near = 0.05
 far = 100.0
 _sections_unfolded = [ "Transform" ]
 
-[node name="Ambient" parent="." index="3" instance=ExtResource( 4 )]
+[node name="Ambient" parent="." index="4" instance=ExtResource( 5 )]
 
-[node name="BasePivot" parent="." index="4" instance=ExtResource( 5 )]
+[node name="BasePivot" parent="." index="5" instance=ExtResource( 6 )]
 
-[node name="Gnomo" parent="." index="5" instance=ExtResource( 6 )]
+[node name="Gnomo" parent="." index="6" instance=ExtResource( 7 )]
 
 transform = Transform( 1, 0, 0, 0, 0.000345306, -1, 0, 1, 0.000345306, -1.32992, 6.14664, 24.5124 )
 
-[node name="Gugu" parent="." index="6" instance=ExtResource( 7 )]
+[node name="Gugu" parent="." index="7" instance=ExtResource( 8 )]
 
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 9.5 )
 _sections_unfolded = [ "Transform", "Visibility" ]
 
-[node name="PlayerSpawn" parent="." index="7" instance=ExtResource( 8 )]
+[node name="PlayerSpawn" parent="." index="8" instance=ExtResource( 9 )]
 
-[node name="Ponteiros" type="Spatial" parent="." index="8"]
+[node name="Ponteiros" type="Spatial" parent="." index="9"]
 
 editor/display_folded = true
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0 )
 _sections_unfolded = [ "Transform" ]
 
-[node name="Ponteiro" parent="Ponteiros" index="0" instance=ExtResource( 9 )]
+[node name="Ponteiro" parent="Ponteiros" index="0" instance=ExtResource( 10 )]
 
-[node name="PonteiroBussola" parent="Ponteiros" index="1" instance=ExtResource( 10 )]
+[node name="PonteiroBussola" parent="Ponteiros" index="1" instance=ExtResource( 11 )]
 
-[node name="PonteiroMeias" parent="Ponteiros" index="2" instance=ExtResource( 11 )]
+[node name="PonteiroMeias" parent="Ponteiros" index="2" instance=ExtResource( 12 )]
 
-[node name="PonteiroMinutos" parent="Ponteiros" index="3" instance=ExtResource( 12 )]
+[node name="PonteiroMinutos" parent="Ponteiros" index="3" instance=ExtResource( 13 )]
 
-[node name="PonteiroPendulo" parent="Ponteiros" index="4" instance=ExtResource( 13 )]
+[node name="PonteiroPendulo" parent="Ponteiros" index="4" instance=ExtResource( 14 )]
 
 

@@ -11,7 +11,20 @@ config_version=3
 [application]
 
 config/name="Jaaj"
+run/main_scene="res://Assets/Menus/MainMenu/MainMenu.tscn"
 config/icon="res://icon.png"
+
+[autoload]
+
+GameState="*res://Assets/Singletons/GameState/GameState.tscn"
+SceneLoader="*res://Assets/Singletons/SceneLoader/SceneLoader.tscn"
+
+[display]
+
+window/size/width=1280
+window/size/height=720
+window/stretch/mode="viewport"
+window/stretch/aspect="keep"
 
 [input]
 
@@ -20,6 +33,8 @@ jump=[ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","
 move_left=[ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":65,"unicode":0,"echo":false,"script":null)
  ]
 move_right=[ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":68,"unicode":0,"echo":false,"script":null)
+ ]
+pause=[ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":80,"unicode":0,"echo":false,"script":null)
  ]
 
 [rendering]
