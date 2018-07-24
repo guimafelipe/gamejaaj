@@ -3,7 +3,7 @@
 [ext_resource path="res://Assets/Menus/LevelsMenu/LevelsMenu.gd" type="Script" id=1]
 [ext_resource path="res://Assets/Menus/LevelsMenu/Button.gd" type="Script" id=2]
 
-[node name="LevelsMenu" type="MarginContainer" index="0"]
+[node name="LevelsMenu" type="MarginContainer"]
 
 anchor_left = 0.0
 anchor_top = 0.0
