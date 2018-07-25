@@ -20,7 +20,7 @@
 [sub_resource type="Animation" id=1]
 
 resource_name = "Cutscene"
-length = 30.0
+length = 34.0
 loop = false
 step = 0.1
 tracks/0/type = "value"
@@ -54,7 +54,7 @@ tracks/2/loop_wrap = true
 tracks/2/imported = false
 tracks/2/enabled = true
 tracks/2/keys = {
-"times": PoolRealArray( 29.9 ),
+"times": PoolRealArray( 33.9 ),
 "transitions": PoolRealArray( 1 ),
 "values": [ {
 "args": [  ],
@@ -68,7 +68,7 @@ tracks/3/loop_wrap = true
 tracks/3/imported = false
 tracks/3/enabled = true
 tracks/3/keys = {
-"times": PoolRealArray( 0, 29.9 ),
+"times": PoolRealArray( 0, 33.9 ),
 "transitions": PoolRealArray( 1, 1 ),
 "values": [ {
 "args": [  ],
@@ -97,7 +97,7 @@ tracks/5/loop_wrap = true
 tracks/5/imported = false
 tracks/5/enabled = true
 tracks/5/keys = {
-"times": PoolRealArray( 0, 3, 5, 6.5, 8.9, 10.1, 12.5, 17, 21.5, 29.9 ),
+"times": PoolRealArray( 0, 3, 5, 6.5, 8.9, 10.1, 15.5, 20.7, 25.5, 33.9 ),
 "transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
 "values": [ {
 "args": [  ],
@@ -109,7 +109,7 @@ tracks/5/keys = {
 "args": [ "GUGUUUU!!" ],
 "method": "set_subtitle"
 }, {
-"args": [ "Acorda seu preguiçoso! Só pensa em dormir!" ],
+"args": [ "Acorda, seu preguiçoso! Só pensa em dormir!" ],
 "method": "set_subtitle"
 }, {
 "args": [ "Foi mal!!!" ],
@@ -150,7 +150,7 @@ tracks/7/loop_wrap = true
 tracks/7/imported = false
 tracks/7/enabled = true
 tracks/7/keys = {
-"times": PoolRealArray( 0, 29.9 ),
+"times": PoolRealArray( 0, 33.9 ),
 "transitions": PoolRealArray( 1, 1 ),
 "update": 1,
 "values": [ true, false ]
@@ -162,7 +162,7 @@ tracks/8/loop_wrap = true
 tracks/8/imported = false
 tracks/8/enabled = true
 tracks/8/keys = {
-"times": PoolRealArray( 0, 29.9 ),
+"times": PoolRealArray( 0, 33.9 ),
 "transitions": PoolRealArray( 1, 1 ),
 "update": 1,
 "values": [ false, true ]
@@ -174,7 +174,7 @@ tracks/9/loop_wrap = true
 tracks/9/imported = false
 tracks/9/enabled = true
 tracks/9/keys = {
-"times": PoolRealArray( 4.6, 29.9 ),
+"times": PoolRealArray( 4.6, 33.9 ),
 "transitions": PoolRealArray( 1, 1 ),
 "update": 1,
 "values": [ true, false ]
@@ -186,13 +186,13 @@ tracks/10/loop_wrap = true
 tracks/10/imported = false
 tracks/10/enabled = true
 tracks/10/keys = {
-"times": PoolRealArray( 29.9 ),
+"times": PoolRealArray( 33.9 ),
 "transitions": PoolRealArray( 1 ),
 "update": 1,
 "values": [ true ]
 }
 
-[node name="Level1" type="Spatial"]
+[node name="Level1" type="Spatial" index="0"]
 
 script = ExtResource( 1 )
 _sections_unfolded = [ "Transform" ]
@@ -272,7 +272,6 @@ blend_times = [  ]
 
 [node name="Ponteiros" type="Spatial" parent="." index="4"]
 
-editor/display_folded = true
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0 )
 _sections_unfolded = [ "Transform" ]
 
@@ -282,6 +281,8 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
 
 [node name="PonteiroMinutos" parent="Ponteiros" index="1" instance=ExtResource( 9 )]
 
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
+
 [node name="Ambient" parent="." index="5" instance=ExtResource( 10 )]
 
 editor/display_folded = false
@@ -290,6 +291,7 @@ visible = false
 [node name="Gugu" parent="." index="6" instance=ExtResource( 11 )]
 
 transform = Transform( 0.835978, 0, 0.548763, 0, 1, 0, -0.548763, 0, 0.835978, 0, 0, 9.5 )
+visible = false
 _sections_unfolded = [ "Transform", "Visibility" ]
 
 [node name="BasePivot" parent="." index="7" instance=ExtResource( 12 )]
@@ -306,7 +308,6 @@ light_cull_mask = -1
 
 [node name="GnomeWhiteSitting" parent="Decoratives" index="9"]
 
-visible = false
 _sections_unfolded = [ "Visibility" ]
 
 [node name="GnomeWhiteSitting2" parent="Decoratives" index="10"]
@@ -334,7 +335,6 @@ _sections_unfolded = [ "Transform", "Visibility" ]
 [node name="GuguPlaceholder" parent="." index="11" instance=ExtResource( 16 )]
 
 transform = Transform( -0.60773, 0, -0.230573, 0, 0.65, 0, 0.230573, 0, -0.607731, 2.25121, 0.233248, 10.1441 )
-visible = false
 _sections_unfolded = [ "Transform", "Visibility" ]
 
 [connection signal="timeout" from="Timers/LevelTimer" to="." method="_on_LevelTimer_timeout"]

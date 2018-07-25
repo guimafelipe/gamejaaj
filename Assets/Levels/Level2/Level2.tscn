@@ -114,7 +114,7 @@ tracks/5/keys = {
 "values": [ Transform( -0.884404, 0, -0.466723, 0, 1, 0, 0.466723, 0, -0.884404, 0, 0, 0 ) ]
 }
 
-[node name="Level2" type="Spatial" index="0"]
+[node name="Level2" type="Spatial"]
 
 script = ExtResource( 1 )
 LEVEL = 2
@@ -126,6 +126,8 @@ LEVEL = 2
 [node name="Timers" parent="." index="2" instance=ExtResource( 4 )]
 
 [node name="Cutscene" type="Node" parent="." index="3"]
+
+editor/display_folded = true
 
 [node name="Camera" type="Camera" parent="Cutscene" index="0"]
 
@@ -168,6 +170,7 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 10 )
 
 [node name="Ponteiros" type="Spatial" parent="." index="8"]
 
+editor/display_folded = true
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0 )
 _sections_unfolded = [ "Transform" ]
 
