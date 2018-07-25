@@ -1,23 +1,24 @@
-[gd_scene load_steps=20 format=2]
+[gd_scene load_steps=21 format=2]
 
 [ext_resource path="res://Teste/Teste2/LevelTeste.gd" type="Script" id=1]
 [ext_resource path="res://Assets/UI/UI.tscn" type="PackedScene" id=2]
-[ext_resource path="res://Assets/Timers/Timers.tscn" type="PackedScene" id=3]
-[ext_resource path="res://Assets/Ambient/Ambient.tscn" type="PackedScene" id=4]
-[ext_resource path="res://Assets/Camera/BasePivot.tscn" type="PackedScene" id=5]
-[ext_resource path="res://Assets/Cutscenes/Cutscene.tscn" type="PackedScene" id=6]
-[ext_resource path="res://Assets/Gugu/PlayerSpawn.tscn" type="PackedScene" id=7]
-[ext_resource path="res://Assets/Gugu/Gugu.tscn" type="PackedScene" id=8]
-[ext_resource path="res://Assets/Ponteiros/PonteiroBussola/PonteiroBussola.tscn" type="PackedScene" id=9]
-[ext_resource path="res://Assets/Ponteiros/PonteiroMinutos/PonteiroMinutos.tscn" type="PackedScene" id=10]
-[ext_resource path="res://Assets/Decoratives/MainClock/MainClock.tscn" type="PackedScene" id=11]
-[ext_resource path="res://Assets/Decoratives/WoodenTable/WoodenTable.tscn" type="PackedScene" id=12]
-[ext_resource path="res://Assets/Decoratives/AlarmClock/AlarmClock.tscn" type="PackedScene" id=13]
-[ext_resource path="res://Assets/Decoratives/PaperBall/PaperBall.tscn" type="PackedScene" id=14]
-[ext_resource path="res://Assets/Decoratives/Books/Books.tscn" type="PackedScene" id=15]
-[ext_resource path="res://Assets/Decoratives/PottedPlant/PottedPlant.tscn" type="PackedScene" id=16]
-[ext_resource path="res://Assets/Decoratives/PaperOrigami/PaperOrigami.tscn" type="PackedScene" id=17]
-[ext_resource path="res://Assets/Decoratives/GnomeWhite/GnomeWhiteSitting.tscn" type="PackedScene" id=18]
+[ext_resource path="res://Assets/UI/PauseUI/PauseUI.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Assets/Timers/Timers.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Assets/Ambient/Ambient.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Assets/Camera/BasePivot.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Assets/Cutscenes/Cutscene.tscn" type="PackedScene" id=7]
+[ext_resource path="res://Assets/Gugu/PlayerSpawn.tscn" type="PackedScene" id=8]
+[ext_resource path="res://Assets/Gugu/Gugu.tscn" type="PackedScene" id=9]
+[ext_resource path="res://Assets/Ponteiros/PonteiroBussola/PonteiroBussola.tscn" type="PackedScene" id=10]
+[ext_resource path="res://Assets/Ponteiros/PonteiroMinutos/PonteiroMinutos.tscn" type="PackedScene" id=11]
+[ext_resource path="res://Assets/Decoratives/MainClock/MainClock.tscn" type="PackedScene" id=12]
+[ext_resource path="res://Assets/Decoratives/WoodenTable/WoodenTable.tscn" type="PackedScene" id=13]
+[ext_resource path="res://Assets/Decoratives/AlarmClock/AlarmClock.tscn" type="PackedScene" id=14]
+[ext_resource path="res://Assets/Decoratives/PaperBall/PaperBall.tscn" type="PackedScene" id=15]
+[ext_resource path="res://Assets/Decoratives/Books/Books.tscn" type="PackedScene" id=16]
+[ext_resource path="res://Assets/Decoratives/PottedPlant/PottedPlant.tscn" type="PackedScene" id=17]
+[ext_resource path="res://Assets/Decoratives/PaperOrigami/PaperOrigami.tscn" type="PackedScene" id=18]
+[ext_resource path="res://Assets/Decoratives/GnomeWhite/GnomeWhiteSitting.tscn" type="PackedScene" id=19]
 
 [sub_resource type="Environment" id=1]
 
@@ -101,50 +102,53 @@ _sections_unfolded = [ "Background" ]
 [node name="LevelTeste" type="Spatial" index="0"]
 
 script = ExtResource( 1 )
+LEVEL = 1
 
 [node name="UI" parent="." index="0" instance=ExtResource( 2 )]
 
-[node name="Timers" parent="." index="1" instance=ExtResource( 3 )]
+[node name="PauseUI" parent="." index="1" instance=ExtResource( 3 )]
 
-[node name="Ambient" parent="." index="2" instance=ExtResource( 4 )]
+[node name="Timers" parent="." index="2" instance=ExtResource( 4 )]
+
+[node name="Ambient" parent="." index="3" instance=ExtResource( 5 )]
 
 visible = false
 
-[node name="BasePivot" parent="." index="3" instance=ExtResource( 5 )]
+[node name="BasePivot" parent="." index="4" instance=ExtResource( 6 )]
 
-[node name="Cutscene" parent="." index="4" instance=ExtResource( 6 )]
+[node name="Cutscene" parent="." index="5" instance=ExtResource( 7 )]
 
-[node name="PlayerSpawn" parent="." index="5" instance=ExtResource( 7 )]
+[node name="PlayerSpawn" parent="." index="6" instance=ExtResource( 8 )]
 
-[node name="Gugu" parent="." index="6" instance=ExtResource( 8 )]
+[node name="Gugu" parent="." index="7" instance=ExtResource( 9 )]
 
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 9.5 )
 _sections_unfolded = [ "Transform" ]
 
-[node name="WorldEnvironment" type="WorldEnvironment" parent="." index="7"]
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." index="8"]
 
 environment = SubResource( 1 )
 
-[node name="Ponteiros" type="Spatial" parent="." index="8"]
+[node name="Ponteiros" type="Spatial" parent="." index="9"]
 
 editor/display_folded = true
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0 )
 _sections_unfolded = [ "Transform" ]
 
-[node name="PonteiroBussola" parent="Ponteiros" index="0" instance=ExtResource( 9 )]
+[node name="PonteiroBussola" parent="Ponteiros" index="0" instance=ExtResource( 10 )]
 
-[node name="PonteiroMinutos" parent="Ponteiros" index="1" instance=ExtResource( 10 )]
+[node name="PonteiroMinutos" parent="Ponteiros" index="1" instance=ExtResource( 11 )]
 
-[node name="Decoratives" type="Spatial" parent="." index="9"]
+[node name="Decoratives" type="Spatial" parent="." index="10"]
 
 _sections_unfolded = [ "Transform" ]
 
-[node name="MainClock" parent="Decoratives" index="0" instance=ExtResource( 11 )]
+[node name="MainClock" parent="Decoratives" index="0" instance=ExtResource( 12 )]
 
 transform = Transform( 8, 0, 0, 0, 8, 0, 0, 0, 8, 0, -2, 0 )
 _sections_unfolded = [ "Transform" ]
 
-[node name="WoodenTable" parent="Decoratives" index="1" instance=ExtResource( 12 )]
+[node name="WoodenTable" parent="Decoratives" index="1" instance=ExtResource( 13 )]
 
 transform = Transform( 50, 0, 0, 0, 50, 0, 0, 0, 50, 0, -38, 0 )
 _sections_unfolded = [ "Transform" ]
@@ -176,48 +180,48 @@ directional_shadow_bias_split_scale = 0.25
 directional_shadow_depth_range = 0
 directional_shadow_max_distance = 200.0
 
-[node name="AlarmClock" parent="Decoratives" index="3" instance=ExtResource( 13 )]
+[node name="AlarmClock" parent="Decoratives" index="3" instance=ExtResource( 14 )]
 
 transform = Transform( 5.65685, 0, -5.65685, 0, 8, 0, 5.65685, 0, 5.65685, -25, 0, -13 )
 _sections_unfolded = [ "Transform" ]
 
-[node name="PaperBall" parent="Decoratives" index="4" instance=ExtResource( 14 )]
+[node name="PaperBall" parent="Decoratives" index="4" instance=ExtResource( 15 )]
 
 transform = Transform( 5, 0, 0, 0, 5, 0, 0, 0, 5, 27, 3, 14 )
 _sections_unfolded = [ "Transform" ]
 
-[node name="Books" parent="Decoratives" index="5" instance=ExtResource( 15 )]
+[node name="Books" parent="Decoratives" index="5" instance=ExtResource( 16 )]
 
 transform = Transform( 8.15677, 0, 3.80356, 0, 9, 0, -3.80356, 0, 8.15677, 38, 0, -4 )
 _sections_unfolded = [ "Transform" ]
 
-[node name="PottedPlant" parent="Decoratives" index="6" instance=ExtResource( 16 )]
+[node name="PottedPlant" parent="Decoratives" index="6" instance=ExtResource( 17 )]
 
 transform = Transform( 10, 0, 0, 0, 10, 0, 0, 0, 10, -36, 0, 5 )
 _sections_unfolded = [ "Transform" ]
 
-[node name="PaperOrigami" parent="Decoratives" index="7" instance=ExtResource( 17 )]
+[node name="PaperOrigami" parent="Decoratives" index="7" instance=ExtResource( 18 )]
 
 transform = Transform( 2.86788, 0, 4.09576, 0, 5, 0, -4.09576, 0, 2.86788, -20, 0, 14 )
 _sections_unfolded = [ "Transform" ]
 
-[node name="GnomeWhiteSitting" parent="Decoratives" index="8" instance=ExtResource( 18 )]
+[node name="GnomeWhiteSitting" parent="Decoratives" index="8" instance=ExtResource( 19 )]
 
 transform = Transform( -0.031795, 0, -0.999494, 0, 1, 0, 0.999494, 0, -0.031795, 30, 8.55226, -2 )
 
-[node name="GnomeWhiteSitting2" parent="Decoratives" index="9" instance=ExtResource( 18 )]
+[node name="GnomeWhiteSitting2" parent="Decoratives" index="9" instance=ExtResource( 19 )]
 
 transform = Transform( -0.534765, 0, -0.845001, 0, 1, 0, 0.845001, 0, -0.534765, 26.4797, 5.55123, 13.4018 )
 
-[node name="GnomeWhiteSitting3" parent="Decoratives" index="10" instance=ExtResource( 18 )]
+[node name="GnomeWhiteSitting3" parent="Decoratives" index="10" instance=ExtResource( 19 )]
 
 transform = Transform( -0.499785, 0, 0.866149, 0, 1, 0, -0.866149, 0, -0.499785, -16.6876, 3.54272, 10.1103 )
 
-[node name="GnomeWhiteSitting4" parent="Decoratives" index="11" instance=ExtResource( 18 )]
+[node name="GnomeWhiteSitting4" parent="Decoratives" index="11" instance=ExtResource( 19 )]
 
 transform = Transform( -0.0708022, 0, 0.99749, 0, 1, 0, -0.99749, 0, -0.0708022, -31.3082, 8.85852, 4.68838 )
 
-[node name="GnomeWhiteSitting5" parent="Decoratives" index="12" instance=ExtResource( 18 )]
+[node name="GnomeWhiteSitting5" parent="Decoratives" index="12" instance=ExtResource( 19 )]
 
 transform = Transform( 0.702892, 0, 0.711296, 0, 1, 0, -0.711296, 0, 0.702892, -23.3365, 12.5501, -10.9894 )
 

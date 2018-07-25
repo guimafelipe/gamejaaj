@@ -121,7 +121,7 @@ func _physics_process(delta):
 	#vou ter que mudar isso no futuro para pôr animação de pulo
 	#preciso de outra maneira de identificar movimentação
 	is_moving = (velocity.x or velocity.y or velocity.z != 0) #and !$CollisionShape/CharacterMesh/AnimationPlayer.is_playing()
-	must_rotate = (velocity.x or velocity.y or velocity.z != 0)
+	must_rotate = (velocity.x or velocity.z != 0)
 
 	if must_rotate:
 		var _angle = atan2(velocity.x, velocity.z)
