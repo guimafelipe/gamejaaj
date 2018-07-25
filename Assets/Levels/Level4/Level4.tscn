@@ -110,7 +110,7 @@ tracks/5/keys = {
 "values": [ Transform( -0.866026, 0, 0.5, 0, 1, 0, -0.5, 0, -0.866026, 0, 0, 0 ), Transform( -0.866025, 0, -0.5, 0, 1, 0, 0.5, 0, -0.866025, 0, 0, 0 ), Transform( -0.866026, 0, 0.5, 0, 1, 0, -0.5, 0, -0.866026, 0, 0, 0 ) ]
 }
 
-[node name="Level4" type="Spatial" index="0"]
+[node name="Level4" type="Spatial"]
 
 script = ExtResource( 1 )
 LEVEL = 4
@@ -134,6 +134,8 @@ light_cull_mask = -1
 visible = false
 
 [node name="Cutscene" type="Node" parent="." index="4"]
+
+editor/display_folded = true
 
 [node name="CutsceneAnim" type="AnimationPlayer" parent="Cutscene" index="0"]
 
