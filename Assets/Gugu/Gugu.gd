@@ -37,6 +37,7 @@ func _ready():
 func reset_position(spawn_position):
 	transform.origin = spawn_position
 	self.angle = atan2(translation.x, translation.z)
+	set_center(rotation_center)
 
 # Hp fuctions
 func reset_hp():

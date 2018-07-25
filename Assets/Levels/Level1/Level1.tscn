@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=2]
+[gd_scene load_steps=18 format=2]
 
 [ext_resource path="res://Assets/Levels/Level1/Level1.gd" type="Script" id=1]
 [ext_resource path="res://Assets/UI/UI.tscn" type="PackedScene" id=2]
@@ -7,24 +7,208 @@
 [ext_resource path="res://Assets/Timers/CountdownTimer.tscn" type="PackedScene" id=5]
 [ext_resource path="res://Assets/Timers/LoseAnimTimer.tscn" type="PackedScene" id=6]
 [ext_resource path="res://Assets/Timers/WinAnimTimer.tscn" type="PackedScene" id=7]
-[ext_resource path="res://Assets/Cutscenes/Cutscene1/Cutscene.tscn" type="PackedScene" id=8]
-[ext_resource path="res://Assets/Ponteiros/PonteiroBase/Ponteiro.tscn" type="PackedScene" id=9]
-[ext_resource path="res://Assets/Ponteiros/PonteiroMinutos/PonteiroMinutos.tscn" type="PackedScene" id=10]
-[ext_resource path="res://Assets/Ambient/Ambient.tscn" type="PackedScene" id=11]
-[ext_resource path="res://Assets/Gugu/Gugu.tscn" type="PackedScene" id=12]
-[ext_resource path="res://Assets/Camera/BasePivot.tscn" type="PackedScene" id=13]
-[ext_resource path="res://Assets/Gugu/PlayerSpawn.tscn" type="PackedScene" id=14]
-[ext_resource path="res://icon.png" type="Texture" id=15]
-[ext_resource path="res://Assets/Gnomos/Gnomo.tscn" type="PackedScene" id=16]
+[ext_resource path="res://Assets/Ponteiros/PonteiroBase/Ponteiro.tscn" type="PackedScene" id=8]
+[ext_resource path="res://Assets/Ponteiros/PonteiroMinutos/PonteiroMinutos.tscn" type="PackedScene" id=9]
+[ext_resource path="res://Assets/Ambient/Ambient.tscn" type="PackedScene" id=10]
+[ext_resource path="res://Assets/Gugu/Gugu.tscn" type="PackedScene" id=11]
+[ext_resource path="res://Assets/Camera/BasePivot.tscn" type="PackedScene" id=12]
+[ext_resource path="res://Assets/Gugu/PlayerSpawn.tscn" type="PackedScene" id=13]
+[ext_resource path="res://Assets/Decoratives/MainDecoratives/Decoratives.tscn" type="PackedScene" id=14]
+[ext_resource path="res://Assets/Decoratives/GnomeWhite/GnomeWhite.tscn" type="PackedScene" id=15]
+[ext_resource path="res://Assets/Gugu/GuguPlaceholder.tscn" type="PackedScene" id=16]
 
-[node name="Level1" type="Spatial"]
+[sub_resource type="Animation" id=1]
+
+resource_name = "Cutscene"
+length = 30.0
+loop = false
+step = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("../Ponteiros/Ponteiro:transform")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = false
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Transform( -0.466956, 0, 0.884281, 0, 1, 0, -0.884281, 0, -0.466956, 0, 0, 0 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("../Ponteiros/PonteiroMinutos:transform")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = false
+tracks/1/keys = {
+"times": PoolRealArray( 0, 1.5 ),
+"transitions": PoolRealArray( 0, 1 ),
+"update": 0,
+"values": [ Transform( -0.0291238, 0, 0.999576, 0, 1, 0, -0.999576, 0, -0.0291238, 0, 0, 0 ), Transform( 0.0472897, 0, 0.998881, 0, 1, 0, -0.998881, 0, 0.0472897, 0, 0, 0 ) ]
+}
+tracks/2/type = "method"
+tracks/2/path = NodePath("..")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 29.9 ),
+"transitions": PoolRealArray( 1 ),
+"values": [ {
+"args": [  ],
+"method": "on_cutscene_ended"
+} ]
+}
+tracks/3/type = "method"
+tracks/3/path = NodePath("Camera")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0, 29.9 ),
+"transitions": PoolRealArray( 1, 1 ),
+"values": [ {
+"args": [  ],
+"method": "make_current"
+}, {
+"args": [  ],
+"method": "clear_current"
+} ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("Camera:transform")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0, 2.9, 3, 5, 8.9, 10.1 ),
+"transitions": PoolRealArray( 1, 0, 0, 0, 0, 0 ),
+"update": 0,
+"values": [ Transform( 1, 0, 0, 0, -1.62921e-07, 1, 0, -1, -1.62921e-07, 0, 15.3269, 0 ), Transform( 1, 0, 0, 0, -1.62921e-07, 1, 0, -1, -1.62921e-07, 0, 16.8496, 0 ), Transform( -0.975265, 0.13133, -0.177797, 0, 0.804359, 0.594143, 0.221042, 0.579446, -0.784463, -1.90572, 3.5144, 6.96152 ), Transform( 0.856614, -0.227677, 0.463007, 0, 0.897374, 0.44127, -0.515957, -0.377998, 0.768704, -3.55916, 4.71064, -3.68373 ), Transform( -0.853637, -0.229844, 0.467414, 0, 0.897374, 0.44127, -0.520868, 0.376684, -0.766032, 4.18042, 4.71064, 6.36984 ), Transform( 0.856614, -0.227677, 0.463007, 0, 0.897374, 0.44127, -0.515957, -0.377998, 0.768704, -3.55916, 4.71064, -3.68373 ) ]
+}
+tracks/5/type = "method"
+tracks/5/path = NodePath("../UI/SubtitlesUI")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0, 3, 5, 6.5, 8.9, 10.1, 12.5, 17, 21.5, 29.9 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
+"values": [ {
+"args": [  ],
+"method": "start_subtitles"
+}, {
+"args": [ "Gugu: ...zzz" ],
+"method": "set_subtitle"
+}, {
+"args": [ "GUGUUUU!!" ],
+"method": "set_subtitle"
+}, {
+"args": [ "Acorda seu preguiçoso! Só pensa em dormir!" ],
+"method": "set_subtitle"
+}, {
+"args": [ "Foi mal!!!" ],
+"method": "set_subtitle"
+}, {
+"args": [ "Teu turno começou à horas e coitado do Meias cobrindo pra você..." ],
+"method": "set_subtitle"
+}, {
+"args": [ "Você deixou o último relógio atrasar e o supervisor está descontando no departamento inteiro!" ],
+"method": "set_subtitle"
+}, {
+"args": [ "Nós preparamos uma surpresinha para você aprender a vigiar os relógios de pertinho... Vamos ver se assim toma jeito." ],
+"method": "set_subtitle"
+}, {
+"args": [ "Vai precisar de muito A e D para correr, e ESPAÇO para levantar esse corpinho de quem não faz nada. Se precisar de uma pausa, aperte P. Espero que esteja em forma..." ],
+"method": "set_subtitle"
+}, {
+"args": [  ],
+"method": "end_subtitles"
+} ]
+}
+tracks/6/type = "value"
+tracks/6/path = NodePath("../GuguPlaceholder:transform")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/keys = {
+"times": PoolRealArray( 0.389516, 5.9 ),
+"transitions": PoolRealArray( 0, 1 ),
+"update": 0,
+"values": [ Transform( 0.00235546, -0.645524, 0.0761067, 0.0299505, 0.0761341, 0.644831, -0.649305, 0.00117009, 0.0300202, 2.25121, 0.233248, 10.1441 ), Transform( -0.60773, 0, -0.230573, 0, 0.65, 0, 0.230573, 0, -0.607731, 2.25121, 0.233248, 10.1441 ) ]
+}
+tracks/7/type = "value"
+tracks/7/path = NodePath("../GuguPlaceholder:visible")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/keys = {
+"times": PoolRealArray( 0, 29.9 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ true, false ]
+}
+tracks/8/type = "value"
+tracks/8/path = NodePath("../Gugu:visible")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/keys = {
+"times": PoolRealArray( 0, 29.9 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ false, true ]
+}
+tracks/9/type = "value"
+tracks/9/path = NodePath("../GnomeHorasPlaceHolder:visible")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/keys = {
+"times": PoolRealArray( 4.6, 29.9 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ true, false ]
+}
+
+[node name="Level1" type="Spatial" index="0"]
 
 script = ExtResource( 1 )
 _sections_unfolded = [ "Transform" ]
+LEVEL = 1
 
 [node name="UI" parent="." index="0" instance=ExtResource( 2 )]
 
 editor/display_folded = true
+
+[node name="PlayerUI" parent="UI" index="0"]
+
+margin_right = 1240.0
+margin_bottom = 680.0
+
+[node name="SurviveTimeUI" parent="UI" index="1"]
+
+margin_right = 1240.0
+margin_bottom = 680.0
+
+[node name="SubtitlesUI" parent="UI" index="2"]
+
+margin_right = 1240.0
+margin_bottom = 680.0
+
+[node name="CountdownUI" parent="UI" index="3"]
+
+margin_right = 1240.0
+margin_bottom = 680.0
 
 [node name="PauseUI" parent="." index="1" instance=ExtResource( 3 )]
 
@@ -45,7 +229,34 @@ one_shot = true
 
 [node name="WinAnimTimer" parent="Timers" index="3" instance=ExtResource( 7 )]
 
-[node name="Cutscene" parent="." index="3" instance=ExtResource( 8 )]
+[node name="Cutscene" type="Node" parent="." index="3"]
+
+[node name="Camera" type="Camera" parent="Cutscene" index="0"]
+
+transform = Transform( 1, 0, 0, 0, -1.19209e-07, 1, 0, -1, -1.19209e-07, 0, 15.852, 0 )
+keep_aspect = 1
+cull_mask = 1048575
+environment = null
+h_offset = 0.0
+v_offset = 0.0
+doppler_tracking = 0
+projection = 0
+current = false
+fov = 70.0
+size = 1.0
+near = 0.05
+far = 100.0
+_sections_unfolded = [ "Transform" ]
+
+[node name="CutsceneAnim" type="AnimationPlayer" parent="Cutscene" index="1"]
+
+root_node = NodePath("..")
+autoplay = ""
+playback_process_mode = 1
+playback_default_blend_time = 0.0
+playback_speed = 1.0
+anims/Cutscene = SubResource( 1 )
+blend_times = [  ]
 
 [node name="Ponteiros" type="Spatial" parent="." index="4"]
 
@@ -53,58 +264,65 @@ editor/display_folded = true
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0 )
 _sections_unfolded = [ "Transform" ]
 
-[node name="Ponteiro" parent="Ponteiros" index="0" instance=ExtResource( 9 )]
+[node name="Ponteiro" parent="Ponteiros" index="0" instance=ExtResource( 8 )]
 
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
 
-[node name="PonteiroMinutos" parent="Ponteiros" index="1" instance=ExtResource( 10 )]
+[node name="PonteiroMinutos" parent="Ponteiros" index="1" instance=ExtResource( 9 )]
 
-[node name="Ambient" parent="." index="5" instance=ExtResource( 11 )]
+[node name="Ambient" parent="." index="5" instance=ExtResource( 10 )]
 
 editor/display_folded = false
+visible = false
 
-[node name="Gugu" parent="." index="6" instance=ExtResource( 12 )]
+[node name="Gugu" parent="." index="6" instance=ExtResource( 11 )]
 
 transform = Transform( 0.835978, 0, 0.548763, 0, 1, 0, -0.548763, 0, 0.835978, 0, 0, 9.5 )
-_sections_unfolded = [ "Transform" ]
+visible = false
+_sections_unfolded = [ "Transform", "Visibility" ]
 
-[node name="BasePivot" parent="." index="7" instance=ExtResource( 13 )]
+[node name="BasePivot" parent="." index="7" instance=ExtResource( 12 )]
 
-[node name="PlayerSpawn" parent="." index="8" instance=ExtResource( 14 )]
+[node name="PlayerSpawn" parent="." index="8" instance=ExtResource( 13 )]
 
-[node name="Sprite3D" type="Sprite3D" parent="." index="9"]
+[node name="Decoratives" parent="." index="9" instance=ExtResource( 14 )]
 
-transform = Transform( 2, 0, 0, 0, -3.25841e-07, -1, 0, 2, -1.62921e-07, -0.0228529, 0.1, -8.94316 )
-layers = 1
-material_override = null
-cast_shadow = 1
-extra_cull_margin = 0.0
-use_in_baked_light = false
-lod_min_distance = 0.0
-lod_min_hysteresis = 0.0
-lod_max_distance = 0.0
-lod_max_hysteresis = 0.0
-centered = true
-offset = Vector2( 0, 0 )
-flip_h = false
-flip_v = false
-modulate = Color( 1, 1, 1, 1 )
-opacity = 1.0
-pixel_size = 0.01
-axis = 2
-transparent = true
-shaded = false
-double_sided = true
-alpha_cut = 0
-texture = ExtResource( 15 )
-vframes = 1
-hframes = 1
-frame = 0
-region_enabled = false
-region_rect = Rect2( 0, 0, 0, 0 )
-_sections_unfolded = [ "Transform" ]
+editor/display_folded = true
 
-[node name="Gnomo" parent="." index="10" instance=ExtResource( 16 )]
+[node name="DirectionalLight" parent="Decoratives" index="1"]
+
+light_cull_mask = -1
+
+[node name="GnomeWhiteSitting" parent="Decoratives" index="9"]
+
+visible = false
+
+[node name="GnomeWhiteSitting2" parent="Decoratives" index="10"]
+
+visible = false
+
+[node name="GnomeWhiteSitting3" parent="Decoratives" index="11"]
+
+visible = false
+
+[node name="GnomeWhiteSitting4" parent="Decoratives" index="12"]
+
+visible = false
+
+[node name="GnomeWhiteSitting5" parent="Decoratives" index="13"]
+
+visible = false
+
+[node name="GnomeHorasPlaceHolder" parent="." index="10" instance=ExtResource( 15 )]
+
+transform = Transform( 0.65, 0, 0, 0, 0.65, 0, 0, 0, 0.65, -5.84411, 0, -6.00747 )
+visible = false
+_sections_unfolded = [ "Transform", "Visibility" ]
+
+[node name="GuguPlaceholder" parent="." index="11" instance=ExtResource( 16 )]
+
+transform = Transform( 0.00235546, -0.645524, 0.0761067, 0.0299505, 0.0761341, 0.644831, -0.649305, 0.00117009, 0.0300202, 2.25121, 0.233248, 10.1441 )
+_sections_unfolded = [ "Transform", "Visibility" ]
 
 [connection signal="timeout" from="Timers/LevelTimer" to="." method="_on_LevelTimer_timeout"]
 
@@ -112,4 +330,4 @@ _sections_unfolded = [ "Transform" ]
 
 
 [editable path="UI"]
-[editable path="Cutscene"]
+[editable path="Decoratives"]
