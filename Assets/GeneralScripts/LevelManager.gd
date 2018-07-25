@@ -15,12 +15,12 @@ export var LEVEL = 1
 
 func _ready():
 	# This node has all below dependencies to work
+	start_level()
 	player.set_center(center)
 	$BasePivot.set_center(center)
 	$BasePivot.set_player(player)
 	connect_timers()
 	player.connect("died", self, "on_player_died")
-	start_level()
 
 func connect_timers():
 	countdown_timer.connect("timeout", self, "on_countdown_ended")
