@@ -1,8 +1,9 @@
-[gd_scene load_steps=2 format=2]
+[gd_scene load_steps=3 format=2]
 
-[ext_resource path="res://Assets/UI/ArregarUI/ArregarUI.gd" type="Script" id=1]
+[ext_resource path="res://Assets/Theme/ui_buttons_theme.tres" type="Theme" id=1]
+[ext_resource path="res://Assets/UI/ArregarUI/ArregarUI.gd" type="Script" id=2]
 
-[node name="ArregarUI" type="MarginContainer" index="0"]
+[node name="ArregarUI" type="MarginContainer"]
 
 anchor_left = 0.0
 anchor_top = 0.0
@@ -14,12 +15,9 @@ mouse_filter = 0
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
-custom_constants/margin_right = 20
-custom_constants/margin_top = 20
-custom_constants/margin_left = 20
-custom_constants/margin_bottom = 20
-script = ExtResource( 1 )
-_sections_unfolded = [ "Focus", "custom_constants" ]
+theme = ExtResource( 1 )
+script = ExtResource( 2 )
+_sections_unfolded = [ "Focus", "Theme", "custom_constants" ]
 
 [node name="ArregarBtn" type="Button" parent="." index="0"]
 
@@ -27,13 +25,14 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = 1202.0
-margin_top = 680.0
+margin_left = 1161.0
+margin_top = 649.0
 margin_right = 1260.0
 margin_bottom = 700.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 hint_tooltip = "Pedir arrêgo."
+focus_mode = 2
 mouse_filter = 0
 mouse_default_cursor_shape = 16
 size_flags_horizontal = 8

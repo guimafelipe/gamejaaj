@@ -1,8 +1,9 @@
-[gd_scene load_steps=2 format=2]
+[gd_scene load_steps=3 format=2]
 
-[ext_resource path="res://Assets/Menus/MainMenu/MainMenu.gd" type="Script" id=1]
+[ext_resource path="res://Assets/Theme/ui_buttons_theme.tres" type="Theme" id=1]
+[ext_resource path="res://Assets/Menus/MainMenu/MainMenu.gd" type="Script" id=2]
 
-[node name="MainMenu" type="MarginContainer"]
+[node name="MainMenu" type="MarginContainer" index="0"]
 
 anchor_left = 0.0
 anchor_top = 0.0
@@ -14,12 +15,9 @@ mouse_filter = 0
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
-custom_constants/margin_right = 20
-custom_constants/margin_top = 20
-custom_constants/margin_left = 20
-custom_constants/margin_bottom = 20
-script = ExtResource( 1 )
-_sections_unfolded = [ "custom_constants" ]
+theme = ExtResource( 1 )
+script = ExtResource( 2 )
+_sections_unfolded = [ "Theme", "custom_constants" ]
 
 [node name="HBoxContainer" type="HBoxContainer" parent="." index="0"]
 
@@ -81,9 +79,9 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_top = 290.0
+margin_top = 243.0
 margin_right = 412.0
-margin_bottom = 310.0
+margin_bottom = 294.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 focus_mode = 2
@@ -105,9 +103,9 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_top = 330.0
+margin_top = 314.0
 margin_right = 412.0
-margin_bottom = 350.0
+margin_bottom = 365.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 focus_mode = 2
@@ -129,9 +127,9 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_top = 370.0
+margin_top = 385.0
 margin_right = 412.0
-margin_bottom = 390.0
+margin_bottom = 436.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 focus_mode = 2
