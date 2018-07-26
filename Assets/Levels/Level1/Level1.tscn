@@ -192,7 +192,7 @@ tracks/10/keys = {
 "values": [ true ]
 }
 
-[node name="Level1" type="Spatial" index="0"]
+[node name="Level1" type="Spatial"]
 
 script = ExtResource( 1 )
 _sections_unfolded = [ "Transform" ]
