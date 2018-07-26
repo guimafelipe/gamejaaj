@@ -176,7 +176,7 @@ use_filter = true
 font_data = ExtResource( 2 )
 _sections_unfolded = [ "Font", "Settings" ]
 
-[node name="SceneLoader" type="Node" index="0"]
+[node name="SceneLoader" type="Node"]
 
 script = ExtResource( 1 )
 
