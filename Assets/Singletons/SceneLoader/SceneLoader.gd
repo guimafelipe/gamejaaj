@@ -5,11 +5,26 @@ var wait_frames
 var time_max = 100
 var current_scene
 
+var is_level = false
+
+var levels_loading_texts = [
+	"Ezequiel, o Gnomo das Horas",
+	"Zequinha, o Gnomo da Bússola",
+	"Evilásio, o Gnomo das Meias",
+	"Wesley, o Gnomo do Pêndulo",
+	"Moacir, o Gnomo Chefe"
+]
+
 func _ready():
 	var root = get_tree().get_root()
 	current_scene = root.get_child(root.get_child_count() - 1)
 
 func goto_scene(path):
+	if not is_level:
+		$Margin/Label.set_text("Loading...")
+	
+	$Margin.set_modulate(Color(1,1,1,1))
+	
 	loader = ResourceLoader.load_interactive(path)
 	if loader == null:
 		show_error()
@@ -18,12 +33,15 @@ func goto_scene(path):
 	
 	current_scene.queue_free()
 	
+	$ColorRect.set_visible(true)
+	$Margin.set_visible(true)
 	#$LoadAnimation.play("Loading")
 	
 	wait_frames = 1
 
 func _process(delta):
 	if loader == null:
+		# pode dar merda
 		set_process(false)
 		return
 	
@@ -51,10 +69,18 @@ func _process(delta):
 func set_new_scene(scene_resource):
 	current_scene = scene_resource.instance()
 	get_node('/root').add_child(current_scene)
+	if is_level:
+		$AnimationPlayer.play("FadeOutLevels")
+		is_level = false
+	else:
+		$Margin.set_visible(false)
+	$ColorRect.set_visible(false)
 
 func goto_level(level):
 	var level_path = "res://Assets/Levels/Level" + str(level) + "/Level" \
 	 + str(level) + ".tscn"
+	$Margin/Label.set_text(levels_loading_texts[level-1])
+	is_level = true
 	goto_scene(level_path)
 
 func goto_levels_menu():
