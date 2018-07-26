@@ -23,5 +23,9 @@ Button/styles/focus = null
 Button/styles/hover = null
 Button/styles/normal = null
 Button/styles/pressed = null
-_sections_unfolded = [ "Button" ]
+MarginContainer/constants/margin_bottom = 20
+MarginContainer/constants/margin_left = 20
+MarginContainer/constants/margin_right = 20
+MarginContainer/constants/margin_top = 20
+_sections_unfolded = [ "MarginContainer/constants" ]
 
