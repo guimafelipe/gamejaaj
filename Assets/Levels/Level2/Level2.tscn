@@ -114,7 +114,7 @@ tracks/5/keys = {
 "values": [ Transform( -0.884404, 0, -0.466723, 0, 1, 0, 0.466723, 0, -0.884404, 0, 0, 0 ) ]
 }
 
-[node name="Level2" type="Spatial" index="0"]
+[node name="Level2" type="Spatial"]
 
 script = ExtResource( 1 )
 LEVEL = 2
