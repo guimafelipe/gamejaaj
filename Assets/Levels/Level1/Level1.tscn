@@ -20,7 +20,7 @@
 [sub_resource type="Animation" id=1]
 
 resource_name = "Cutscene"
-length = 34.0
+length = 49.0
 loop = false
 step = 0.1
 tracks/0/type = "value"
@@ -54,7 +54,7 @@ tracks/2/loop_wrap = true
 tracks/2/imported = false
 tracks/2/enabled = true
 tracks/2/keys = {
-"times": PoolRealArray( 33.9 ),
+"times": PoolRealArray( 48.9 ),
 "transitions": PoolRealArray( 1 ),
 "values": [ {
 "args": [  ],
@@ -68,7 +68,7 @@ tracks/3/loop_wrap = true
 tracks/3/imported = false
 tracks/3/enabled = true
 tracks/3/keys = {
-"times": PoolRealArray( 0, 33.9 ),
+"times": PoolRealArray( 0, 48.9 ),
 "transitions": PoolRealArray( 1, 1 ),
 "values": [ {
 "args": [  ],
@@ -85,7 +85,7 @@ tracks/4/loop_wrap = true
 tracks/4/imported = false
 tracks/4/enabled = true
 tracks/4/keys = {
-"times": PoolRealArray( 0, 2.9, 3, 5, 8.9, 10.1 ),
+"times": PoolRealArray( 0, 2.9, 3, 5, 8.9, 10.4 ),
 "transitions": PoolRealArray( 1, 0, 0, 0, 0, 0 ),
 "update": 0,
 "values": [ Transform( 1, 0, 0, 0, -1.62921e-07, 1, 0, -1, -1.62921e-07, 0, 15.3269, 0 ), Transform( 1, 0, 0, 0, -1.62921e-07, 1, 0, -1, -1.62921e-07, 0, 16.8496, 0 ), Transform( -0.975265, 0.13133, -0.177797, 0, 0.804359, 0.594143, 0.221042, 0.579446, -0.784463, -1.90572, 3.5144, 6.96152 ), Transform( 0.856614, -0.227677, 0.463007, 0, 0.897374, 0.44127, -0.515957, -0.377998, 0.768704, -3.55916, 4.71064, -3.68373 ), Transform( -0.853637, -0.229844, 0.467414, 0, 0.897374, 0.44127, -0.520868, 0.376684, -0.766032, 4.18042, 4.71064, 6.36984 ), Transform( 0.856614, -0.227677, 0.463007, 0, 0.897374, 0.44127, -0.515957, -0.377998, 0.768704, -3.55916, 4.71064, -3.68373 ) ]
@@ -97,7 +97,7 @@ tracks/5/loop_wrap = true
 tracks/5/imported = false
 tracks/5/enabled = true
 tracks/5/keys = {
-"times": PoolRealArray( 0, 3, 5, 6.5, 8.9, 10.1, 15.5, 20.7, 25.5, 33.9 ),
+"times": PoolRealArray( 0, 3, 5, 6.5, 9, 10.5, 17.9, 27, 36, 48.9 ),
 "transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
 "values": [ {
 "args": [  ],
@@ -115,7 +115,7 @@ tracks/5/keys = {
 "args": [ "Foi mal!!!" ],
 "method": "set_subtitle"
 }, {
-"args": [ "Teu turno começou à horas e coitado do Meias cobrindo pra você..." ],
+"args": [ "Teu turno começou à horas e coitado do Evilásio cobrindo pra você..." ],
 "method": "set_subtitle"
 }, {
 "args": [ "Você deixou o último relógio atrasar e o supervisor está descontando no departamento inteiro!" ],
@@ -124,7 +124,7 @@ tracks/5/keys = {
 "args": [ "Nós preparamos uma surpresinha para você aprender a vigiar os relógios de pertinho... Vamos ver se assim toma jeito." ],
 "method": "set_subtitle"
 }, {
-"args": [ "Vai precisar de muito A e D para correr, e ESPAÇO para levantar esse corpinho de quem não faz nada. Se precisar de uma pausa, aperte P. Espero que esteja em forma..." ],
+"args": [ "Utilize as teclas \"A\" e \"D\" para correr e a \"Barra de Espaço\" para pular. Se precidar de uma pausa, pressione a tecla \"P\". Espero que esteja em forma..." ],
 "method": "set_subtitle"
 }, {
 "args": [  ],
@@ -150,7 +150,7 @@ tracks/7/loop_wrap = true
 tracks/7/imported = false
 tracks/7/enabled = true
 tracks/7/keys = {
-"times": PoolRealArray( 0, 33.9 ),
+"times": PoolRealArray( 0, 48.9 ),
 "transitions": PoolRealArray( 1, 1 ),
 "update": 1,
 "values": [ true, false ]
@@ -162,7 +162,7 @@ tracks/8/loop_wrap = true
 tracks/8/imported = false
 tracks/8/enabled = true
 tracks/8/keys = {
-"times": PoolRealArray( 0, 33.9 ),
+"times": PoolRealArray( 0, 48.9 ),
 "transitions": PoolRealArray( 1, 1 ),
 "update": 1,
 "values": [ false, true ]
@@ -174,7 +174,7 @@ tracks/9/loop_wrap = true
 tracks/9/imported = false
 tracks/9/enabled = true
 tracks/9/keys = {
-"times": PoolRealArray( 4.6, 33.9 ),
+"times": PoolRealArray( 4.6, 48.9 ),
 "transitions": PoolRealArray( 1, 1 ),
 "update": 1,
 "values": [ true, false ]
@@ -186,7 +186,7 @@ tracks/10/loop_wrap = true
 tracks/10/imported = false
 tracks/10/enabled = true
 tracks/10/keys = {
-"times": PoolRealArray( 33.9 ),
+"times": PoolRealArray( 48.9 ),
 "transitions": PoolRealArray( 1 ),
 "update": 1,
 "values": [ true ]
@@ -280,8 +280,6 @@ _sections_unfolded = [ "Transform" ]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
 
 [node name="PonteiroMinutos" parent="Ponteiros" index="1" instance=ExtResource( 9 )]
-
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
 
 [node name="Ambient" parent="." index="5" instance=ExtResource( 10 )]
 
