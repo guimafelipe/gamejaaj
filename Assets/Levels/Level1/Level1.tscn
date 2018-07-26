@@ -124,7 +124,7 @@ tracks/5/keys = {
 "args": [ "Nós preparamos uma surpresinha para você aprender a vigiar os relógios de pertinho... Vamos ver se assim toma jeito." ],
 "method": "set_subtitle"
 }, {
-"args": [ "Utilize as teclas \"A\" e \"D\" para correr e a \"Barra de Espaço\" para pular. Se precidar de uma pausa, pressione a tecla \"P\". Espero que esteja em forma..." ],
+"args": [ "Utilize as teclas \"A\" e \"D\" para correr e a \"Barra de Espaço\" para pular. Se precisar de uma pausa, pressione a tecla \"P\". Espero que esteja em forma..." ],
 "method": "set_subtitle"
 }, {
 "args": [  ],
@@ -192,7 +192,7 @@ tracks/10/keys = {
 "values": [ true ]
 }
 
-[node name="Level1" type="Spatial"]
+[node name="Level1" type="Spatial" index="0"]
 
 script = ExtResource( 1 )
 _sections_unfolded = [ "Transform" ]

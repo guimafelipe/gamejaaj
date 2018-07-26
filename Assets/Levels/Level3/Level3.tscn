@@ -124,7 +124,7 @@ tracks/4/keys = {
 } ]
 }
 
-[node name="Level3" type="Spatial" index="0"]
+[node name="Level3" type="Spatial"]
 
 script = ExtResource( 1 )
 LEVEL = 3
