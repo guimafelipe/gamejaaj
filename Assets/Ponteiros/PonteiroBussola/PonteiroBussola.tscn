@@ -1,6 +1,7 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://Assets/Ponteiros/PonteiroBase/Ponteiro.gd" type="Script" id=1]
+[ext_resource path="res://Assets/Decoratives/PonteiroBussola/PonteiroBussola.tscn" type="PackedScene" id=2]
 
 [sub_resource type="CylinderMesh" id=1]
 
@@ -11,7 +12,7 @@ height = 2.0
 radial_segments = 64
 rings = 4
 
-[sub_resource type="SpatialMaterial" id=4]
+[sub_resource type="SpatialMaterial" id=2]
 
 render_priority = 0
 flags_transparent = false
@@ -81,6 +82,7 @@ _sections_unfolded = [ "Transform" ]
 [node name="MeshInstance" type="MeshInstance" parent="." index="0"]
 
 transform = Transform( 1, -2.1657e-14, 1.45227e-22, 0, -2.85265e-07, -1.00117, 3.31851e-15, 6.52611, -4.37626e-08, 4.22795e-15, 0.000440462, -4.49534 )
+visible = false
 layers = 1
 material_override = null
 cast_shadow = 1
@@ -92,7 +94,7 @@ lod_max_distance = 0.0
 lod_max_hysteresis = 0.0
 mesh = SubResource( 1 )
 skeleton = NodePath("..")
-material/0 = SubResource( 4 )
+material/0 = SubResource( 2 )
 _sections_unfolded = [ "Geometry", "Transform", "material" ]
 
 [node name="Area" type="Area" parent="." index="1"]
@@ -124,6 +126,11 @@ reverb_bus_uniformity = 0.0
 
 shape = SubResource( 3 )
 disabled = false
+
+[node name="PonteiroBussola" parent="." index="2" instance=ExtResource( 2 )]
+
+transform = Transform( 8, 0, 0, 0, 8, 0, 0, 0, 8, 0, -3, 0 )
+_sections_unfolded = [ "Transform" ]
 
 [connection signal="body_entered" from="Area" to="." method="_on_Area_body_entered"]
 
