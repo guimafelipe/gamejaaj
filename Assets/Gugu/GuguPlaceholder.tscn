@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=23 format=2]
 
 [ext_resource path="res://Assets/Meshes/WhiteGnomes/BrownButton.material" type="Material" id=1]
 [ext_resource path="res://Assets/Meshes/WhiteGnomes/HatCloth.material" type="Material" id=2]
@@ -7,6 +7,12 @@
 [ext_resource path="res://Assets/Meshes/WhiteGnomes/Torso.material" type="Material" id=5]
 [ext_resource path="res://Assets/Meshes/WhiteGnomes/BrownButtonTexture.material" type="Material" id=6]
 [ext_resource path="res://Assets/Meshes/WhiteGnomes/MouthWhite.material" type="Material" id=7]
+[ext_resource path="res://Assets/Meshes/WhiteGnomes/HatTexture.jpg" type="Texture" id=8]
+[ext_resource path="res://Assets/Meshes/WhiteGnomes/HeadWhite.png" type="Texture" id=9]
+[ext_resource path="res://Assets/Meshes/WhiteGnomes/TrousersTexture.jpg" type="Texture" id=10]
+[ext_resource path="res://Assets/Meshes/WhiteGnomes/TorsoTexture.jpg" type="Texture" id=11]
+[ext_resource path="res://Assets/Meshes/WhiteGnomes/BrownButtonTexture.png" type="Texture" id=12]
+[ext_resource path="res://Assets/Meshes/WhiteGnomes/MouthWhite.png" type="Texture" id=13]
 
 [sub_resource type="ArrayMesh" id=1]
 
@@ -105,9 +111,383 @@ surfaces/6 = {
 "vertex_count": 257
 }
 
-[sub_resource type="Animation" id=2]
+[sub_resource type="SpatialMaterial" id=2]
 
-resource_name = "default"
+resource_name = "BrownButton"
+render_priority = 0
+flags_transparent = false
+flags_unshaded = false
+flags_vertex_lighting = false
+flags_no_depth_test = false
+flags_use_point_size = false
+flags_world_triplanar = false
+flags_fixed_size = false
+flags_albedo_tex_force_srgb = false
+vertex_color_use_as_albedo = false
+vertex_color_is_srgb = false
+params_diffuse_mode = 0
+params_specular_mode = 0
+params_blend_mode = 0
+params_cull_mode = 0
+params_depth_draw_mode = 0
+params_line_width = 1.0
+params_point_size = 1.0
+params_billboard_mode = 0
+params_grow = false
+params_use_alpha_scissor = false
+albedo_color = Color( 0.0435842, 0.00777698, 0.00145693, 1 )
+metallic = 0.5
+metallic_specular = 0.5
+metallic_texture_channel = 0
+roughness = 0.542695
+roughness_texture_channel = 0
+emission_enabled = false
+normal_enabled = false
+rim_enabled = false
+clearcoat_enabled = false
+anisotropy_enabled = false
+ao_enabled = false
+depth_enabled = false
+subsurf_scatter_enabled = false
+transmission_enabled = false
+refraction_enabled = false
+detail_enabled = false
+uv1_scale = Vector3( 1, 1, 1 )
+uv1_offset = Vector3( 0, 0, 0 )
+uv1_triplanar = false
+uv1_triplanar_sharpness = 1.0
+uv2_scale = Vector3( 1, 1, 1 )
+uv2_offset = Vector3( 0, 0, 0 )
+uv2_triplanar = false
+uv2_triplanar_sharpness = 1.0
+proximity_fade_enable = false
+distance_fade_enable = false
+
+[sub_resource type="SpatialMaterial" id=3]
+
+resource_name = "HatCloth"
+render_priority = 0
+flags_transparent = false
+flags_unshaded = false
+flags_vertex_lighting = false
+flags_no_depth_test = false
+flags_use_point_size = false
+flags_world_triplanar = false
+flags_fixed_size = false
+flags_albedo_tex_force_srgb = false
+vertex_color_use_as_albedo = false
+vertex_color_is_srgb = false
+params_diffuse_mode = 0
+params_specular_mode = 0
+params_blend_mode = 0
+params_cull_mode = 0
+params_depth_draw_mode = 0
+params_line_width = 1.0
+params_point_size = 1.0
+params_billboard_mode = 0
+params_grow = false
+params_use_alpha_scissor = false
+albedo_color = Color( 0.9375, 0.263672, 0.263672, 1 )
+albedo_texture = ExtResource( 8 )
+metallic = 0.5
+metallic_specular = 0.5
+metallic_texture_channel = 0
+roughness = 0.542695
+roughness_texture_channel = 0
+emission_enabled = false
+normal_enabled = false
+rim_enabled = false
+clearcoat_enabled = false
+anisotropy_enabled = false
+ao_enabled = false
+depth_enabled = false
+subsurf_scatter_enabled = false
+transmission_enabled = false
+refraction_enabled = false
+detail_enabled = false
+uv1_scale = Vector3( 1, 1, 1 )
+uv1_offset = Vector3( 0, 0, 0 )
+uv1_triplanar = false
+uv1_triplanar_sharpness = 1.0
+uv2_scale = Vector3( 1, 1, 1 )
+uv2_offset = Vector3( 0, 0, 0 )
+uv2_triplanar = false
+uv2_triplanar_sharpness = 1.0
+proximity_fade_enable = false
+distance_fade_enable = false
+_sections_unfolded = [ "Albedo" ]
+
+[sub_resource type="SpatialMaterial" id=4]
+
+resource_name = "PinkHeadBack"
+render_priority = 0
+flags_transparent = false
+flags_unshaded = false
+flags_vertex_lighting = false
+flags_no_depth_test = false
+flags_use_point_size = false
+flags_world_triplanar = false
+flags_fixed_size = false
+flags_albedo_tex_force_srgb = false
+vertex_color_use_as_albedo = false
+vertex_color_is_srgb = false
+params_diffuse_mode = 0
+params_specular_mode = 0
+params_blend_mode = 0
+params_cull_mode = 0
+params_depth_draw_mode = 0
+params_line_width = 1.0
+params_point_size = 1.0
+params_billboard_mode = 0
+params_grow = false
+params_use_alpha_scissor = false
+albedo_color = Color( 0.639216, 0.356863, 0.372549, 1 )
+albedo_texture = ExtResource( 9 )
+metallic = 0.5
+metallic_specular = 0.5
+metallic_texture_channel = 0
+roughness = 0.542695
+roughness_texture_channel = 0
+emission_enabled = false
+normal_enabled = false
+rim_enabled = false
+clearcoat_enabled = false
+anisotropy_enabled = false
+ao_enabled = false
+depth_enabled = false
+subsurf_scatter_enabled = false
+transmission_enabled = false
+refraction_enabled = false
+detail_enabled = false
+uv1_scale = Vector3( 1, 1, 1 )
+uv1_offset = Vector3( 0, 0, 0 )
+uv1_triplanar = false
+uv1_triplanar_sharpness = 1.0
+uv2_scale = Vector3( 1, 1, 1 )
+uv2_offset = Vector3( 0, 0, 0 )
+uv2_triplanar = false
+uv2_triplanar_sharpness = 1.0
+proximity_fade_enable = false
+distance_fade_enable = false
+_sections_unfolded = [ "Albedo" ]
+
+[sub_resource type="SpatialMaterial" id=5]
+
+resource_name = "Trousers"
+render_priority = 0
+flags_transparent = false
+flags_unshaded = false
+flags_vertex_lighting = false
+flags_no_depth_test = false
+flags_use_point_size = false
+flags_world_triplanar = false
+flags_fixed_size = false
+flags_albedo_tex_force_srgb = false
+vertex_color_use_as_albedo = false
+vertex_color_is_srgb = false
+params_diffuse_mode = 0
+params_specular_mode = 0
+params_blend_mode = 0
+params_cull_mode = 0
+params_depth_draw_mode = 0
+params_line_width = 1.0
+params_point_size = 1.0
+params_billboard_mode = 0
+params_grow = false
+params_use_alpha_scissor = false
+albedo_color = Color( 0.894531, 0.0978394, 0.0978394, 1 )
+albedo_texture = ExtResource( 10 )
+metallic = 0.5
+metallic_specular = 0.5
+metallic_texture_channel = 0
+roughness = 0.542695
+roughness_texture_channel = 0
+emission_enabled = false
+normal_enabled = false
+rim_enabled = false
+clearcoat_enabled = false
+anisotropy_enabled = false
+ao_enabled = false
+depth_enabled = false
+subsurf_scatter_enabled = false
+transmission_enabled = false
+refraction_enabled = false
+detail_enabled = false
+uv1_scale = Vector3( 1, 1, 1 )
+uv1_offset = Vector3( 0, 0, 0 )
+uv1_triplanar = false
+uv1_triplanar_sharpness = 1.0
+uv2_scale = Vector3( 1, 1, 1 )
+uv2_offset = Vector3( 0, 0, 0 )
+uv2_triplanar = false
+uv2_triplanar_sharpness = 1.0
+proximity_fade_enable = false
+distance_fade_enable = false
+_sections_unfolded = [ "Albedo", "Parameters" ]
+
+[sub_resource type="SpatialMaterial" id=6]
+
+resource_name = "Torso"
+render_priority = 0
+flags_transparent = false
+flags_unshaded = false
+flags_vertex_lighting = false
+flags_no_depth_test = false
+flags_use_point_size = false
+flags_world_triplanar = false
+flags_fixed_size = false
+flags_albedo_tex_force_srgb = false
+vertex_color_use_as_albedo = false
+vertex_color_is_srgb = false
+params_diffuse_mode = 0
+params_specular_mode = 0
+params_blend_mode = 0
+params_cull_mode = 0
+params_depth_draw_mode = 0
+params_line_width = 1.0
+params_point_size = 1.0
+params_billboard_mode = 0
+params_grow = false
+params_use_alpha_scissor = false
+albedo_color = Color( 0.143143, 0.691406, 0.228809, 1 )
+albedo_texture = ExtResource( 11 )
+metallic = 0.5
+metallic_specular = 0.5
+metallic_texture_channel = 0
+roughness = 0.542695
+roughness_texture_channel = 0
+emission_enabled = false
+normal_enabled = false
+rim_enabled = false
+clearcoat_enabled = false
+anisotropy_enabled = false
+ao_enabled = false
+depth_enabled = false
+subsurf_scatter_enabled = false
+transmission_enabled = false
+refraction_enabled = false
+detail_enabled = false
+uv1_scale = Vector3( 1, 1, 1 )
+uv1_offset = Vector3( 0, 0, 0 )
+uv1_triplanar = false
+uv1_triplanar_sharpness = 1.0
+uv2_scale = Vector3( 1, 1, 1 )
+uv2_offset = Vector3( 0, 0, 0 )
+uv2_triplanar = false
+uv2_triplanar_sharpness = 1.0
+proximity_fade_enable = false
+distance_fade_enable = false
+_sections_unfolded = [ "Albedo" ]
+
+[sub_resource type="SpatialMaterial" id=7]
+
+resource_name = "BrownButtonTexture"
+render_priority = 0
+flags_transparent = false
+flags_unshaded = false
+flags_vertex_lighting = false
+flags_no_depth_test = false
+flags_use_point_size = false
+flags_world_triplanar = false
+flags_fixed_size = false
+flags_albedo_tex_force_srgb = false
+vertex_color_use_as_albedo = false
+vertex_color_is_srgb = false
+params_diffuse_mode = 0
+params_specular_mode = 0
+params_blend_mode = 0
+params_cull_mode = 0
+params_depth_draw_mode = 0
+params_line_width = 1.0
+params_point_size = 1.0
+params_billboard_mode = 0
+params_grow = false
+params_use_alpha_scissor = false
+albedo_color = Color( 0.64, 0.64, 0.64, 1 )
+albedo_texture = ExtResource( 12 )
+metallic = 0.5
+metallic_specular = 0.5
+metallic_texture_channel = 0
+roughness = 0.542695
+roughness_texture_channel = 0
+emission_enabled = false
+normal_enabled = false
+rim_enabled = false
+clearcoat_enabled = false
+anisotropy_enabled = false
+ao_enabled = false
+depth_enabled = false
+subsurf_scatter_enabled = false
+transmission_enabled = false
+refraction_enabled = false
+detail_enabled = false
+uv1_scale = Vector3( 1, 1, 1 )
+uv1_offset = Vector3( 0, 0, 0 )
+uv1_triplanar = false
+uv1_triplanar_sharpness = 1.0
+uv2_scale = Vector3( 1, 1, 1 )
+uv2_offset = Vector3( 0, 0, 0 )
+uv2_triplanar = false
+uv2_triplanar_sharpness = 1.0
+proximity_fade_enable = false
+distance_fade_enable = false
+
+[sub_resource type="SpatialMaterial" id=8]
+
+resource_name = "MouthWhite"
+render_priority = 0
+flags_transparent = false
+flags_unshaded = false
+flags_vertex_lighting = false
+flags_no_depth_test = false
+flags_use_point_size = false
+flags_world_triplanar = false
+flags_fixed_size = false
+flags_albedo_tex_force_srgb = false
+vertex_color_use_as_albedo = false
+vertex_color_is_srgb = false
+params_diffuse_mode = 0
+params_specular_mode = 0
+params_blend_mode = 0
+params_cull_mode = 0
+params_depth_draw_mode = 0
+params_line_width = 1.0
+params_point_size = 1.0
+params_billboard_mode = 0
+params_grow = false
+params_use_alpha_scissor = false
+albedo_color = Color( 0.639282, 0.360629, 0.374227, 1 )
+albedo_texture = ExtResource( 13 )
+metallic = 0.5
+metallic_specular = 0.5
+metallic_texture_channel = 0
+roughness = 0.542695
+roughness_texture_channel = 0
+emission_enabled = false
+normal_enabled = false
+rim_enabled = false
+clearcoat_enabled = false
+anisotropy_enabled = false
+ao_enabled = false
+depth_enabled = false
+subsurf_scatter_enabled = false
+transmission_enabled = false
+refraction_enabled = false
+detail_enabled = false
+uv1_scale = Vector3( 1, 1, 1 )
+uv1_offset = Vector3( 0, 0, 0 )
+uv1_triplanar = false
+uv1_triplanar_sharpness = 1.0
+uv2_scale = Vector3( 1, 1, 1 )
+uv2_offset = Vector3( 0, 0, 0 )
+uv2_triplanar = false
+uv2_triplanar_sharpness = 1.0
+proximity_fade_enable = false
+distance_fade_enable = false
+_sections_unfolded = [ "Albedo" ]
+
+[sub_resource type="Animation" id=9]
+
 length = 0.958333
 loop = false
 step = 0.1
@@ -161,7 +541,7 @@ tracks/6/imported = true
 tracks/6/enabled = true
 tracks/6/keys = PoolRealArray( 0, 1, -8.24567e-11, -5.96046e-08, 2.38419e-07, 7.10543e-15, 1.55294e-22, 0, 1, 1, 1, 1, 0.0416667, 1, -8.24567e-11, -5.96046e-08, 0.0549192, 7.10557e-15, -0.00626792, 8.88196e-16, 0.99998, 1, 1, 1, 0.0833333, 1, -8.24567e-11, -5.96046e-08, 0.220516, 7.10769e-15, -0.0252441, 0, 0.999681, 1, 1, 1, 0.125, 1, -8.24603e-11, 0, 0.492017, 7.11682e-15, -0.0565629, 0, 0.998399, 1, 1, 1, 0.25, 1, -8.24656e-11, 1.19209e-07, 1.72276, 6.79781e-15, -0.199367, -1.81275e-15, 0.979925, 1, 1, 1, 0.333333, 1, -8.24709e-11, 2.38419e-07, 2.50798, 6.49298e-15, -0.288321, -1.85514e-15, 0.957534, 1, 1, 1, 0.375, 1, -8.24727e-11, 2.98023e-07, 2.77949, 6.08966e-15, -0.318189, -2.81061e-15, 0.948027, 1, 1, 1, 0.416667, 1, -8.24727e-11, 2.98023e-07, 2.94508, 6.1298e-15, -0.336123, -3.77219e-15, 0.941818, 1, 1, 1, 0.458333, 1, -8.24727e-11, 2.98023e-07, 3, 8.06556e-09, -0.34202, 6.17437e-08, 0.939693, 1, 1, 1, 0.5, 1, -8.24727e-11, 2.98023e-07, 2.95389, 8.07293e-09, -0.337071, 6.18001e-08, 0.941479, 1, 1, 1, 0.541667, 1, -8.24727e-11, 2.98023e-07, 2.81468, 8.0939e-09, -0.32202, 6.19606e-08, 0.946733, 1, 1, 1, 0.583333, 1, -8.24709e-11, 2.38419e-07, 2.58515, 8.12415e-09, -0.296865, 6.21922e-08, 0.954919, 1, 1, 1, 0.75, 1, -8.2462e-11, 5.96046e-08, 1.09565, 8.18075e-09, -0.126696, 6.26255e-08, 0.991942, 1, 1, 1, 0.833333, 1, -8.24603e-11, 0, 0.414854, 8.12415e-09, -0.0476396, 6.21923e-08, 0.998865, 1, 1, 1, 0.875, 1, -8.24567e-11, -5.96046e-08, 0.185316, 8.0939e-09, -0.0212015, 6.19606e-08, 0.999775, 1, 1, 1, 0.916667, 1, -8.24567e-11, -5.96046e-08, 0.0461123, 8.07293e-09, -0.00526188, 6.18001e-08, 0.999986, 1, 1, 1, 0.958333, 1, -8.24567e-11, -5.96046e-08, 2.38419e-07, 7.10543e-15, 1.55294e-22, 0, 1, 1, 1, 1 )
 
-[node name="GuguPlaceholder" type="Spatial"]
+[node name="GuguPlaceholder" type="Spatial" index="0"]
 
 transform = Transform( -0.00031854, -0.649738, 0.0184351, 0.0300413, 0.0184007, 0.649045, -0.649305, 0.00117009, 0.0300202, 2.25121, 0.534312, 8.07128 )
 _sections_unfolded = [ "Transform" ]
@@ -216,13 +596,13 @@ lod_max_distance = 0.0
 lod_max_hysteresis = 0.0
 mesh = SubResource( 1 )
 skeleton = NodePath("..")
-material/0 = ExtResource( 1 )
-material/1 = ExtResource( 2 )
-material/2 = ExtResource( 3 )
-material/3 = ExtResource( 4 )
-material/4 = ExtResource( 5 )
-material/5 = ExtResource( 6 )
-material/6 = ExtResource( 7 )
+material/0 = SubResource( 2 )
+material/1 = SubResource( 3 )
+material/2 = SubResource( 4 )
+material/3 = SubResource( 5 )
+material/4 = SubResource( 6 )
+material/5 = SubResource( 7 )
+material/6 = SubResource( 8 )
 _sections_unfolded = [ "material" ]
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." index="1"]
@@ -232,7 +612,7 @@ autoplay = ""
 playback_process_mode = 1
 playback_default_blend_time = 0.0
 playback_speed = 1.0
-anims/default = SubResource( 2 )
+anims/default = SubResource( 9 )
 blend_times = [  ]
 
 

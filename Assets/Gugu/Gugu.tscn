@@ -209,7 +209,7 @@ surfaces/6 = {
 "vertex_count": 257
 }
 
-[sub_resource type="SpatialMaterial" id=9]
+[sub_resource type="SpatialMaterial" id=6]
 
 resource_name = "BrownButton"
 render_priority = 0
@@ -261,7 +261,7 @@ uv2_triplanar_sharpness = 1.0
 proximity_fade_enable = false
 distance_fade_enable = false
 
-[sub_resource type="SpatialMaterial" id=10]
+[sub_resource type="SpatialMaterial" id=7]
 
 resource_name = "HatCloth"
 render_priority = 0
@@ -315,7 +315,7 @@ proximity_fade_enable = false
 distance_fade_enable = false
 _sections_unfolded = [ "Albedo" ]
 
-[sub_resource type="SpatialMaterial" id=11]
+[sub_resource type="SpatialMaterial" id=8]
 
 resource_name = "LightPink"
 render_priority = 0
@@ -368,7 +368,7 @@ proximity_fade_enable = false
 distance_fade_enable = false
 _sections_unfolded = [ "Albedo" ]
 
-[sub_resource type="SpatialMaterial" id=12]
+[sub_resource type="SpatialMaterial" id=9]
 
 resource_name = "Trousers"
 render_priority = 0
@@ -422,7 +422,7 @@ proximity_fade_enable = false
 distance_fade_enable = false
 _sections_unfolded = [ "Albedo" ]
 
-[sub_resource type="SpatialMaterial" id=13]
+[sub_resource type="SpatialMaterial" id=10]
 
 resource_name = "Chothes"
 render_priority = 0
@@ -476,7 +476,7 @@ proximity_fade_enable = false
 distance_fade_enable = false
 _sections_unfolded = [ "Albedo" ]
 
-[sub_resource type="SpatialMaterial" id=14]
+[sub_resource type="SpatialMaterial" id=11]
 
 resource_name = "BrownButtonTexture"
 render_priority = 0
@@ -530,7 +530,7 @@ proximity_fade_enable = false
 distance_fade_enable = false
 _sections_unfolded = [ "Albedo" ]
 
-[sub_resource type="SpatialMaterial" id=15]
+[sub_resource type="SpatialMaterial" id=12]
 
 resource_name = "MouthWhite"
 render_priority = 0
@@ -584,9 +584,8 @@ proximity_fade_enable = false
 distance_fade_enable = false
 _sections_unfolded = [ "Albedo" ]
 
-[sub_resource type="Animation" id=6]
+[sub_resource type="Animation" id=13]
 
-resource_name = "Idle"
 length = 0.0416667
 loop = false
 step = 0.1
@@ -640,9 +639,8 @@ tracks/6/imported = true
 tracks/6/enabled = true
 tracks/6/keys = PoolRealArray( 0, 1, -1.9736e-10, -3.57628e-07, 0.0237489, -3.55272e-15, -8.47033e-22, 0, 1, 1, 1, 1, 0.0416667, 1, -1.9736e-10, -3.57628e-07, 0.0237489, -3.55272e-15, -8.47033e-22, 0, 1, 1, 1, 1 )
 
-[sub_resource type="Animation" id=7]
+[sub_resource type="Animation" id=14]
 
-resource_name = "Jump"
 length = 1.0
 loop = false
 step = 0.1
@@ -696,9 +694,8 @@ tracks/6/imported = true
 tracks/6/enabled = true
 tracks/6/keys = PoolRealArray( 0, 1, -1.9746e-10, 0, 0, -3.55272e-15, -8.47033e-22, 0, 1, 1, 1, 1, 0.0666667, 1, -1.9746e-10, 0, -0.00716233, 3.1897e-08, -0.0148261, -3.77841e-08, 0.99989, 1, 1, 1, 0.133333, 1, -1.9746e-10, 0, -0.0263447, 2.26578e-08, -0.054827, -4.56923e-08, 0.998496, 1, 1, 1, 0.266667, 1, -1.9746e-10, 0, -0.0918136, -1.08312e-08, -0.192325, -1.34149e-08, 0.981331, 1, 1, 1, 0.333333, 1, -1.9746e-10, 0, -0.125716, -3.68164e-15, -0.262319, 0, 0.964981, 1, 1, 1, 0.4, 1, -1.9746e-10, 0, -0.150442, 2.83261e-08, -0.311984, -7.1319e-09, 0.950087, 1, 1, 1, 0.466667, 1, -1.9746e-10, 0, -0.163716, -6.31449e-08, -0.338061, -1.82395e-09, 0.941124, 1, 1, 1, 0.533333, 1, -1.9746e-10, 0, -0.163716, 8.72721e-08, -0.338062, -3.34907e-08, 0.941124, 1, 1, 1, 0.6, 1, -1.9746e-10, 0, -0.150442, 4.40101e-08, -0.311984, -1.49739e-08, 0.950087, 1, 1, 1, 0.666667, 1, -1.9746e-10, 0, -0.125716, 8.15616e-09, -0.262319, 6.24374e-08, 0.964981, 1, 1, 1, 0.8, 1, -1.9746e-10, 0, -0.0564367, -2.08582e-08, -0.118082, 2.00289e-08, 0.993004, 1, 1, 1, 0.866667, 1, -1.9746e-10, 0, -0.0263445, 4.50432e-08, -0.0548271, 4.38494e-08, 0.998496, 1, 1, 1, 0.933333, 1, -1.9746e-10, 0, -0.00716233, -5.35995e-09, -0.0148261, -1.54299e-08, 0.99989, 1, 1, 1, 1, 1, -1.9746e-10, 0, 0, -3.55272e-15, -8.47033e-22, 0, 1, 1, 1, 1 )
 
-[sub_resource type="Animation" id=8]
+[sub_resource type="Animation" id=15]
 
-resource_name = "Walk"
 length = 1.0
 loop = false
 step = 0.1
@@ -752,7 +749,7 @@ tracks/6/imported = true
 tracks/6/enabled = true
 tracks/6/keys = PoolRealArray( 0, 1, -1.9746e-10, 0, 0, -3.55272e-15, -8.47033e-22, 0, 1, 1, 1, 1, 0.0666667, 1, -1.9746e-10, 0, -0.0455538, 3.81247e-08, -0.0586327, -3.82998e-08, 0.99828, 1, 1, 1, 0.133333, 1, -1.9746e-10, 0, -0.148146, -3.34758e-09, -0.191521, -4.37328e-08, 0.981489, 1, 1, 1, 0.2, 1, -1.9746e-10, 0, -0.242289, 2.02433e-08, -0.310173, -9.31684e-08, 0.95068, 1, 1, 1, 0.266667, 1, -1.97446e-10, -5.96046e-08, -0.261897, 5.54262e-08, -0.336818, -3.33491e-08, 0.94157, 1, 1, 1, 0.333333, 1, -1.97446e-10, -5.96046e-08, -0.203667, 8.09333e-09, -0.288276, 6.19564e-08, 0.957547, 1, 1, 1, 0.4, 1, -1.97446e-10, -5.96046e-08, -0.0926253, -1.32103e-08, -0.174554, 7.83653e-08, 0.984648, 1, 1, 1, 0.466667, 1, -1.97446e-10, -5.96046e-08, -0.01327, 1.47859e-08, -0.0519284, 1.40437e-08, 0.998651, 1, 1, 1, 0.533333, 1, -1.9746e-10, 0, -0.0134914, 1.04584e-07, 0.0519285, 2.8965e-08, 0.998651, 1, 1, 1, 0.6, 1, -1.9746e-10, 0, -0.0941702, -1.70568e-08, 0.174554, 1.02646e-08, 0.984648, 1, 1, 1, 0.666667, 1, -1.9746e-10, 0, -0.207065, -3.71022e-15, 0.288276, 0, 0.957547, 1, 1, 1, 0.733333, 1, -1.97446e-10, -5.96046e-08, -0.266266, 1.57902e-08, 0.336818, 3.78673e-08, 0.94157, 1, 1, 1, 0.8, 1, -1.97446e-10, -5.96046e-08, -0.24633, -5.94249e-08, 0.310146, -4.61429e-08, 0.950689, 1, 1, 1, 0.866667, 1, -1.97446e-10, -5.96046e-08, -0.150617, -3.45894e-08, 0.19139, 1.82096e-09, 0.981514, 1, 1, 1, 0.933333, 1, -1.97446e-10, -5.96046e-08, -0.0463138, -6.79426e-08, 0.058385, -3.08318e-08, 0.998294, 1, 1, 1, 1, 1, -1.9746e-10, 0, 0, 1.28422e-11, -0.000297034, 5.36318e-11, 1, 1, 1, 1 )
 
-[node name="Gugu" type="KinematicBody"]
+[node name="Gugu" type="KinematicBody" index="0"]
 
 input_ray_pickable = true
 input_capture_on_drag = false
@@ -859,13 +856,13 @@ lod_max_distance = 0.0
 lod_max_hysteresis = 0.0
 mesh = SubResource( 5 )
 skeleton = NodePath("..")
-material/0 = SubResource( 9 )
-material/1 = SubResource( 10 )
-material/2 = SubResource( 11 )
-material/3 = SubResource( 12 )
-material/4 = SubResource( 13 )
-material/5 = SubResource( 14 )
-material/6 = SubResource( 15 )
+material/0 = SubResource( 6 )
+material/1 = SubResource( 7 )
+material/2 = SubResource( 8 )
+material/3 = SubResource( 9 )
+material/4 = SubResource( 10 )
+material/5 = SubResource( 11 )
+material/6 = SubResource( 12 )
 _sections_unfolded = [ "material" ]
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="GuguMesh" index="1"]
@@ -875,9 +872,9 @@ autoplay = ""
 playback_process_mode = 1
 playback_default_blend_time = 0.0
 playback_speed = 1.0
-anims/Idle = SubResource( 6 )
-anims/Jump = SubResource( 7 )
-anims/Walk = SubResource( 8 )
+anims/Idle = SubResource( 13 )
+anims/Jump = SubResource( 14 )
+anims/Walk = SubResource( 15 )
 blend_times = [  ]
 
 
