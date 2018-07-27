@@ -163,7 +163,6 @@ tracks/6/keys = PoolRealArray( 0, 1, -8.24567e-11, -5.96046e-08, 2.38419e-07, 7.
 
 [node name="GuguPlaceholder" type="Spatial"]
 
-editor/display_folded = true
 transform = Transform( -0.00031854, -0.649738, 0.0184351, 0.0300413, 0.0184007, 0.649045, -0.649305, 0.00117009, 0.0300202, 2.25121, 0.534312, 8.07128 )
 _sections_unfolded = [ "Transform" ]
 

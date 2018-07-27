@@ -16,8 +16,6 @@ var velocity = Vector3()
 var pos_after
 var pos_before
 
-# Variables related to animation
-var is_moving # check if it's moving and animation not playing to enable walk animation
 var must_rotate # check only if it's moving to rotate mesh
 
 # Variables related to player state
@@ -38,6 +36,8 @@ func reset_position(spawn_position):
 	transform.origin = spawn_position
 	self.angle = atan2(translation.x, translation.z)
 	set_center(rotation_center)
+	$GuguMesh/AnimationPlayer.play("Idle")
+	
 
 # Hp fuctions
 func reset_hp():
@@ -55,6 +55,8 @@ func take_damage(value):
 	if(lifes == 0):
 		can_move = false
 		# Play death animation here
+		$GuguMesh/AnimationPlayer.stop()
+		
 		emit_signal('died')
 	else:
 		start_invulnerability()
@@ -107,30 +109,28 @@ func _physics_process(delta):
 	
 	velocity = move_and_slide(velocity, Vector3(0, 1, 0))
 	
+	# HANDLING ANIMATION
 	if can_move and is_on_floor() and Input.is_action_pressed("jump"):
 		velocity.y = 10 #jump
-
-	var hitCount = get_slide_count()
-
-	if(hitCount > 0):
-		var collision = get_slide_collision(0)
-		if collision.collider is RigidBody:
-			# collision.collider.apply_impulse(collision.position, -collision.normal)
-			pass
+		$GuguMesh/AnimationPlayer.play("Jump")
+	elif (not $GuguMesh/AnimationPlayer.is_playing()):
+		if(velocity.x or velocity.z != 0):
+			$GuguMesh/AnimationPlayer.play("Walk")
+		else:
+			$GuguMesh/AnimationPlayer.stop(true)
+			$GuguMesh/AnimationPlayer.play("Idle")
+	elif($GuguMesh/AnimationPlayer.get_current_animation() == "Walk"):
+		if(velocity.length() <= 0.1):
+			$GuguMesh/AnimationPlayer.stop(true)
+			$GuguMesh/AnimationPlayer.play("Idle")
 	
-	#HANDLING ANIMATION AND ROTATION
-	#vou ter que mudar isso no futuro para pôr animação de pulo
-	#preciso de outra maneira de identificar movimentação
-	is_moving = (velocity.x or velocity.y or velocity.z != 0) #and !$CollisionShape/CharacterMesh/AnimationPlayer.is_playing()
+	#HANDLING ROTATION
 	must_rotate = (velocity.x or velocity.z != 0)
-
+	
 	if must_rotate:
 		var _angle = atan2(velocity.x, velocity.z)
 		var char_rot = self.get_rotation()
 		char_rot.y = _angle
 		self.set_rotation(char_rot)
-		
-	#ANIMAÇÃO DE ANDAR
-	if is_moving:
-#		$CollisionShape/CharacterMesh/AnimationPlayer.play("default")
-		pass
+	
+	
