@@ -192,7 +192,7 @@ tracks/10/keys = {
 "values": [ true ]
 }
 
-[node name="Level1" type="Spatial" index="0"]
+[node name="Level1" type="Spatial"]
 
 script = ExtResource( 1 )
 _sections_unfolded = [ "Transform" ]
@@ -257,7 +257,7 @@ current = false
 fov = 70.0
 size = 1.0
 near = 0.05
-far = 100.0
+far = 250.0
 _sections_unfolded = [ "Transform" ]
 
 [node name="CutsceneAnim" type="AnimationPlayer" parent="Cutscene" index="1"]

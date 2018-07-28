@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=16 format=2]
 
 [ext_resource path="res://Assets/Decoratives/MainClock/MainClock.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Assets/Decoratives/WoodenTable/WoodenTable.tscn" type="PackedScene" id=2]
@@ -8,6 +8,12 @@
 [ext_resource path="res://Assets/Decoratives/PottedPlant/PottedPlant.tscn" type="PackedScene" id=6]
 [ext_resource path="res://Assets/Decoratives/PaperOrigami/PaperOrigami.tscn" type="PackedScene" id=7]
 [ext_resource path="res://Assets/Decoratives/GnomeWhite/GnomeWhiteSitting.tscn" type="PackedScene" id=8]
+[ext_resource path="res://Assets/Decoratives/RoomDecoratives/Wall.tscn" type="PackedScene" id=9]
+[ext_resource path="res://Assets/Decoratives/RoomDecoratives/WallDoor.tscn" type="PackedScene" id=10]
+[ext_resource path="res://Assets/Decoratives/RoomDecoratives/BookCase.tscn" type="PackedScene" id=11]
+[ext_resource path="res://Assets/Decoratives/RoomDecoratives/Chair.tscn" type="PackedScene" id=12]
+[ext_resource path="res://Assets/Decoratives/RoomDecoratives/CoatHanger.tscn" type="PackedScene" id=13]
+[ext_resource path="res://Assets/Decoratives/RoomDecoratives/Lamp.tscn" type="PackedScene" id=14]
 
 [sub_resource type="Environment" id=1]
 
@@ -88,7 +94,7 @@ adjustment_contrast = 1.0
 adjustment_saturation = 1.0
 _sections_unfolded = [ "Background" ]
 
-[node name="Decoratives" type="Spatial" index="0"]
+[node name="Decoratives" type="Spatial"]
 
 _sections_unfolded = [ "Transform" ]
 
@@ -177,5 +183,75 @@ transform = Transform( -0.0708022, 0, 0.99749, 0, 1, 0, -0.99749, 0, -0.0708022,
 [node name="GnomeWhiteSitting5" parent="." index="13" instance=ExtResource( 8 )]
 
 transform = Transform( 0.702892, 0, 0.711296, 0, 1, 0, -0.711296, 0, 0.702892, -23.3365, 12.5501, -10.9894 )
+
+[node name="Wall" parent="." index="14" instance=ExtResource( 9 )]
+
+transform = Transform( 16, 0, 0, 0, 16, 0, 0, 0, 16, 0, -34.9564, -132.51 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="Wall2" parent="." index="15" instance=ExtResource( 9 )]
+
+transform = Transform( 16, 0, 0, 0, 16, 0, 0, 0, 16, 110.552, -34.9564, -132.51 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="Wall3" parent="." index="16" instance=ExtResource( 9 )]
+
+transform = Transform( 16, 0, 0, 0, 16, 0, 0, 0, 16, -157.817, -34.9564, -132.51 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="Wall4" parent="." index="17" instance=ExtResource( 9 )]
+
+transform = Transform( -2.60673e-06, 0, 16, 0, 16, 0, -16, 0, -2.60673e-06, -157.817, -34.9564, -44.1217 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="Wall5" parent="." index="18" instance=ExtResource( 9 )]
+
+transform = Transform( -2.60673e-06, 0, 16, 0, 16, 0, -16, 0, -2.60673e-06, -157.817, -34.9564, 114.325 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="Wall6" parent="." index="19" instance=ExtResource( 9 )]
+
+transform = Transform( -16, 0, -5.21346e-06, 0, 16, 0, 5.21346e-06, 0, -16, -66.7932, -34.9564, 167.108 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="Wall7" parent="." index="20" instance=ExtResource( 9 )]
+
+transform = Transform( -16, 0, -5.21346e-06, 0, 16, 0, 5.21346e-06, 0, -16, 92.7268, -34.9564, 167.108 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="Wall8" parent="." index="21" instance=ExtResource( 9 )]
+
+transform = Transform( 7.82019e-06, 0, -16, 0, 16, 0, 16, 0, 7.82019e-06, 177.251, -34.9564, 80.296 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="Wall9" parent="." index="22" instance=ExtResource( 9 )]
+
+transform = Transform( 7.82019e-06, 0, -16, 0, 16, 0, 16, 0, 7.82019e-06, 177.251, -34.9564, -48.7146 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="WallDoor" parent="." index="23" instance=ExtResource( 10 )]
+
+transform = Transform( -13, 0, -5.06239e-06, 0, 13, 0, 5.06239e-06, 0, -13, 0, -34.0107, 165.828 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="BookCase" parent="." index="24" instance=ExtResource( 11 )]
+
+transform = Transform( 16, 0, 0, 0, 16, 0, 0, 0, 16, -85.2416, -35.6143, -83.3001 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="Chair" parent="." index="25" instance=ExtResource( 12 )]
+
+transform = Transform( 11, 0, 0, 0, 11, 0, 0, 0, 11, 0, -39.6658, -29.1522 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="CoatHanger" parent="." index="26" instance=ExtResource( 13 )]
+
+transform = Transform( 16, 0, 0, 0, 16, 0, 0, 0, 16, -122.595, -38.2595, 133.176 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="Lamp" parent="." index="27" instance=ExtResource( 14 )]
+
+transform = Transform( 12, 0, 0, 0, 12, 0, 0, 0, 12, 155.334, -37.4864, -111.084 )
+_sections_unfolded = [ "Transform" ]
 
 

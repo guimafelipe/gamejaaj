@@ -3,16 +3,14 @@
 [ext_resource path="res://Assets/Camera/BasePivot.gd" type="Script" id=1]
 [ext_resource path="res://Assets/Camera/Camera.gd" type="Script" id=2]
 
-[node name="BasePivot" type="Spatial"]
+[node name="BasePivot" type="Spatial" index="0"]
 
-editor/display_folded = true
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 9.01734 )
 script = ExtResource( 1 )
 _sections_unfolded = [ "Transform" ]
 
 [node name="BaseCamPos" type="Spatial" parent="." index="0"]
 
-editor/display_folded = true
 transform = Transform( 0.999999, 0, 0, 0, 0.999999, 0, 0, 0, 1, 0, 7.40313, 9.68034 )
 
 [node name="Camera" type="Camera" parent="BaseCamPos" index="0"]
@@ -29,7 +27,7 @@ current = true
 fov = 70.0
 size = 1.0
 near = 0.05
-far = 100.0
+far = 250.0
 script = ExtResource( 2 )
 _sections_unfolded = [ "Transform", "Visibility" ]
 

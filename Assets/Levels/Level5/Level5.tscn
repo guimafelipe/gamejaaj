@@ -94,7 +94,7 @@ tracks/3/keys = {
 } ]
 }
 
-[node name="Level5" type="Spatial" index="0"]
+[node name="Level5" type="Spatial"]
 
 script = ExtResource( 1 )
 LEVEL = 5
@@ -135,7 +135,7 @@ current = false
 fov = 70.0
 size = 1.0
 near = 0.05
-far = 100.0
+far = 250.0
 _sections_unfolded = [ "Transform" ]
 
 [node name="Ponteiros" type="Spatial" parent="." index="5"]

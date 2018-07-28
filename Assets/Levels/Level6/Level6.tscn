@@ -1,10 +1,13 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=10 format=2]
 
-[ext_resource path="res://Assets/UI/UI.tscn" type="PackedScene" id=1]
-[ext_resource path="res://Assets/UI/PauseUI/PauseUI.tscn" type="PackedScene" id=2]
-[ext_resource path="res://Assets/Decoratives/MainDecoratives/Decoratives.tscn" type="PackedScene" id=3]
-[ext_resource path="res://Assets/Levels/Level6/SmokeEffect.tscn" type="PackedScene" id=4]
-[ext_resource path="res://Assets/Decoratives/GuguAnimated/GuguMesh.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Assets/Levels/Level6/Level6.gd" type="Script" id=1]
+[ext_resource path="res://Assets/UI/UI.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Assets/UI/PauseUI/PauseUI.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Assets/Decoratives/MainDecoratives/Decoratives.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Assets/Levels/Level6/SmokeEffect.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Assets/Decoratives/GuguAnimated/GuguMesh.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Assets/Decoratives/PonteiroHoras/PonteiroHoras.tscn" type="PackedScene" id=7]
+[ext_resource path="res://Assets/Decoratives/PonteiroMinutos/PonteiroMinutos.tscn" type="PackedScene" id=8]
 
 [sub_resource type="Animation" id=1]
 
@@ -204,11 +207,12 @@ tracks/13/keys = {
 "values": [ false, true ]
 }
 
-[node name="FinalCutscene" type="Spatial"]
+[node name="FinalCutscene" type="Spatial" index="0"]
 
+script = ExtResource( 1 )
 _sections_unfolded = [ "Transform" ]
 
-[node name="UI" parent="." index="0" instance=ExtResource( 1 )]
+[node name="UI" parent="." index="0" instance=ExtResource( 2 )]
 
 [node name="PlayerUI" parent="UI" index="0"]
 
@@ -233,17 +237,13 @@ visible = false
 margin_right = 1240.0
 margin_bottom = 680.0
 
-[node name="PauseUI" parent="." index="1" instance=ExtResource( 2 )]
+[node name="PauseUI" parent="." index="1" instance=ExtResource( 3 )]
 
-[node name="Decoratives" parent="." index="2" instance=ExtResource( 3 )]
+[node name="Decoratives" parent="." index="2" instance=ExtResource( 4 )]
 
 editor/display_folded = true
 
-[node name="DirectionalLight" parent="Decoratives" index="1"]
-
-light_cull_mask = -1
-
-[node name="SmokeEffect6" parent="Decoratives" index="9" instance=ExtResource( 4 )]
+[node name="SmokeEffect6" parent="Decoratives" index="9" instance=ExtResource( 5 )]
 
 transform = Transform( 0.211797, -0.973943, -0.0810992, -0.109795, 0.0587443, -0.992217, 0.971127, 0.219053, -0.0944927, 30, 8.55226, -2 )
 emitting = false
@@ -253,7 +253,7 @@ one_shot = true
 
 _sections_unfolded = [ "Visibility" ]
 
-[node name="SmokeEffect5" parent="Decoratives" index="11" instance=ExtResource( 4 )]
+[node name="SmokeEffect5" parent="Decoratives" index="11" instance=ExtResource( 5 )]
 
 transform = Transform( -0.0700483, -0.991384, -0.110687, -0.530157, 0.13099, -0.83772, 0.845001, -1.19209e-07, -0.534766, 26.4797, 5.55123, 13.4018 )
 emitting = false
@@ -263,7 +263,7 @@ one_shot = true
 
 _sections_unfolded = [ "Visibility" ]
 
-[node name="SmokeEffect4" parent="Decoratives" index="13" instance=ExtResource( 4 )]
+[node name="SmokeEffect4" parent="Decoratives" index="13" instance=ExtResource( 5 )]
 
 transform = Transform( 0.399811, 0.916543, 0.010022, -0.601237, 0.270492, -0.751896, -0.691856, 0.294591, 0.659206, -16.6876, 3.54272, 10.1103 )
 emitting = false
@@ -273,7 +273,7 @@ one_shot = true
 
 _sections_unfolded = [ "Visibility" ]
 
-[node name="SmokeEffect3" parent="Decoratives" index="15" instance=ExtResource( 4 )]
+[node name="SmokeEffect3" parent="Decoratives" index="15" instance=ExtResource( 5 )]
 
 transform = Transform( 0.255818, 0.966294, 0.0289015, -0.109795, 0.0587443, -0.992217, -0.960471, 0.250654, 0.121123, -31.3082, 8.85852, 4.68838 )
 emitting = false
@@ -283,7 +283,7 @@ one_shot = true
 
 _sections_unfolded = [ "Visibility" ]
 
-[node name="SmokeEffect2" parent="Decoratives" index="17" instance=ExtResource( 4 )]
+[node name="SmokeEffect2" parent="Decoratives" index="17" instance=ExtResource( 5 )]
 
 transform = Transform( 0.708462, 0.704797, -0.0366682, -0.109795, 0.0587443, -0.992217, -0.697157, 0.706974, 0.119001, -23.3365, 12.5501, -10.9894 )
 emitting = false
@@ -293,13 +293,13 @@ one_shot = true
 
 _sections_unfolded = [ "Visibility" ]
 
-[node name="SmokeEffect" parent="." index="3" instance=ExtResource( 4 )]
+[node name="SmokeEffect" parent="." index="3" instance=ExtResource( 5 )]
 
 transform = Transform( -0.940804, 0.315919, 0.12281, -0.109795, 0.0587443, -0.992218, -0.320671, -0.946968, -0.0205807, 2.5171, 0, -6.37019 )
 emitting = false
 one_shot = true
 
-[node name="GuguMesh" parent="." index="4" instance=ExtResource( 5 )]
+[node name="GuguMesh" parent="." index="4" instance=ExtResource( 6 )]
 
 transform = Transform( -0.380357, 0, 0.527094, 0, 0.65, 0, -0.527094, 0, -0.380357, 2.50934, 0, -6.36459 )
 visible = false
@@ -330,7 +330,22 @@ current = false
 fov = 70.0
 size = 1.0
 near = 0.05
-far = 100.0
+far = 250.0
+_sections_unfolded = [ "Transform" ]
+
+[node name="Ponteiros" type="Spatial" parent="." index="7"]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="PonteiroHoras" parent="Ponteiros" index="0" instance=ExtResource( 7 )]
+
+transform = Transform( -5.11685, 0, -6.14962, 0, 8, 0, 6.14962, 0, -5.11685, 0, -3, 0 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="PonteiroMinutos" parent="Ponteiros" index="1" instance=ExtResource( 8 )]
+
+transform = Transform( -4.02303, 0, -6.91485, 0, 8, 0, 6.91485, 0, -4.02303, 0, -3, 0 )
 _sections_unfolded = [ "Transform" ]
 
 
