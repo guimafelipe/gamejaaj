@@ -1,9 +1,10 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://Assets/Theme/ui_buttons_theme.tres" type="Theme" id=1]
 [ext_resource path="res://Assets/Menus/MainMenu/MainMenu.gd" type="Script" id=2]
+[ext_resource path="res://Assets/Menus/MainMenu/MainMenu1920x1080.png" type="Texture" id=3]
 
-[node name="MainMenu" type="MarginContainer"]
+[node name="MainMenu" type="MarginContainer" index="0"]
 
 anchor_left = 0.0
 anchor_top = 0.0
@@ -16,15 +17,55 @@ mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
 theme = ExtResource( 1 )
+custom_constants/margin_right = 0
+custom_constants/margin_top = 0
+custom_constants/margin_left = 0
+custom_constants/margin_bottom = 0
+script = ExtResource( 2 )
+_sections_unfolded = [ "custom_constants" ]
+
+[node name="Background" type="TextureRect" parent="." index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_right = 1280.0
+margin_bottom = 720.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 1
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+texture = ExtResource( 3 )
+expand = true
+stretch_mode = 0
+
+[node name="MarginContainer" type="MarginContainer" parent="." index="1"]
+
+editor/display_folded = true
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_right = 1280.0
+margin_bottom = 720.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
 custom_constants/margin_right = 20
 custom_constants/margin_top = 20
 custom_constants/margin_left = 20
 custom_constants/margin_bottom = 20
-script = ExtResource( 2 )
-_sections_unfolded = [ "Theme", "custom_constants" ]
+_sections_unfolded = [ "custom_constants" ]
 
-[node name="HBoxContainer" type="HBoxContainer" parent="." index="0"]
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer" index="0"]
 
+editor/display_folded = true
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
@@ -41,7 +82,7 @@ size_flags_horizontal = 1
 size_flags_vertical = 1
 alignment = 0
 
-[node name="Separator" type="Control" parent="HBoxContainer" index="0"]
+[node name="Separator" type="Control" parent="MarginContainer/HBoxContainer" index="0"]
 
 anchor_left = 0.0
 anchor_top = 0.0
@@ -58,7 +99,7 @@ size_flags_vertical = 1
 size_flags_stretch_ratio = 2.0
 _sections_unfolded = [ "Size Flags" ]
 
-[node name="ButtonsList" type="VBoxContainer" parent="HBoxContainer" index="1"]
+[node name="ButtonsList" type="VBoxContainer" parent="MarginContainer/HBoxContainer" index="1"]
 
 anchor_left = 0.0
 anchor_top = 0.0
@@ -77,7 +118,7 @@ custom_constants/separation = 20
 alignment = 1
 _sections_unfolded = [ "Rect", "Size Flags", "Theme", "custom_constants" ]
 
-[node name="LevelSelectBtn" type="Button" parent="HBoxContainer/ButtonsList" index="0"]
+[node name="LevelSelectBtn" type="Button" parent="MarginContainer/HBoxContainer/ButtonsList" index="0"]
 
 anchor_left = 0.0
 anchor_top = 0.0
@@ -101,7 +142,7 @@ text = "Levels"
 flat = false
 align = 1
 
-[node name="CreditsBtn" type="Button" parent="HBoxContainer/ButtonsList" index="1"]
+[node name="CreditsBtn" type="Button" parent="MarginContainer/HBoxContainer/ButtonsList" index="1"]
 
 anchor_left = 0.0
 anchor_top = 0.0
@@ -125,7 +166,7 @@ text = "Credits"
 flat = false
 align = 1
 
-[node name="QuitBtn" type="Button" parent="HBoxContainer/ButtonsList" index="2"]
+[node name="QuitBtn" type="Button" parent="MarginContainer/HBoxContainer/ButtonsList" index="2"]
 
 anchor_left = 0.0
 anchor_top = 0.0
@@ -149,10 +190,10 @@ text = "Quit"
 flat = false
 align = 1
 
-[connection signal="button_up" from="HBoxContainer/ButtonsList/LevelSelectBtn" to="." method="_on_LevelSelectBtn_button_up"]
+[connection signal="button_up" from="MarginContainer/HBoxContainer/ButtonsList/LevelSelectBtn" to="." method="_on_LevelSelectBtn_button_up"]
 
-[connection signal="button_up" from="HBoxContainer/ButtonsList/CreditsBtn" to="." method="_on_CreditsBtn_button_up"]
+[connection signal="button_up" from="MarginContainer/HBoxContainer/ButtonsList/CreditsBtn" to="." method="_on_CreditsBtn_button_up"]
 
-[connection signal="button_up" from="HBoxContainer/ButtonsList/QuitBtn" to="." method="_on_QuitBtn_button_up"]
+[connection signal="button_up" from="MarginContainer/HBoxContainer/ButtonsList/QuitBtn" to="." method="_on_QuitBtn_button_up"]
 
 
