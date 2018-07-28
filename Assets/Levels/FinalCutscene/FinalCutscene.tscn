@@ -1,47 +1,324 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=7 format=2]
 
-[ext_resource path="res://Assets/Decoratives/MainDecoratives/Decoratives.tscn" type="PackedScene" id=1]
-[ext_resource path="res://Assets/Levels/FinalCutscene/SmokeEffect.tscn" type="PackedScene" id=2]
-[ext_resource path="res://Assets/Decoratives/GuguAnimated/GuguMesh.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Assets/UI/UI.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Assets/UI/PauseUI/PauseUI.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Assets/Decoratives/MainDecoratives/Decoratives.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Assets/Levels/FinalCutscene/SmokeEffect.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Assets/Decoratives/GuguAnimated/GuguMesh.tscn" type="PackedScene" id=5]
+
+[sub_resource type="Animation" id=1]
+
+resource_name = "Cutscene"
+length = 60.0
+loop = false
+step = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("Camera:transform")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 3, 4.5, 9.5, 16, 22, 27.5, 36, 42, 60 ),
+"transitions": PoolRealArray( 1, -4, 0, 0, 0, 0, 0, 0, 1, 1 ),
+"update": 0,
+"values": [ Transform( 1, 0, 0, 0, 0.519109, 0.854708, 0, -0.854708, 0.519109, -0.758056, 17.2274, 16.6139 ), Transform( 1, 0, 0, 0, 0.519109, 0.854708, 0, -0.854708, 0.519109, -0.758056, 17.2274, 16.6139 ), Transform( 0.565237, -0.325987, 0.757786, 0, 0.918608, 0.39517, -0.824929, -0.223365, 0.519231, -27.6623, 12.531, 5.85051 ), Transform( 0.813276, 0.0393009, 0.58055, 0, 0.997716, -0.0675414, -0.581878, 0.0549298, 0.811419, -20.3007, 13.3794, -6.25166 ), Transform( -0.0692009, 0.178813, -0.981447, 0.0174639, 0.983871, 0.178023, 0.99745, -0.00482047, -0.0712075, 21.1815, 8.98857, 13.8691 ), Transform( 0.226491, -0.177315, 0.957738, 0.0174639, 0.983871, 0.178023, -0.973857, -0.0235949, 0.225935, -12.2103, 6.30368, 10.8472 ), Transform( -0.0340896, -0.181051, -0.982883, 0, 0.983454, -0.181157, 0.999419, -0.00617555, -0.0335255, 23.3793, 9.38435, -0.364717 ), Transform( -0.729037, 0.0874053, 0.67887, 0, 0.991813, -0.127697, -0.684474, -0.0930958, -0.723069, 3.52011, 3.1288, -8.16789 ), Transform( 0.999966, 0.00104594, 0.00812376, -0.00595142, 0.774217, 0.632892, -0.00562756, -0.632919, 0.774197, 3.52011, 18.7341, 24.7878 ), Transform( 0.999966, 0.00104594, 0.00812376, -0.00595142, 0.774217, 0.632892, -0.00562756, -0.632919, 0.774197, 3.52011, 24.2284, 47.7442 ) ]
+}
+tracks/1/type = "method"
+tracks/1/path = NodePath("UI")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 5, 10, 16.5, 22.5, 27.8, 36.5, 42.5, 51 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1 ),
+"values": [ {
+"args": [ "Ih, chegou a autoridade..." ],
+"method": "set_subtitle"
+}, {
+"args": [ "Todos de volta para seus postos! Sem lenga lenga!" ],
+"method": "set_subtitle"
+}, {
+"args": [ "cof cof... Acho que vi um humano..." ],
+"method": "set_subtitle"
+}, {
+"args": [ "Bem que podia subir mais um tiquinho..." ],
+"method": "set_subtitle"
+}, {
+"args": [ "Ao trabalho, Gugu! Cuida das horas que os minutos eu garanto!" ],
+"method": "set_subtitle"
+}, {
+"args": [ "....." ],
+"method": "set_subtitle"
+}, {
+"args": [ "Ih, acho que to ouvindo gnomos... Tenho que parar de usar essas ervas..." ],
+"method": "set_subtitle"
+}, {
+"args": [ "Se bem que eu podia fazer um jogo sobre isso..." ],
+"method": "set_subtitle"
+} ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Decoratives/GnomeWhiteSitting4:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = false
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 7.7 ),
+"transitions": PoolRealArray( 0, 0 ),
+"update": 1,
+"values": [ true, false ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("Decoratives/SmokeEffect3:emitting")
+tracks/3/interp = 1
+tracks/3/loop_wrap = false
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0, 7.7 ),
+"transitions": PoolRealArray( 0, 0 ),
+"update": 1,
+"values": [ false, true ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("Decoratives/GnomeWhiteSitting5:visible")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0, 14.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ true, false ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("Decoratives/SmokeEffect2:emitting")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0, 14.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ false, true ]
+}
+tracks/6/type = "value"
+tracks/6/path = NodePath("Decoratives/SmokeEffect5:emitting")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/keys = {
+"times": PoolRealArray( 0, 21.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ false, true ]
+}
+tracks/7/type = "value"
+tracks/7/path = NodePath("Decoratives/GnomeWhiteSitting2:visible")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/keys = {
+"times": PoolRealArray( 0, 21.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ true, false ]
+}
+tracks/8/type = "value"
+tracks/8/path = NodePath("Decoratives/GnomeWhiteSitting3:visible")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/keys = {
+"times": PoolRealArray( 0, 26.6 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ true, false ]
+}
+tracks/9/type = "value"
+tracks/9/path = NodePath("Decoratives/SmokeEffect4:emitting")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/keys = {
+"times": PoolRealArray( 0, 26.6 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ false, true ]
+}
+tracks/10/type = "value"
+tracks/10/path = NodePath("Decoratives/GnomeWhiteSitting:visible")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/keys = {
+"times": PoolRealArray( 0, 35 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ true, false ]
+}
+tracks/11/type = "value"
+tracks/11/path = NodePath("Decoratives/SmokeEffect6:emitting")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/keys = {
+"times": PoolRealArray( 0, 35 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ false, true ]
+}
+tracks/12/type = "value"
+tracks/12/path = NodePath("GuguMesh:visible")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/imported = false
+tracks/12/enabled = true
+tracks/12/keys = {
+"times": PoolRealArray( 0, 41 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ true, false ]
+}
+tracks/13/type = "value"
+tracks/13/path = NodePath("SmokeEffect:emitting")
+tracks/13/interp = 1
+tracks/13/loop_wrap = true
+tracks/13/imported = false
+tracks/13/enabled = true
+tracks/13/keys = {
+"times": PoolRealArray( 0, 41 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ false, true ]
+}
 
 [node name="FinalCutscene" type="Spatial" index="0"]
 
 _sections_unfolded = [ "Transform" ]
 
-[node name="Decoratives" parent="." index="0" instance=ExtResource( 1 )]
+[node name="UI" parent="." index="0" instance=ExtResource( 1 )]
+
+[node name="PlayerUI" parent="UI" index="0"]
+
+visible = false
+margin_right = 1240.0
+margin_bottom = 680.0
+
+[node name="SurviveTimeUI" parent="UI" index="1"]
+
+visible = false
+margin_right = 1240.0
+margin_bottom = 680.0
+
+[node name="SubtitlesUI" parent="UI" index="2"]
+
+margin_right = 1240.0
+margin_bottom = 680.0
+
+[node name="CountdownUI" parent="UI" index="3"]
+
+visible = false
+margin_right = 1240.0
+margin_bottom = 680.0
+
+[node name="PauseUI" parent="." index="1" instance=ExtResource( 2 )]
+
+[node name="Decoratives" parent="." index="2" instance=ExtResource( 3 )]
+
+editor/display_folded = true
 
 [node name="DirectionalLight" parent="Decoratives" index="1"]
 
 light_cull_mask = -1
 
-[node name="SmokeEffect6" parent="Decoratives/GnomeWhiteSitting" index="2" instance=ExtResource( 2 )]
+[node name="SmokeEffect6" parent="Decoratives" index="9" instance=ExtResource( 4 )]
 
-transform = Transform( 0.963902, 0.249909, -0.0918664, -0.109795, 0.0587443, -0.992217, -0.242567, 0.966486, 0.0840626, -1.78814e-07, 0, 7.62939e-06 )
-_sections_unfolded = [ "Draw Passes", "Drawing", "Geometry", "LOD", "Process Material", "Time", "Transform" ]
+transform = Transform( 0.211797, -0.973943, -0.0810992, -0.109795, 0.0587443, -0.992217, 0.971127, 0.219053, -0.0944927, 30, 8.55226, -2 )
+emitting = false
+one_shot = true
 
-[node name="SmokeEffect5" parent="Decoratives/GnomeWhiteSitting2" index="2" instance=ExtResource( 2 )]
+[node name="GnomeWhiteSitting" parent="Decoratives" index="10"]
 
-transform = Transform( 0.751486, 0.530157, -0.392686, -0.530157, 0.13099, -0.83772, -0.392686, 0.83772, 0.379504, 0, -4.76837e-07, -3.8147e-06 )
-_sections_unfolded = [ "Draw Passes", "Drawing", "Geometry", "LOD", "Process Material", "Time", "Transform" ]
+_sections_unfolded = [ "Visibility" ]
 
-[node name="SmokeEffect4" parent="Decoratives/GnomeWhiteSitting3" index="2" instance=ExtResource( 2 )]
+[node name="SmokeEffect5" parent="Decoratives" index="11" instance=ExtResource( 4 )]
 
-transform = Transform( 0.399431, -0.713235, -0.57598, -0.601237, 0.270492, -0.751896, 0.692076, 0.646631, -0.320781, 9.53674e-07, -2.38419e-07, -2.86102e-06 )
-_sections_unfolded = [ "Draw Passes", "Drawing", "Geometry", "LOD", "Process Material", "Time", "Transform" ]
+transform = Transform( -0.0700483, -0.991384, -0.110687, -0.530157, 0.13099, -0.83772, 0.845001, -1.19209e-07, -0.534766, 26.4797, 5.55123, 13.4018 )
+emitting = false
+one_shot = true
 
-[node name="SmokeEffect3" parent="Decoratives/GnomeWhiteSitting4" index="2" instance=ExtResource( 2 )]
+[node name="GnomeWhiteSitting2" parent="Decoratives" index="12"]
 
-transform = Transform( 0.939948, -0.318441, -0.122865, -0.109795, 0.0587443, -0.992217, 0.32318, 0.946122, 0.0202532, -1.66893e-06, 0, 1.90735e-06 )
-_sections_unfolded = [ "Draw Passes", "Drawing", "Geometry", "LOD", "Process Material", "Time", "Transform" ]
+_sections_unfolded = [ "Visibility" ]
 
-[node name="SmokeEffect2" parent="Decoratives/GnomeWhiteSitting5" index="2" instance=ExtResource( 2 )]
+[node name="SmokeEffect4" parent="Decoratives" index="13" instance=ExtResource( 4 )]
 
-transform = Transform( 0.993858, -0.00747177, -0.110419, -0.109795, 0.0587443, -0.992217, 0.0139, 0.998246, 0.0575631, 0, 0, 0 )
-_sections_unfolded = [ "Draw Passes", "Drawing", "Geometry", "LOD", "Process Material", "Time", "Transform" ]
+transform = Transform( 0.399811, 0.916543, 0.010022, -0.601237, 0.270492, -0.751896, -0.691856, 0.294591, 0.659206, -16.6876, 3.54272, 10.1103 )
+emitting = false
+one_shot = true
 
-[node name="Camera" type="Camera" parent="." index="1"]
+[node name="GnomeWhiteSitting3" parent="Decoratives" index="14"]
 
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.59859, 5.5833, 7.19364 )
+_sections_unfolded = [ "Visibility" ]
+
+[node name="SmokeEffect3" parent="Decoratives" index="15" instance=ExtResource( 4 )]
+
+transform = Transform( 0.255818, 0.966294, 0.0289015, -0.109795, 0.0587443, -0.992217, -0.960471, 0.250654, 0.121123, -31.3082, 8.85852, 4.68838 )
+emitting = false
+one_shot = true
+
+[node name="GnomeWhiteSitting4" parent="Decoratives" index="16"]
+
+_sections_unfolded = [ "Visibility" ]
+
+[node name="SmokeEffect2" parent="Decoratives" index="17" instance=ExtResource( 4 )]
+
+transform = Transform( 0.708462, 0.704797, -0.0366682, -0.109795, 0.0587443, -0.992217, -0.697157, 0.706974, 0.119001, -23.3365, 12.5501, -10.9894 )
+emitting = false
+one_shot = true
+
+[node name="GnomeWhiteSitting5" parent="Decoratives" index="18"]
+
+_sections_unfolded = [ "Visibility" ]
+
+[node name="SmokeEffect" parent="." index="3" instance=ExtResource( 4 )]
+
+transform = Transform( -0.940804, 0.315919, 0.12281, -0.109795, 0.0587443, -0.992218, -0.320671, -0.946968, -0.0205807, 2.5171, 0, -6.37019 )
+emitting = false
+one_shot = true
+
+[node name="GuguMesh" parent="." index="4" instance=ExtResource( 5 )]
+
+transform = Transform( -0.380357, 0, 0.527094, 0, 0.65, 0, -0.527094, 0, -0.380357, 2.50934, 0, -6.36459 )
+visible = false
+_sections_unfolded = [ "Transform", "Visibility" ]
+
+[node name="FinalCutsceneAnim" type="AnimationPlayer" parent="." index="5"]
+
+root_node = NodePath("..")
+autoplay = "Cutscene"
+playback_process_mode = 1
+playback_default_blend_time = 0.0
+playback_speed = 1.0
+anims/Cutscene = SubResource( 1 )
+blend_times = [  ]
+_sections_unfolded = [ "Playback Options" ]
+
+[node name="Camera" type="Camera" parent="." index="6"]
+
+transform = Transform( 1, 0, 0, 0, 0.519109, 0.854708, 0, -0.854708, 0.519109, -0.758056, 17.2274, 16.6139 )
 keep_aspect = 1
 cull_mask = 1048575
 environment = null
@@ -54,16 +331,8 @@ fov = 70.0
 size = 1.0
 near = 0.05
 far = 100.0
-
-[node name="GuguMesh" parent="." index="2" instance=ExtResource( 3 )]
-
-transform = Transform( -0.380357, 0, 0.527094, 0, 0.65, 0, -0.527094, 0, -0.380357, 2.50934, 0, -6.36459 )
 _sections_unfolded = [ "Transform" ]
 
-[node name="SmokeEffect" parent="GuguMesh" index="2" instance=ExtResource( 2 )]
 
-transform = Transform( 1.24702, 0.896993, -0.0848847, -0.168916, 0.0903758, -1.52649, -0.885025, 1.24664, 0.171741, 1.86265e-09, 0, 0.0147233 )
-_sections_unfolded = [ "Draw Passes", "Drawing", "Geometry", "LOD", "Process Material", "Time", "Transform" ]
-
-
+[editable path="UI"]
 [editable path="Decoratives"]

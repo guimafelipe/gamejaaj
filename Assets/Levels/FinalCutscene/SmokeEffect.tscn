@@ -3,7 +3,7 @@
 [ext_resource path="res://Assets/Levels/FinalCutscene/SmokeEffectMaterial.tres" type="Material" id=1]
 [ext_resource path="res://Assets/Levels/FinalCutscene/SmokeEffect.gd" type="Script" id=2]
 
-[sub_resource type="ParticlesMaterial" id=2]
+[sub_resource type="ParticlesMaterial" id=1]
 
 render_priority = 0
 trail_divisor = 1
@@ -41,14 +41,14 @@ anim_offset_random = 0.0
 anim_loop = false
 _sections_unfolded = [ "Angle", "Angular Velocity", "Animation", "Color", "Damping", "Emission Shape", "Flags", "Gravity", "Hue Variation", "Initial Velocity", "Linear Accel", "Radial Accel", "Resource", "Scale", "Spread", "Tangential Accel", "Trail" ]
 
-[sub_resource type="PlaneMesh" id=3]
+[sub_resource type="PlaneMesh" id=2]
 
 custom_aabb = AABB( 0, 0, 0, 0, 0, 0 )
 size = Vector2( 2, 2 )
 subdivide_width = 0
 subdivide_depth = 0
 
-[node name="SmokeEffect" type="Particles" index="0"]
+[node name="SmokeEffect" type="Particles"]
 
 transform = Transform( 1, -6.51683e-07, 5.30863e-14, 5.30863e-14, 1.62921e-07, 1, -6.51683e-07, -1, 1.62921e-07, 0, 0, 0 )
 layers = 1
@@ -61,7 +61,7 @@ lod_min_hysteresis = 0.0
 lod_max_distance = 0.0
 lod_max_hysteresis = 0.0
 emitting = true
-amount = 300
+amount = 150
 lifetime = 1.0
 one_shot = false
 preprocess = 0.0
@@ -69,14 +69,14 @@ speed_scale = 1.0
 explosiveness = 0.3
 randomness = 1.0
 fixed_fps = 0
-fract_delta = true
+fract_delta = false
 visibility_aabb = AABB( -4, -4.6783, -4, 8, 9.35661, 8 )
 local_coords = false
 draw_order = 0
-process_material = SubResource( 2 )
+process_material = SubResource( 1 )
 draw_passes = 1
-draw_pass_1 = SubResource( 3 )
+draw_pass_1 = SubResource( 2 )
 script = ExtResource( 2 )
-_sections_unfolded = [ "Draw Passes", "Drawing", "Geometry", "LOD", "Process Material", "Transform" ]
+_sections_unfolded = [ "Draw Passes", "Drawing", "Geometry", "LOD", "Process Material", "Time", "Transform" ]
 
 
