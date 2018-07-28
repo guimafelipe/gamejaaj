@@ -94,7 +94,7 @@ adjustment_contrast = 1.0
 adjustment_saturation = 1.0
 _sections_unfolded = [ "Background" ]
 
-[node name="Decoratives" type="Spatial"]
+[node name="Decoratives" type="Spatial" index="0"]
 
 _sections_unfolded = [ "Transform" ]
 
@@ -231,7 +231,7 @@ _sections_unfolded = [ "Transform" ]
 
 [node name="WallDoor" parent="." index="23" instance=ExtResource( 10 )]
 
-transform = Transform( -13, 0, -5.06239e-06, 0, 13, 0, 5.06239e-06, 0, -13, 0, -34.0107, 165.828 )
+transform = Transform( -11, 0, -4.28356e-06, 0, 11, 0, 4.28356e-06, 0, -11, 0, -34.0107, 164.281 )
 _sections_unfolded = [ "Transform" ]
 
 [node name="BookCase" parent="." index="24" instance=ExtResource( 11 )]
@@ -241,17 +241,17 @@ _sections_unfolded = [ "Transform" ]
 
 [node name="Chair" parent="." index="25" instance=ExtResource( 12 )]
 
-transform = Transform( 11, 0, 0, 0, 11, 0, 0, 0, 11, 0, -39.6658, -29.1522 )
+transform = Transform( -8.67653, 0, 6.7615, 0, 11, 0, -6.7615, 0, -8.67653, 90.8978, -39.6658, 70.9461 )
 _sections_unfolded = [ "Transform" ]
 
 [node name="CoatHanger" parent="." index="26" instance=ExtResource( 13 )]
 
-transform = Transform( 16, 0, 0, 0, 16, 0, 0, 0, 16, -122.595, -38.2595, 133.176 )
+transform = Transform( 14, 0, 0, 0, 14, 0, 0, 0, 14, -122.595, -38.2595, 133.176 )
 _sections_unfolded = [ "Transform" ]
 
 [node name="Lamp" parent="." index="27" instance=ExtResource( 14 )]
 
-transform = Transform( 12, 0, 0, 0, 12, 0, 0, 0, 12, 155.334, -37.4864, -111.084 )
+transform = Transform( 11, 0, 0, 0, 11, 0, 0, 0, 11, 148.153, -37.4864, -102.05 )
 _sections_unfolded = [ "Transform" ]
 
 
