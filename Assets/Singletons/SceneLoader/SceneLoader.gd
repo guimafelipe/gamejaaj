@@ -12,7 +12,8 @@ var levels_loading_texts = [
 	"Zequinha, o Gnomo da Bússola",
 	"Evilásio, o Gnomo das Meias",
 	"Wesley, o Gnomo do Pêndulo",
-	"Moacir, o Gnomo Chefe"
+	"Moacir, o Gnomo Chefe",
+	"Humano, o Humano da Erva",
 ]
 
 func _ready():
@@ -77,6 +78,9 @@ func set_new_scene(scene_resource):
 	$ColorRect.set_visible(false)
 
 func goto_level(level):
+	if(level == 7):
+		goto_credits()
+		return
 	var level_path = "res://Assets/Levels/Level" + str(level) + "/Level" \
 	 + str(level) + ".tscn"
 	$Margin/Label.set_text(levels_loading_texts[level-1])
@@ -88,3 +92,6 @@ func goto_levels_menu():
 
 func goto_main_menu():
 	goto_scene("res://Assets/Menus/MainMenu/MainMenu.tscn")
+
+func goto_credits():
+	pass
