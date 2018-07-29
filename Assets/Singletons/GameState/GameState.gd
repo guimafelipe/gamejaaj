@@ -1,6 +1,6 @@
 extends Node
 
-var max_level_reached = 1
+var max_level_reached = 0
 var current_level
 
 func save():
@@ -22,8 +22,10 @@ func load_game():
 	save_game.close()
 
 func set_max_level_reached(value):
+	if(max_level_reached > value):
+		return
 	max_level_reached = value
-	save_game()
+	save()
 
 func _ready():
 	pass

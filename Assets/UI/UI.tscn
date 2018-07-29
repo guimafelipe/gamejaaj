@@ -1,12 +1,13 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://Assets/UI/UI.gd" type="Script" id=1]
 [ext_resource path="res://Assets/UI/PlayerUI/PlayerUI.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Assets/UI/SurviveTimeUI/SurviveTimeUI.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Assets/UI/SubtitlesUI/SubtitlesUI.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Assets/UI/CountdownUI/CountdownUI.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Assets/UI/SkipButton/SkipButton.tscn" type="PackedScene" id=6]
 
-[node name="UI" type="MarginContainer"]
+[node name="UI" type="MarginContainer" index="0"]
 
 anchor_left = 0.0
 anchor_top = 0.0
@@ -23,38 +24,54 @@ mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
 script = ExtResource( 1 )
-_sections_unfolded = [ "Margin" ]
+_sections_unfolded = [ "Margin", "Size Flags" ]
 
 [node name="PlayerUI" parent="." index="0" instance=ExtResource( 2 )]
 
 anchor_right = 0.0
 anchor_bottom = 0.0
 margin_left = 8.0
-margin_right = 984.0
-margin_bottom = 560.0
+margin_right = 1240.0
+margin_bottom = 680.0
 
 [node name="SurviveTimeUI" parent="." index="1" instance=ExtResource( 3 )]
 
 anchor_right = 0.0
 anchor_bottom = 0.0
 margin_left = 8.0
-margin_right = 984.0
-margin_bottom = 560.0
+margin_right = 1240.0
+margin_bottom = 680.0
 
 [node name="SubtitlesUI" parent="." index="2" instance=ExtResource( 4 )]
 
 anchor_right = 0.0
 anchor_bottom = 0.0
 margin_left = 8.0
-margin_right = 984.0
-margin_bottom = 560.0
+margin_right = 1240.0
+margin_bottom = 680.0
 
 [node name="CountdownUI" parent="." index="3" instance=ExtResource( 5 )]
 
 anchor_right = 0.0
 anchor_bottom = 0.0
 margin_left = 8.0
-margin_right = 984.0
-margin_bottom = 560.0
+margin_right = 1240.0
+margin_bottom = 680.0
+
+[node name="SkipButton" parent="." index="4" instance=ExtResource( 6 )]
+
+visible = false
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 1140.0
+margin_top = 635.0
+margin_right = 1240.0
+margin_bottom = 680.0
+rect_min_size = Vector2( 100, 0 )
+size_flags_horizontal = 8
+size_flags_vertical = 8
+_sections_unfolded = [ "Rect", "Theme" ]
+
+[connection signal="button_up" from="SkipButton" to="." method="_on_SkipButton_button_up"]
 
 

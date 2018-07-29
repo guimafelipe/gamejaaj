@@ -31,6 +31,7 @@ func connect_timers():
 
 func start_level():
 	# call only once per level play
+	print(GameState.max_level_reached)
 	start_cutscene()
 
 func restart_level():
@@ -49,10 +50,12 @@ func level_setup():
 	for pointer in $Ponteiros.get_children():
 		pointer.reset_position()
 
-
 func start_cutscene():
 	$UI.enter_cutscene()
 	$Cutscene/CutsceneAnim.play("Cutscene")
+	if GameState.max_level_reached >= LEVEL:
+		$UI.show_skip_button()
+	GameState.set_max_level_reached(LEVEL)
 
 func on_cutscene_ended():
 	$Cutscene/CutsceneAnim.stop()

@@ -25,10 +25,10 @@
 [ext_resource path="res://Assets/Meshes/WhiteGnomes/TorsoTexture.jpg" type="Texture" id=23]
 [ext_resource path="res://Assets/Gugu/GuguPlaceholder.tscn" type="PackedScene" id=24]
 
-[sub_resource type="Animation" id=3]
+[sub_resource type="Animation" id=1]
 
 resource_name = "Cutscene"
-length = 49.0
+length = 73.6
 loop = false
 step = 0.1
 tracks/0/type = "value"
@@ -62,7 +62,7 @@ tracks/2/loop_wrap = true
 tracks/2/imported = false
 tracks/2/enabled = true
 tracks/2/keys = {
-"times": PoolRealArray( 48.9 ),
+"times": PoolRealArray( 73.5 ),
 "transitions": PoolRealArray( 1 ),
 "values": [ {
 "args": [  ],
@@ -76,7 +76,7 @@ tracks/3/loop_wrap = true
 tracks/3/imported = false
 tracks/3/enabled = true
 tracks/3/keys = {
-"times": PoolRealArray( 0, 48.9 ),
+"times": PoolRealArray( 0, 73.5 ),
 "transitions": PoolRealArray( 1, 1 ),
 "values": [ {
 "args": [  ],
@@ -105,12 +105,9 @@ tracks/5/loop_wrap = true
 tracks/5/imported = false
 tracks/5/enabled = true
 tracks/5/keys = {
-"times": PoolRealArray( 0, 3, 5, 6.5, 9, 10.5, 17.9, 27, 36, 48.9 ),
-"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
+"times": PoolRealArray( 3, 5, 6.5, 9, 10.5, 17.9, 27, 36, 46, 56, 65.5, 73.5 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
 "values": [ {
-"args": [  ],
-"method": "start_subtitles"
-}, {
 "args": [ "Gugu: ...zzz" ],
 "method": "set_subtitle"
 }, {
@@ -132,7 +129,16 @@ tracks/5/keys = {
 "args": [ "Nós preparamos uma surpresinha para você aprender a vigiar os relógios de pertinho... Vamos ver se assim toma jeito." ],
 "method": "set_subtitle"
 }, {
-"args": [ "Utilize as teclas \"A\" e \"D\" para correr e a \"Barra de Espaço\" para pular. Se precisar de uma pausa, pressione a tecla \"P\". Espero que esteja em forma..." ],
+"args": [ "Utilize a teclas \"A\" para andar para a esquerda e \"D\" para andar para a direita. Use a \"Barra de Espaço\" para pular os ponteiros do relógio, se não irá sofrer dano." ],
+"method": "set_subtitle"
+}, {
+"args": [ "A cada desafio, você deve sobreviver pelo tempo mostrado no canto superior direito, mas se tomar dano três vezes, deverá começar de novo." ],
+"method": "set_subtitle"
+}, {
+"args": [ "A tecla \"P\" pausa o jogo. E se conseguir sobreviver o tempo estipulado, um novo castigo mais difícil será dado." ],
+"method": "set_subtitle"
+}, {
+"args": [ "Espero que esteja em forma. Seu castigo começa agora!" ],
 "method": "set_subtitle"
 }, {
 "args": [  ],
@@ -158,7 +164,7 @@ tracks/7/loop_wrap = true
 tracks/7/imported = false
 tracks/7/enabled = true
 tracks/7/keys = {
-"times": PoolRealArray( 0, 48.9 ),
+"times": PoolRealArray( 0, 73.5 ),
 "transitions": PoolRealArray( 1, 1 ),
 "update": 1,
 "values": [ true, false ]
@@ -170,7 +176,7 @@ tracks/8/loop_wrap = true
 tracks/8/imported = false
 tracks/8/enabled = true
 tracks/8/keys = {
-"times": PoolRealArray( 0, 48.9 ),
+"times": PoolRealArray( 0, 73.5 ),
 "transitions": PoolRealArray( 1, 1 ),
 "update": 1,
 "values": [ false, true ]
@@ -182,7 +188,7 @@ tracks/9/loop_wrap = true
 tracks/9/imported = false
 tracks/9/enabled = true
 tracks/9/keys = {
-"times": PoolRealArray( 4.6, 48.9 ),
+"times": PoolRealArray( 4.6, 73.5 ),
 "transitions": PoolRealArray( 1, 1 ),
 "update": 1,
 "values": [ true, false ]
@@ -194,15 +200,14 @@ tracks/10/loop_wrap = true
 tracks/10/imported = false
 tracks/10/enabled = true
 tracks/10/keys = {
-"times": PoolRealArray( 48.9 ),
+"times": PoolRealArray( 73.5 ),
 "transitions": PoolRealArray( 1 ),
 "update": 1,
 "values": [ true ]
 }
 
-[sub_resource type="ArrayMesh" id=1]
+[sub_resource type="ArrayMesh" id=2]
 
-resource_name = "Cube.013"
 blend_shape_mode = 1
 custom_aabb = AABB( 0, 0, 0, 0, 0, 0 )
 surfaces/0 = {
@@ -297,7 +302,7 @@ surfaces/6 = {
 "vertex_count": 257
 }
 
-[sub_resource type="SpatialMaterial" id=4]
+[sub_resource type="SpatialMaterial" id=3]
 
 resource_name = "Trousers"
 render_priority = 0
@@ -351,7 +356,7 @@ proximity_fade_enable = false
 distance_fade_enable = false
 _sections_unfolded = [ "Albedo", "Parameters" ]
 
-[sub_resource type="SpatialMaterial" id=5]
+[sub_resource type="SpatialMaterial" id=4]
 
 resource_name = "Torso"
 render_priority = 0
@@ -405,9 +410,8 @@ proximity_fade_enable = false
 distance_fade_enable = false
 _sections_unfolded = [ "Albedo" ]
 
-[sub_resource type="Animation" id=2]
+[sub_resource type="Animation" id=5]
 
-resource_name = "default"
 length = 0.958333
 loop = false
 step = 0.1
@@ -471,26 +475,6 @@ LEVEL = 1
 
 editor/display_folded = true
 
-[node name="PlayerUI" parent="UI" index="0"]
-
-margin_right = 1240.0
-margin_bottom = 680.0
-
-[node name="SurviveTimeUI" parent="UI" index="1"]
-
-margin_right = 1240.0
-margin_bottom = 680.0
-
-[node name="SubtitlesUI" parent="UI" index="2"]
-
-margin_right = 1240.0
-margin_bottom = 680.0
-
-[node name="CountdownUI" parent="UI" index="3"]
-
-margin_right = 1240.0
-margin_bottom = 680.0
-
 [node name="PauseUI" parent="." index="1" instance=ExtResource( 3 )]
 
 [node name="Timers" type="Node" parent="." index="2"]
@@ -511,6 +495,8 @@ one_shot = true
 [node name="WinAnimTimer" parent="Timers" index="3" instance=ExtResource( 7 )]
 
 [node name="Cutscene" type="Node" parent="." index="3"]
+
+editor/display_folded = true
 
 [node name="Camera" type="Camera" parent="Cutscene" index="0"]
 
@@ -536,11 +522,12 @@ autoplay = ""
 playback_process_mode = 1
 playback_default_blend_time = 0.0
 playback_speed = 1.0
-anims/Cutscene = SubResource( 3 )
+anims/Cutscene = SubResource( 1 )
 blend_times = [  ]
 
 [node name="Ponteiros" type="Spatial" parent="." index="4"]
 
+editor/display_folded = true
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0 )
 _sections_unfolded = [ "Transform" ]
 
@@ -648,13 +635,13 @@ lod_min_distance = 0.0
 lod_min_hysteresis = 0.0
 lod_max_distance = 0.0
 lod_max_hysteresis = 0.0
-mesh = SubResource( 1 )
+mesh = SubResource( 2 )
 skeleton = NodePath("..")
 material/0 = ExtResource( 15 )
 material/1 = ExtResource( 16 )
 material/2 = ExtResource( 17 )
-material/3 = SubResource( 4 )
-material/4 = SubResource( 5 )
+material/3 = SubResource( 3 )
+material/4 = SubResource( 4 )
 material/5 = ExtResource( 20 )
 material/6 = ExtResource( 21 )
 _sections_unfolded = [ "material" ]
@@ -666,7 +653,7 @@ autoplay = ""
 playback_process_mode = 1
 playback_default_blend_time = 0.0
 playback_speed = 1.0
-anims/default = SubResource( 2 )
+anims/default = SubResource( 5 )
 blend_times = [  ]
 
 [node name="GuguPlaceholder" parent="." index="11" instance=ExtResource( 24 )]

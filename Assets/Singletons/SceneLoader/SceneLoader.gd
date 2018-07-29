@@ -8,7 +8,7 @@ var current_scene
 var is_level = false
 
 var levels_loading_texts = [
-	"Ezequiel, o Gnomo das Horas",
+	"Ezequiel, o Gnomo do Minuto",
 	"Zequinha, o Gnomo da Bússola",
 	"Evilásio, o Gnomo das Meias",
 	"Wesley, o Gnomo do Pêndulo",
