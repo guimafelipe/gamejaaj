@@ -1,0 +1,149 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://Assets/Menus/Credits/Credits.gd" type="Script" id=1]
+[ext_resource path="res://Assets/Menus/Credits/CreditsMenuWithPages.png" type="Texture" id=2]
+[ext_resource path="res://Assets/Fonts/Muli-SemiBold.ttf" type="DynamicFontData" id=3]
+[ext_resource path="res://Assets/Theme/ui_buttons_theme.tres" type="Theme" id=4]
+
+[sub_resource type="DynamicFont" id=1]
+
+size = 12
+use_mipmaps = true
+use_filter = true
+font_data = ExtResource( 3 )
+_sections_unfolded = [ "Extra Spacing", "Font", "Settings" ]
+
+[node name="Credits" type="Control" index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+script = ExtResource( 1 )
+_sections_unfolded = [ "Rect" ]
+
+[node name="Background" type="TextureRect" parent="." index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+rect_min_size = Vector2( 1280, 720 )
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 1
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 2
+size_flags_vertical = 2
+texture = ExtResource( 2 )
+expand = true
+stretch_mode = 5
+_sections_unfolded = [ "Rect", "Size Flags" ]
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Background" index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 277.0
+margin_top = 165.0
+margin_right = 572.0
+margin_bottom = 589.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = true
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+custom_fonts/normal_font = SubResource( 1 )
+custom_colors/default_color = Color( 0, 0, 0, 1 )
+bbcode_enabled = false
+bbcode_text = "Gugu, o Gnomo da Hora
+
+Jogo feito por Felipe Guimarães e Nathália Hohl para a Game Jaaj.
+
+Usamos a Godot Engine 3.0.5 para o jogo.
+Os gnomos, os ponteiros e o relógio principal foram modelados por Nathália Hohl.
+O código foi escrito por Felipe Guimarães.
+
+Os outros assets e os sons foram obtidos na internet de forma lícita.
+
+O código do jogo se encontra aqui: https://github.com/guimafelipe/gamejaaj
+
+Visite nosso site para ver outros projetos nossos: https://guimafelipe.github.io/ghgames/"
+visible_characters = -1
+percent_visible = 1.0
+meta_underlined = true
+tab_size = 4
+text = "Gugu, o Gnomo da Hora
+
+Jogo feito por Felipe Guimarães e Nathália Hohl para a Game Jaaj.
+
+Usamos a Godot Engine 3.0.5 para o jogo.
+Os gnomos, os ponteiros e o relógio principal foram modelados por Nathália Hohl.
+O código foi escrito por Felipe Guimarães.
+
+Os outros assets e os sons foram obtidos na internet de forma lícita.
+
+O código do jogo se encontra aqui: https://github.com/guimafelipe/gamejaaj
+
+Visite nosso site para ver outros projetos nossos: https://guimafelipe.github.io/ghgames/"
+scroll_active = false
+scroll_following = false
+selection_enabled = false
+override_selected_font_color = false
+_sections_unfolded = [ "BBCode", "custom_colors", "custom_fonts" ]
+
+[node name="Margin" type="MarginContainer" parent="." index="1"]
+
+editor/display_folded = true
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+theme = ExtResource( 4 )
+_sections_unfolded = [ "Theme" ]
+
+[node name="BackButton" type="Button" parent="Margin" index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 1170.0
+margin_top = 655.0
+margin_right = 1260.0
+margin_bottom = 700.0
+rect_min_size = Vector2( 90, 45 )
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 8
+size_flags_vertical = 8
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+group = null
+text = "Back"
+flat = false
+align = 1
+_sections_unfolded = [ "Rect", "Size Flags" ]
+
+[connection signal="button_up" from="Margin/BackButton" to="." method="_on_BackButton_button_up"]
+
+

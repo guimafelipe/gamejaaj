@@ -13,7 +13,7 @@ var levels_loading_texts = [
 	"Evilásio, o Gnomo das Meias",
 	"Wesley, o Gnomo do Pêndulo",
 	"Moacir, o Gnomo Chefe",
-	"Humano, o Humano da Erva",
+	"Humano, o Humano",
 ]
 
 func _ready():
@@ -94,4 +94,4 @@ func goto_main_menu():
 	goto_scene("res://Assets/Menus/MainMenu/MainMenu.tscn")
 
 func goto_credits():
-	pass
+	goto_scene("res://Assets/Menus/Credits/Credits.tscn")
