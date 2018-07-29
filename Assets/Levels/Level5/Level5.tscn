@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=2]
+[gd_scene load_steps=18 format=2]
 
 [ext_resource path="res://Assets/Levels/Level5/Level5.gd" type="Script" id=1]
 [ext_resource path="res://Assets/UI/UI.tscn" type="PackedScene" id=2]
@@ -13,10 +13,9 @@
 [ext_resource path="res://Assets/Ponteiros/PonteiroSeguidor/PonteiroSeguidor.tscn" type="PackedScene" id=11]
 [ext_resource path="res://Assets/Ambient/Ambient.tscn" type="PackedScene" id=12]
 [ext_resource path="res://Assets/Camera/BasePivot.tscn" type="PackedScene" id=13]
-[ext_resource path="res://Assets/Gnomos/Gnomo.tscn" type="PackedScene" id=14]
-[ext_resource path="res://Assets/Gugu/Gugu.tscn" type="PackedScene" id=15]
-[ext_resource path="res://Assets/Gugu/PlayerSpawn.tscn" type="PackedScene" id=16]
-[ext_resource path="res://Assets/Decoratives/MainDecoratives/Decoratives.tscn" type="PackedScene" id=17]
+[ext_resource path="res://Assets/Gugu/Gugu.tscn" type="PackedScene" id=14]
+[ext_resource path="res://Assets/Gugu/PlayerSpawn.tscn" type="PackedScene" id=15]
+[ext_resource path="res://Assets/Decoratives/MainDecoratives/Decoratives.tscn" type="PackedScene" id=16]
 
 [sub_resource type="Animation" id=1]
 
@@ -58,14 +57,14 @@ tracks/1/keys = {
 tracks/2/type = "value"
 tracks/2/path = NodePath("Camera:transform")
 tracks/2/interp = 1
-tracks/2/loop_wrap = true
+tracks/2/loop_wrap = false
 tracks/2/imported = false
 tracks/2/enabled = true
 tracks/2/keys = {
 "times": PoolRealArray( 0, 1, 2, 11, 15 ),
 "transitions": PoolRealArray( 1, -8, 1, 1, 1 ),
 "update": 0,
-"values": [ Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.31187, 14.8537 ), Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.31187, 14.8537 ), Transform( 0.946432, 0.0231666, 0.322071, 0, 0.997423, -0.0717445, -0.322904, 0.0679013, 0.943993, -19.811, 13.744, -5.77566 ), Transform( 0.946432, 0.0231666, 0.322071, 0, 0.997423, -0.0717445, -0.322904, 0.0679013, 0.943993, -19.811, 13.744, -5.77566 ), Transform( -0.369189, 0.116357, -0.922041, 0, 0.992131, 0.125202, 0.929354, 0.0462232, -0.366284, -7.62224, 4.44391, -9.30812 ) ]
+"values": [ Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.31187, 14.8537 ), Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.31187, 14.8537 ), Transform( 0.946432, 0.0231666, 0.322071, 0, 0.997423, -0.0717445, -0.322904, 0.0679013, 0.943993, -19.811, 13.744, -5.77566 ), Transform( 0.946432, 0.0231666, 0.322071, 0, 0.997423, -0.0717445, -0.322904, 0.0679013, 0.943993, -19.811, 13.744, -5.77566 ), Transform( -0.776091, 0.219921, -0.59103, -0.135842, 0.856916, 0.497233, 0.615816, 0.466185, -0.635171, -7.59589, 4.15429, -10.3848 ) ]
 }
 tracks/3/type = "method"
 tracks/3/path = NodePath("../UI")
@@ -111,6 +110,8 @@ visible = false
 
 [node name="Cutscene" type="Node" parent="." index="4"]
 
+editor/display_folded = true
+
 [node name="CutsceneAnim" type="AnimationPlayer" parent="Cutscene" index="0"]
 
 root_node = NodePath("..")
@@ -123,7 +124,7 @@ blend_times = [  ]
 
 [node name="Camera" type="Camera" parent="Cutscene" index="1"]
 
-transform = Transform( 0.946432, 0.0231666, 0.322071, -9.31322e-10, 0.997423, -0.0717445, -0.322904, 0.0679013, 0.943992, -19.811, 13.744, -5.77566 )
+transform = Transform( -0.776091, 0.219921, -0.59103, -0.135842, 0.856916, 0.497233, 0.615816, 0.466185, -0.635171, -7.59589, 4.15429, -10.3848 )
 keep_aspect = 1
 cull_mask = 1048575
 environment = null
@@ -140,6 +141,7 @@ _sections_unfolded = [ "Transform" ]
 
 [node name="Ponteiros" type="Spatial" parent="." index="5"]
 
+editor/display_folded = true
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0 )
 _sections_unfolded = [ "Transform" ]
 
@@ -155,23 +157,21 @@ _sections_unfolded = [ "Transform" ]
 
 [node name="PonteiroSeguidor" parent="Ponteiros" index="5" instance=ExtResource( 11 )]
 
+transform = Transform( 0.882277, 0, 0.470729, 0, 1, 0, -0.470729, 0, 0.882277, 0, 0, 0 )
+
 [node name="Ambient" parent="." index="6" instance=ExtResource( 12 )]
 
 visible = false
 
 [node name="BasePivot" parent="." index="7" instance=ExtResource( 13 )]
 
-[node name="Gnomo" parent="." index="8" instance=ExtResource( 14 )]
-
-transform = Transform( 1, 0, 0, 0, 0.000345306, -1, 0, 1, 0.000345306, 0.0775261, 7.72191, -26.3309 )
-
-[node name="Gugu" parent="." index="9" instance=ExtResource( 15 )]
+[node name="Gugu" parent="." index="8" instance=ExtResource( 14 )]
 
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 9.5 )
 _sections_unfolded = [ "Transform" ]
 
-[node name="PlayerSpawn" parent="." index="10" instance=ExtResource( 16 )]
+[node name="PlayerSpawn" parent="." index="9" instance=ExtResource( 15 )]
 
-[node name="Decoratives" parent="." index="11" instance=ExtResource( 17 )]
+[node name="Decoratives" parent="." index="10" instance=ExtResource( 16 )]
 
 
