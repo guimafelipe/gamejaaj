@@ -206,6 +206,20 @@ tracks/13/keys = {
 "update": 1,
 "values": [ false, true ]
 }
+tracks/14/type = "method"
+tracks/14/path = NodePath(".")
+tracks/14/interp = 1
+tracks/14/loop_wrap = true
+tracks/14/imported = false
+tracks/14/enabled = true
+tracks/14/keys = {
+"times": PoolRealArray( 59.9 ),
+"transitions": PoolRealArray( 1 ),
+"values": [ {
+"args": [  ],
+"method": "on_end_cutscene"
+} ]
+}
 
 [node name="FinalCutscene" type="Spatial" index="0"]
 
@@ -217,31 +231,24 @@ _sections_unfolded = [ "Transform" ]
 [node name="PlayerUI" parent="UI" index="0"]
 
 visible = false
-margin_right = 1240.0
-margin_bottom = 680.0
 
 [node name="SurviveTimeUI" parent="UI" index="1"]
 
 visible = false
-margin_right = 1240.0
-margin_bottom = 680.0
-
-[node name="SubtitlesUI" parent="UI" index="2"]
-
-margin_right = 1240.0
-margin_bottom = 680.0
 
 [node name="CountdownUI" parent="UI" index="3"]
 
 visible = false
-margin_right = 1240.0
-margin_bottom = 680.0
 
 [node name="PauseUI" parent="." index="1" instance=ExtResource( 3 )]
 
 [node name="Decoratives" parent="." index="2" instance=ExtResource( 4 )]
 
 editor/display_folded = true
+
+[node name="DirectionalLight" parent="Decoratives" index="1"]
+
+light_cull_mask = -1
 
 [node name="SmokeEffect6" parent="Decoratives" index="9" instance=ExtResource( 5 )]
 

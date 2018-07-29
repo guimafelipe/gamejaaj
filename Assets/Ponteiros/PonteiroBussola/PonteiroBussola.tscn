@@ -73,7 +73,7 @@ _sections_unfolded = [ "Albedo", "Emission" ]
 radius = 1.0
 height = 1.0
 
-[node name="PonteiroBussola" type="Spatial"]
+[node name="PonteiroBussola" type="Spatial" index="0"]
 
 transform = Transform( 1, 0, 6.51683e-07, 0, 1, 0, -6.51683e-07, 0, 1, 0, 0, 0 )
 script = ExtResource( 1 )
@@ -100,7 +100,7 @@ _sections_unfolded = [ "Geometry", "Transform", "material" ]
 [node name="Area" type="Area" parent="." index="1"]
 
 editor/display_folded = true
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -9.99184 )
+transform = Transform( 0.2925, 0, -4.61066e-07, 0, 0.351, 0, -4.61066e-07, 0, 1, 0, -0.235608, -9.99184 )
 input_ray_pickable = false
 input_capture_on_drag = false
 space_override = 0

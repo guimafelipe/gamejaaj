@@ -2,7 +2,7 @@
 
 [ext_resource path="res://Assets/Theme/ui_buttons_theme.tres" type="Theme" id=1]
 
-[node name="SkipButton" type="Button"]
+[node name="SkipButton" type="Button" index="0"]
 
 anchor_left = 0.0
 anchor_top = 0.0

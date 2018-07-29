@@ -106,7 +106,7 @@ tracks/1/keys = {
 } ]
 }
 
-[node name="PonteiroMeias" type="Spatial"]
+[node name="PonteiroMeias" type="Spatial" index="0"]
 
 transform = Transform( -1.62921e-07, 0, 1, 0, 1, 0, -1, 0, -1.62921e-07, 0, 0, 0 )
 script = ExtResource( 1 )
@@ -133,7 +133,7 @@ _sections_unfolded = [ "Geometry", "Transform", "material" ]
 [node name="Area" type="Area" parent="." index="1"]
 
 editor/display_folded = true
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -9.99184 )
+transform = Transform( 0.73864, 0, -4.25811e-08, 0, 0.698437, 0, -4.25811e-08, 0, 1, 0, -0.398106, -9.99184 )
 input_ray_pickable = false
 input_capture_on_drag = false
 space_override = 0

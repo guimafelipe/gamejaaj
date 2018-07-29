@@ -133,7 +133,7 @@ _sections_unfolded = [ "Geometry", "Transform", "material" ]
 [node name="Area" type="Area" parent="." index="1"]
 
 editor/display_folded = true
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -9.99184 )
+transform = Transform( 0.435697, 0, -0.0640985, 0, 0.456703, 0, -0.0640985, 0, 0.992719, 0, 0, -9.99184 )
 input_ray_pickable = false
 input_capture_on_drag = false
 space_override = 0
