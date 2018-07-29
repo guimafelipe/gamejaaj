@@ -3,7 +3,7 @@
 [ext_resource path="res://Assets/Theme/ui_buttons_theme.tres" type="Theme" id=1]
 [ext_resource path="res://Assets/UI/ArregarUI/ArregarUI.gd" type="Script" id=2]
 
-[node name="ArregarUI" type="MarginContainer" index="0"]
+[node name="ArregarUI" type="MarginContainer"]
 
 anchor_left = 0.0
 anchor_top = 0.0
@@ -28,10 +28,11 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = 1173.0
+margin_left = 1122.0
 margin_top = 655.0
 margin_right = 1260.0
 margin_bottom = 700.0
+rect_min_size = Vector2( 138, 45 )
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 hint_tooltip = "Pedir arrêgo."
@@ -51,7 +52,7 @@ group = null
 text = "Arrêgo!"
 flat = false
 align = 1
-_sections_unfolded = [ "Focus", "custom_colors" ]
+_sections_unfolded = [ "Focus", "Rect", "custom_colors" ]
 
 [connection signal="button_up" from="ArregarBtn" to="." method="_on_ArregarBtn_button_up"]
 

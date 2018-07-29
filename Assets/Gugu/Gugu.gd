@@ -37,6 +37,7 @@ func reset_position(spawn_position):
 	self.angle = atan2(translation.x, translation.z)
 	set_center(rotation_center)
 	$GuguMesh/AnimationPlayer.play("Idle")
+	$EffectsPlayer.play("Idle")
 	
 
 # Hp fuctions
@@ -52,13 +53,13 @@ func take_damage(value):
 	if invulnerable: return
 	if(value >= 0 and lifes > 0):
 		lifes = max(0, lifes - value)
-	if(lifes == 0):
+	if(lifes == 0 and can_move):
 		can_move = false
 		# Play death animation here
 		$GuguMesh/AnimationPlayer.stop()
-		
+		$EffectsPlayer.play("DeathAnim")
 		emit_signal('died')
-	else:
+	elif can_move:
 		start_invulnerability()
 	emit_signal("lifes_update", lifes)
 
