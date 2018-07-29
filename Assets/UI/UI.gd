@@ -11,6 +11,7 @@ func enter_gameplay():
 	$PlayerUI.set_visible(true)
 	$CountdownUI.set_visible(true)
 	$SubtitlesUI.set_visible(false)
+	$SkipButton.set_visible(false)
 
 func set_countdown_timer(timer):
 	$CountdownUI.set_countdown_timer(timer)

@@ -53,8 +53,8 @@ func level_setup():
 func start_cutscene():
 	$UI.enter_cutscene()
 	$Cutscene/CutsceneAnim.play("Cutscene")
-	if GameState.max_level_reached >= LEVEL:
-		$UI.show_skip_button()
+	
+	$UI.show_skip_button()
 	GameState.set_max_level_reached(LEVEL)
 
 func on_cutscene_ended():
