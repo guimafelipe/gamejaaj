@@ -59,3 +59,4 @@ func _on_NextButton_button_up():
 		if track_time:
 			animator.seek(track_time, true)
 	$HBoxContainer/NextButton.set_disabled(true)
+	$HBoxContainer/NextButton.release_focus()
