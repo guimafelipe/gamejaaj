@@ -52,7 +52,7 @@ func take_damage(value):
 	if invulnerable: return
 	if(value >= 0 and lifes > 0):
 		lifes = max(0, lifes - value)
-		AudioManager.play_hurt()
+		AudioManager.play_sound("Hurt")
 		if(lifes == 0):
 			can_move = false
 			# Play death animation here
@@ -114,7 +114,7 @@ func _physics_process(delta):
 	if can_move and is_on_floor() and Input.is_action_pressed("jump"):
 		velocity.y = 10 #jump
 		$GuguMesh/AnimationPlayer.play("Jump")
-		AudioManager.play_jump()
+		AudioManager.play_sound("Jump")
 	elif (not $GuguMesh/AnimationPlayer.is_playing()):
 		if(velocity.x or velocity.z != 0):
 			$GuguMesh/AnimationPlayer.play("Walk")

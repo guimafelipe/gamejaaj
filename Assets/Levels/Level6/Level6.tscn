@@ -219,11 +219,29 @@ tracks/14/loop_wrap = true
 tracks/14/imported = false
 tracks/14/enabled = true
 tracks/14/keys = {
-"times": PoolRealArray( 1.5, 42.5, 59.9 ),
-"transitions": PoolRealArray( 1, 1, 1 ),
+"times": PoolRealArray( 1.5, 7.7, 14.5, 21.5, 26.6, 35, 41, 42.5, 59.9 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
 "values": [ {
 "args": [  ],
 "method": "play_door"
+}, {
+"args": [  ],
+"method": "play_poof"
+}, {
+"args": [  ],
+"method": "play_poof"
+}, {
+"args": [  ],
+"method": "play_poof"
+}, {
+"args": [  ],
+"method": "play_poof"
+}, {
+"args": [  ],
+"method": "play_poof"
+}, {
+"args": [  ],
+"method": "play_poof"
 }, {
 "args": [  ],
 "method": "play_footsteps"

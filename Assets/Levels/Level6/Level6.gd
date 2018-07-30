@@ -9,7 +9,10 @@ func on_end_cutscene():
 	SceneLoader.goto_credits()
 
 func play_door():
-	AudioManager.play_door()
+	AudioManager.play_sound("Door")
 
 func play_footsteps():
-	AudioManager.play_footsteps()
+	AudioManager.play_sound("Footsteps")
+
+func play_poof():
+	AudioManager.play_sound("Poof")
