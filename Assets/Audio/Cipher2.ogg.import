@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/Cipher2.ogg-349a6c8b6666196443869f0255bb178a.oggstr"
+
+[deps]
+
+source_file="res://Assets/Audio/Cipher2.ogg"
+dest_files=[ "res://.import/Cipher2.ogg-349a6c8b6666196443869f0255bb178a.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

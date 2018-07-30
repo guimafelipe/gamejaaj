@@ -1,5 +1,8 @@
 extends MarginContainer
 
+func _ready():
+	AudioManager.play_background_menu()
+
 func _on_LevelSelectBtn_button_up():
 	SceneLoader.goto_levels_menu()
 
