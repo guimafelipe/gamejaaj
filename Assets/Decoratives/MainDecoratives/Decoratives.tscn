@@ -29,8 +29,8 @@ background_sky_custom_fov = 0.0
 background_color = Color( 0.105469, 0.0506873, 0.0107117, 1 )
 background_energy = 1.0
 background_canvas_max_layer = 0
-ambient_light_color = Color( 1, 1, 1, 1 )
-ambient_light_energy = 1.0
+ambient_light_color = Color( 0.990356, 1, 0.691406, 1 )
+ambient_light_energy = 1.1
 ambient_light_sky_contribution = 1.0
 fog_enabled = false
 fog_color = Color( 0.5, 0.6, 0.7, 1 )
@@ -95,11 +95,11 @@ glow_blend_mode = 2
 glow_hdr_threshold = 1.0
 glow_hdr_scale = 2.0
 glow_bicubic_upscale = false
-adjustment_enabled = false
-adjustment_brightness = 1.0
-adjustment_contrast = 1.0
-adjustment_saturation = 1.0
-_sections_unfolded = [ "Background" ]
+adjustment_enabled = true
+adjustment_brightness = 1.1
+adjustment_contrast = 1.02
+adjustment_saturation = 0.98
+_sections_unfolded = [ "Adjustments", "Background" ]
 
 [sub_resource type="SpatialMaterial" id=2]
 
@@ -1185,7 +1185,7 @@ surfaces/6 = {
 }
 _sections_unfolded = [ "surface_4", "surface_5" ]
 
-[node name="Decoratives" type="Spatial"]
+[node name="Decoratives" type="Spatial" index="0"]
 
 _sections_unfolded = [ "Transform" ]
 
