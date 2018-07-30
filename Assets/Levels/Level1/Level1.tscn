@@ -62,7 +62,7 @@ tracks/0/keys = {
 "args": [ "Nós preparamos uma surpresinha para você aprender a vigiar os relógios de pertinho... Vamos ver se assim toma jeito." ],
 "method": "set_subtitle"
 }, {
-"args": [ "Utilize a teclas \"A\" para andar para a esquerda e \"D\" para andar para a direita. Use a \"Barra de Espaço\" para pular os ponteiros do relógio, se não irá sofrer dano." ],
+"args": [ "Utilize a teclas \"A\" para andar para a esquerda e \"D\" para andar para a direita. Use a \"Barra de Espaço\" para pular os ponteiros do relógio, senão irá sofrer dano." ],
 "method": "set_subtitle"
 }, {
 "args": [ "A cada desafio, você deve sobreviver pelo tempo mostrado no canto superior direito, mas se tomar dano três vezes, deverá começar de novo." ],
