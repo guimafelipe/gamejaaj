@@ -28,7 +28,7 @@
 [sub_resource type="Animation" id=1]
 
 resource_name = "Cutscene"
-length = 73.6
+length = 68.0
 loop = false
 step = 0.1
 tracks/0/type = "value"
@@ -62,7 +62,7 @@ tracks/2/loop_wrap = true
 tracks/2/imported = false
 tracks/2/enabled = true
 tracks/2/keys = {
-"times": PoolRealArray( 73.5 ),
+"times": PoolRealArray( 67.9 ),
 "transitions": PoolRealArray( 1 ),
 "values": [ {
 "args": [  ],
@@ -76,7 +76,7 @@ tracks/3/loop_wrap = true
 tracks/3/imported = false
 tracks/3/enabled = true
 tracks/3/keys = {
-"times": PoolRealArray( 0, 73.5 ),
+"times": PoolRealArray( 0, 67.9 ),
 "transitions": PoolRealArray( 1, 1 ),
 "values": [ {
 "args": [  ],
@@ -105,7 +105,7 @@ tracks/5/loop_wrap = true
 tracks/5/imported = false
 tracks/5/enabled = true
 tracks/5/keys = {
-"times": PoolRealArray( 3, 5, 6.5, 9, 10.5, 17.9, 27, 36, 46, 56, 65.5, 73.5 ),
+"times": PoolRealArray( 3, 5, 6.5, 9, 10.5, 17.9, 27, 36, 44.5, 53, 61.5, 67.9 ),
 "transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
 "values": [ {
 "args": [ "...zzz" ],
@@ -164,7 +164,7 @@ tracks/7/loop_wrap = true
 tracks/7/imported = false
 tracks/7/enabled = true
 tracks/7/keys = {
-"times": PoolRealArray( 0, 73.5 ),
+"times": PoolRealArray( 0, 67.9 ),
 "transitions": PoolRealArray( 1, 1 ),
 "update": 1,
 "values": [ true, false ]
@@ -176,7 +176,7 @@ tracks/8/loop_wrap = true
 tracks/8/imported = false
 tracks/8/enabled = true
 tracks/8/keys = {
-"times": PoolRealArray( 0, 73.5 ),
+"times": PoolRealArray( 0, 67.9 ),
 "transitions": PoolRealArray( 1, 1 ),
 "update": 1,
 "values": [ false, true ]
@@ -188,7 +188,7 @@ tracks/9/loop_wrap = true
 tracks/9/imported = false
 tracks/9/enabled = true
 tracks/9/keys = {
-"times": PoolRealArray( 4.6, 73.5 ),
+"times": PoolRealArray( 4.6, 67.9 ),
 "transitions": PoolRealArray( 1, 1 ),
 "update": 1,
 "values": [ true, false ]
@@ -200,7 +200,7 @@ tracks/10/loop_wrap = true
 tracks/10/imported = false
 tracks/10/enabled = true
 tracks/10/keys = {
-"times": PoolRealArray( 73.5 ),
+"times": PoolRealArray( 67.9 ),
 "transitions": PoolRealArray( 1 ),
 "update": 1,
 "values": [ true ]
