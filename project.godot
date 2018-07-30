@@ -10,9 +10,9 @@ config_version=3
 
 [application]
 
-config/name="Jaaj"
+config/name="Gugu, O Gnomo da Hora"
 run/main_scene="res://Assets/Menus/MainMenu/MainMenu.tscn"
-config/icon="res://icon.png"
+config/icon="res://Assets/Meshes/GuguMesh/buttontexture.png"
 
 [autoload]
 
@@ -45,4 +45,5 @@ pause=[ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"",
 
 [rendering]
 
+environment/default_clear_color=Color( 0, 0, 0, 1 )
 environment/default_environment="res://default_env.tres"
