@@ -31,10 +31,10 @@ func end_subtitles():
 	$SubtitlesUI.end_subtitles()
 
 func show_skip_button():
-	$HBoxContainer/SkipButton.set_visible(true)
+	$HBoxContainer.set_visible(true)
 
 func _on_SkipButton_button_up():
-	$HBoxContainer/SkipButton.set_visible(false)
+	$HBoxContainer.set_visible(false)
 	if(get_node("../Cutscene")):
 		var animator = get_node("../Cutscene/CutsceneAnim")
 		animator.seek(animator.current_animation_length - 0.5, true)
