@@ -22,43 +22,12 @@ length = 19.0
 loop = false
 step = 0.1
 tracks/0/type = "method"
-tracks/0/path = NodePath("Camera")
+tracks/0/path = NodePath("../UI")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = {
-"times": PoolRealArray( 0, 18.9 ),
-"transitions": PoolRealArray( 1, 1 ),
-"values": [ {
-"args": [  ],
-"method": "make_current"
-}, {
-"args": [  ],
-"method": "clear_current"
-} ]
-}
-tracks/1/type = "method"
-tracks/1/path = NodePath("..")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/keys = {
-"times": PoolRealArray( 18.9 ),
-"transitions": PoolRealArray( 1 ),
-"values": [ {
-"args": [  ],
-"method": "on_cutscene_ended"
-} ]
-}
-tracks/2/type = "method"
-tracks/2/path = NodePath("../UI")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/keys = {
 "times": PoolRealArray( 2.7, 8, 10.9 ),
 "transitions": PoolRealArray( 1, 1, 1 ),
 "values": [ {
@@ -70,6 +39,37 @@ tracks/2/keys = {
 }, {
 "args": [ "Cuidar do Movimento Harmônico Simples do relógio de pêndulo é trabalho duro..." ],
 "method": "set_subtitle"
+} ]
+}
+tracks/1/type = "method"
+tracks/1/path = NodePath("Camera")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 18.9 ),
+"transitions": PoolRealArray( 1, 1 ),
+"values": [ {
+"args": [  ],
+"method": "make_current"
+}, {
+"args": [  ],
+"method": "clear_current"
+} ]
+}
+tracks/2/type = "method"
+tracks/2/path = NodePath("..")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 18.9 ),
+"transitions": PoolRealArray( 1 ),
+"values": [ {
+"args": [  ],
+"method": "on_cutscene_ended"
 } ]
 }
 tracks/3/type = "value"
@@ -109,7 +109,7 @@ tracks/5/keys = {
 "values": [ Transform( -0.866026, 0, 0.5, 0, 1, 0, -0.5, 0, -0.866026, 0, 0, 0 ), Transform( -0.866025, 0, -0.5, 0, 1, 0, 0.5, 0, -0.866025, 0, 0, 0 ), Transform( -0.866026, 0, 0.5, 0, 1, 0, -0.5, 0, -0.866026, 0, 0, 0 ) ]
 }
 
-[node name="Level4" type="Spatial"]
+[node name="Level4" type="Spatial" index="0"]
 
 script = ExtResource( 1 )
 LEVEL = 4
@@ -133,8 +133,6 @@ light_cull_mask = -1
 visible = false
 
 [node name="Cutscene" type="Node" parent="." index="4"]
-
-editor/display_folded = true
 
 [node name="CutsceneAnim" type="AnimationPlayer" parent="Cutscene" index="0"]
 

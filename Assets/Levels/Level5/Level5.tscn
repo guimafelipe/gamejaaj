@@ -24,55 +24,12 @@ length = 20.0
 loop = false
 step = 0.1
 tracks/0/type = "method"
-tracks/0/path = NodePath("Camera")
+tracks/0/path = NodePath("../UI")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = {
-"times": PoolRealArray( 0, 19.9 ),
-"transitions": PoolRealArray( 1, 1 ),
-"values": [ {
-"args": [  ],
-"method": "make_current"
-}, {
-"args": [  ],
-"method": "clear_current"
-} ]
-}
-tracks/1/type = "method"
-tracks/1/path = NodePath("..")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/keys = {
-"times": PoolRealArray( 19.9 ),
-"transitions": PoolRealArray( 1 ),
-"values": [ {
-"args": [  ],
-"method": "on_cutscene_ended"
-} ]
-}
-tracks/2/type = "value"
-tracks/2/path = NodePath("Camera:transform")
-tracks/2/interp = 1
-tracks/2/loop_wrap = false
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/keys = {
-"times": PoolRealArray( 0, 1, 2, 11, 15 ),
-"transitions": PoolRealArray( 1, -8, 1, 1, 1 ),
-"update": 0,
-"values": [ Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.31187, 14.8537 ), Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.31187, 14.8537 ), Transform( 0.946432, 0.0231666, 0.322071, 0, 0.997423, -0.0717445, -0.322904, 0.0679013, 0.943993, -19.811, 13.744, -5.77566 ), Transform( 0.946432, 0.0231666, 0.322071, 0, 0.997423, -0.0717445, -0.322904, 0.0679013, 0.943993, -19.811, 13.744, -5.77566 ), Transform( -0.776091, 0.219921, -0.59103, -0.135842, 0.856916, 0.497233, 0.615816, 0.466185, -0.635171, -7.59589, 4.15429, -10.3848 ) ]
-}
-tracks/3/type = "method"
-tracks/3/path = NodePath("../UI")
-tracks/3/interp = 1
-tracks/3/loop_wrap = true
-tracks/3/imported = false
-tracks/3/enabled = true
-tracks/3/keys = {
 "times": PoolRealArray( 0, 2.4, 6.5, 10.5, 14.9 ),
 "transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
 "values": [ {
@@ -92,6 +49,49 @@ tracks/3/keys = {
 "method": "set_subtitle"
 } ]
 }
+tracks/1/type = "method"
+tracks/1/path = NodePath("Camera")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 19.9 ),
+"transitions": PoolRealArray( 1, 1 ),
+"values": [ {
+"args": [  ],
+"method": "make_current"
+}, {
+"args": [  ],
+"method": "clear_current"
+} ]
+}
+tracks/2/type = "method"
+tracks/2/path = NodePath("..")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 19.9 ),
+"transitions": PoolRealArray( 1 ),
+"values": [ {
+"args": [  ],
+"method": "on_cutscene_ended"
+} ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("Camera:transform")
+tracks/3/interp = 1
+tracks/3/loop_wrap = false
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0, 1, 2, 11, 15 ),
+"transitions": PoolRealArray( 1, -8, 1, 1, 1 ),
+"update": 0,
+"values": [ Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.31187, 14.8537 ), Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.31187, 14.8537 ), Transform( 0.946432, 0.0231666, 0.322071, 0, 0.997423, -0.0717445, -0.322904, 0.0679013, 0.943993, -19.811, 13.744, -5.77566 ), Transform( 0.946432, 0.0231666, 0.322071, 0, 0.997423, -0.0717445, -0.322904, 0.0679013, 0.943993, -19.811, 13.744, -5.77566 ), Transform( -0.776091, 0.219921, -0.59103, -0.135842, 0.856916, 0.497233, 0.615816, 0.466185, -0.635171, -7.59589, 4.15429, -10.3848 ) ]
+}
 
 [node name="Level5" type="Spatial" index="0"]
 
@@ -109,8 +109,6 @@ visible = false
 [node name="Timers" parent="." index="3" instance=ExtResource( 5 )]
 
 [node name="Cutscene" type="Node" parent="." index="4"]
-
-editor/display_folded = true
 
 [node name="CutsceneAnim" type="AnimationPlayer" parent="Cutscene" index="0"]
 

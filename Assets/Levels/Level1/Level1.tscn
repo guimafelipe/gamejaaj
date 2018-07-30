@@ -31,80 +31,13 @@ resource_name = "Cutscene"
 length = 68.0
 loop = false
 step = 0.1
-tracks/0/type = "value"
-tracks/0/path = NodePath("../Ponteiros/Ponteiro:transform")
+tracks/0/type = "method"
+tracks/0/path = NodePath("../UI/SubtitlesUI")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
-"update": 0,
-"values": [ Transform( -0.466956, 0, 0.884281, 0, 1, 0, -0.884281, 0, -0.466956, 0, 0, 0 ) ]
-}
-tracks/1/type = "value"
-tracks/1/path = NodePath("../Ponteiros/PonteiroMinutos:transform")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/keys = {
-"times": PoolRealArray( 0, 1.5 ),
-"transitions": PoolRealArray( 0, 1 ),
-"update": 0,
-"values": [ Transform( -0.0291238, 0, 0.999576, 0, 1, 0, -0.999576, 0, -0.0291238, 0, 0, 0 ), Transform( 0.0472897, 0, 0.998881, 0, 1, 0, -0.998881, 0, 0.0472897, 0, 0, 0 ) ]
-}
-tracks/2/type = "method"
-tracks/2/path = NodePath("..")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/keys = {
-"times": PoolRealArray( 67.9 ),
-"transitions": PoolRealArray( 1 ),
-"values": [ {
-"args": [  ],
-"method": "on_cutscene_ended"
-} ]
-}
-tracks/3/type = "method"
-tracks/3/path = NodePath("Camera")
-tracks/3/interp = 1
-tracks/3/loop_wrap = true
-tracks/3/imported = false
-tracks/3/enabled = true
-tracks/3/keys = {
-"times": PoolRealArray( 0, 67.9 ),
-"transitions": PoolRealArray( 1, 1 ),
-"values": [ {
-"args": [  ],
-"method": "make_current"
-}, {
-"args": [  ],
-"method": "clear_current"
-} ]
-}
-tracks/4/type = "value"
-tracks/4/path = NodePath("Camera:transform")
-tracks/4/interp = 1
-tracks/4/loop_wrap = true
-tracks/4/imported = false
-tracks/4/enabled = true
-tracks/4/keys = {
-"times": PoolRealArray( 0, 2.9, 3, 5, 8.9, 10.4 ),
-"transitions": PoolRealArray( 1, 0, 0, 0, 0, 0 ),
-"update": 0,
-"values": [ Transform( 1, 0, 0, 0, -1.62921e-07, 1, 0, -1, -1.62921e-07, 0, 15.3269, 0 ), Transform( 1, 0, 0, 0, -1.62921e-07, 1, 0, -1, -1.62921e-07, 0, 16.8496, 0 ), Transform( -0.975265, 0.13133, -0.177797, 0, 0.804359, 0.594143, 0.221042, 0.579446, -0.784463, -1.90572, 3.5144, 6.96152 ), Transform( 0.856614, -0.227677, 0.463007, 0, 0.897374, 0.44127, -0.515957, -0.377998, 0.768704, -3.55916, 4.71064, -3.68373 ), Transform( -0.853637, -0.229844, 0.467414, 0, 0.897374, 0.44127, -0.520868, 0.376684, -0.766032, 4.18042, 4.71064, 6.36984 ), Transform( 0.856614, -0.227677, 0.463007, 0, 0.897374, 0.44127, -0.515957, -0.377998, 0.768704, -3.55916, 4.71064, -3.68373 ) ]
-}
-tracks/5/type = "method"
-tracks/5/path = NodePath("../UI/SubtitlesUI")
-tracks/5/interp = 1
-tracks/5/loop_wrap = true
-tracks/5/imported = false
-tracks/5/enabled = true
-tracks/5/keys = {
 "times": PoolRealArray( 3, 5, 6.5, 9, 10.5, 17.9, 27, 36, 44.5, 53, 61.5, 67.9 ),
 "transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
 "values": [ {
@@ -144,6 +77,73 @@ tracks/5/keys = {
 "args": [  ],
 "method": "end_subtitles"
 } ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("../Ponteiros/Ponteiro:transform")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Transform( -0.466956, 0, 0.884281, 0, 1, 0, -0.884281, 0, -0.466956, 0, 0, 0 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("../Ponteiros/PonteiroMinutos:transform")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 1.5 ),
+"transitions": PoolRealArray( 0, 1 ),
+"update": 0,
+"values": [ Transform( -0.0291238, 0, 0.999576, 0, 1, 0, -0.999576, 0, -0.0291238, 0, 0, 0 ), Transform( 0.0472897, 0, 0.998881, 0, 1, 0, -0.998881, 0, 0.0472897, 0, 0, 0 ) ]
+}
+tracks/3/type = "method"
+tracks/3/path = NodePath("..")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 67.9 ),
+"transitions": PoolRealArray( 1 ),
+"values": [ {
+"args": [  ],
+"method": "on_cutscene_ended"
+} ]
+}
+tracks/4/type = "method"
+tracks/4/path = NodePath("Camera")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0, 67.9 ),
+"transitions": PoolRealArray( 1, 1 ),
+"values": [ {
+"args": [  ],
+"method": "make_current"
+}, {
+"args": [  ],
+"method": "clear_current"
+} ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("Camera:transform")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0, 2.9, 3, 5, 8.9, 10.4 ),
+"transitions": PoolRealArray( 1, 0, 0, 0, 0, 0 ),
+"update": 0,
+"values": [ Transform( 1, 0, 0, 0, -1.62921e-07, 1, 0, -1, -1.62921e-07, 0, 15.3269, 0 ), Transform( 1, 0, 0, 0, -1.62921e-07, 1, 0, -1, -1.62921e-07, 0, 16.8496, 0 ), Transform( -0.975265, 0.13133, -0.177797, 0, 0.804359, 0.594143, 0.221042, 0.579446, -0.784463, -1.90572, 3.5144, 6.96152 ), Transform( 0.856614, -0.227677, 0.463007, 0, 0.897374, 0.44127, -0.515957, -0.377998, 0.768704, -3.55916, 4.71064, -3.68373 ), Transform( -0.853637, -0.229844, 0.467414, 0, 0.897374, 0.44127, -0.520868, 0.376684, -0.766032, 4.18042, 4.71064, 6.36984 ), Transform( 0.856614, -0.227677, 0.463007, 0, 0.897374, 0.44127, -0.515957, -0.377998, 0.768704, -3.55916, 4.71064, -3.68373 ) ]
 }
 tracks/6/type = "value"
 tracks/6/path = NodePath("../GuguPlaceholder:transform")
@@ -465,7 +465,7 @@ tracks/6/imported = true
 tracks/6/enabled = true
 tracks/6/keys = PoolRealArray( 0, 1, -8.24567e-11, -5.96046e-08, 2.38419e-07, 7.10543e-15, 1.55294e-22, 0, 1, 1, 1, 1, 0.0416667, 1, -8.24567e-11, -5.96046e-08, 0.0549192, 7.10557e-15, -0.00626792, 8.88196e-16, 0.99998, 1, 1, 1, 0.0833333, 1, -8.24567e-11, -5.96046e-08, 0.220516, 7.10769e-15, -0.0252441, 0, 0.999681, 1, 1, 1, 0.125, 1, -8.24603e-11, 0, 0.492017, 7.11682e-15, -0.0565629, 0, 0.998399, 1, 1, 1, 0.25, 1, -8.24656e-11, 1.19209e-07, 1.72276, 6.79781e-15, -0.199367, -1.81275e-15, 0.979925, 1, 1, 1, 0.333333, 1, -8.24709e-11, 2.38419e-07, 2.50798, 6.49298e-15, -0.288321, -1.85514e-15, 0.957534, 1, 1, 1, 0.375, 1, -8.24727e-11, 2.98023e-07, 2.77949, 6.08966e-15, -0.318189, -2.81061e-15, 0.948027, 1, 1, 1, 0.416667, 1, -8.24727e-11, 2.98023e-07, 2.94508, 6.1298e-15, -0.336123, -3.77219e-15, 0.941818, 1, 1, 1, 0.458333, 1, -8.24727e-11, 2.98023e-07, 3, 8.06556e-09, -0.34202, 6.17437e-08, 0.939693, 1, 1, 1, 0.5, 1, -8.24727e-11, 2.98023e-07, 2.95389, 8.07293e-09, -0.337071, 6.18001e-08, 0.941479, 1, 1, 1, 0.541667, 1, -8.24727e-11, 2.98023e-07, 2.81468, 8.0939e-09, -0.32202, 6.19606e-08, 0.946733, 1, 1, 1, 0.583333, 1, -8.24709e-11, 2.38419e-07, 2.58515, 8.12415e-09, -0.296865, 6.21922e-08, 0.954919, 1, 1, 1, 0.75, 1, -8.2462e-11, 5.96046e-08, 1.09565, 8.18075e-09, -0.126696, 6.26255e-08, 0.991942, 1, 1, 1, 0.833333, 1, -8.24603e-11, 0, 0.414854, 8.12415e-09, -0.0476396, 6.21923e-08, 0.998865, 1, 1, 1, 0.875, 1, -8.24567e-11, -5.96046e-08, 0.185316, 8.0939e-09, -0.0212015, 6.19606e-08, 0.999775, 1, 1, 1, 0.916667, 1, -8.24567e-11, -5.96046e-08, 0.0461123, 8.07293e-09, -0.00526188, 6.18001e-08, 0.999986, 1, 1, 1, 0.958333, 1, -8.24567e-11, -5.96046e-08, 2.38419e-07, 7.10543e-15, 1.55294e-22, 0, 1, 1, 1, 1 )
 
-[node name="Level1" type="Spatial"]
+[node name="Level1" type="Spatial" index="0"]
 
 script = ExtResource( 1 )
 _sections_unfolded = [ "Transform" ]
@@ -474,10 +474,6 @@ LEVEL = 1
 [node name="UI" parent="." index="0" instance=ExtResource( 2 )]
 
 editor/display_folded = true
-
-[node name="SkipButton" parent="UI" index="4"]
-
-margin_left = 1083.0
 
 [node name="PauseUI" parent="." index="1" instance=ExtResource( 3 )]
 

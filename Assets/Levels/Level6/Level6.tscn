@@ -251,7 +251,7 @@ tracks/14/keys = {
 } ]
 }
 
-[node name="FinalCutscene" type="Spatial"]
+[node name="FinalCutscene" type="Spatial" index="0"]
 
 script = ExtResource( 1 )
 _sections_unfolded = [ "Transform" ]
@@ -272,9 +272,10 @@ visible = false
 
 visible = false
 
-[node name="SkipButton" parent="UI" index="4"]
+[node name="HBoxContainer" parent="UI" index="4"]
 
-margin_left = 1083.0
+editor/display_folded = true
+visible = false
 
 [node name="PauseUI" parent="." index="1" instance=ExtResource( 3 )]
 

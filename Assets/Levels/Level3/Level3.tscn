@@ -21,53 +21,12 @@ length = 46.0
 loop = false
 step = 0.1
 tracks/0/type = "method"
-tracks/0/path = NodePath("Camera")
+tracks/0/path = NodePath("../UI")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = {
-"times": PoolRealArray( 0, 45.9 ),
-"transitions": PoolRealArray( 1, 1 ),
-"values": [ {
-"args": [  ],
-"method": "make_current"
-}, {
-"args": [  ],
-"method": "clear_current"
-} ]
-}
-tracks/1/type = "value"
-tracks/1/path = NodePath("Camera:transform")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/keys = {
-"times": PoolRealArray( 0, 2, 4, 6, 8, 11, 12.5, 15, 26, 31.5, 37.5, 39.5, 40 ),
-"transitions": PoolRealArray( 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1 ),
-"update": 0,
-"values": [ Transform( 0.731221, 0.119048, -0.671672, 0, 0.984653, 0.174521, 0.682141, -0.127613, 0.719999, -17.9878, 7.42002, 12.4682 ), Transform( 0.21145, 0.170575, -0.962389, 0, 0.984653, 0.174521, 0.977389, -0.0369025, 0.208205, -19.1271, 7.42002, 10.1303 ), Transform( 0.731221, 0.119048, -0.671672, 0, 0.984653, 0.174521, 0.682141, -0.127613, 0.719999, -17.9878, 7.42002, 12.4682 ), Transform( 0.21145, 0.170575, -0.962389, 0, 0.984653, 0.174521, 0.977389, -0.0369025, 0.208205, -19.1271, 7.42002, 10.1303 ), Transform( 0.731221, 0.119048, -0.671672, 0, 0.984653, 0.174521, 0.682141, -0.127613, 0.719999, -17.9878, 7.42002, 12.4682 ), Transform( 0.355816, -0.295227, -0.886699, 0, 0.948792, -0.315901, 0.934556, 0.112402, 0.337595, -3.57468, 2.62475, 11.6909 ), Transform( 0.731221, 0.119048, -0.671672, 0, 0.984653, 0.174521, 0.682141, -0.127613, 0.719999, -17.9878, 7.42002, 12.4682 ), Transform( 0.21145, 0.170575, -0.962389, 0, 0.984653, 0.174521, 0.977389, -0.0369025, 0.208205, -19.1271, 7.42002, 10.1303 ), Transform( 0.21145, 0.170575, -0.962389, 0, 0.984653, 0.174521, 0.977389, -0.0369025, 0.208205, -19.1271, 7.42002, 10.1303 ), Transform( -0.569143, 0.143498, -0.80962, 0, 0.984653, 0.174521, 0.822239, 0.0993272, -0.560408, -18.5549, 6.95596, 8.50997 ), Transform( -0.998749, 0.010054, 0.048994, 0, 0.979587, -0.20102, -0.050015, -0.200768, -0.978361, -17.027, 5.67525, 8.22202 ), Transform( -0.998749, 0.010054, 0.048994, 0, 0.979587, -0.20102, -0.050015, -0.200768, -0.978361, -17.027, 5.67525, 8.22202 ), Transform( 0.307017, 0.247206, -0.919037, 0, 0.965675, 0.259751, 0.951704, -0.0797481, 0.296479, -13.9858, 5.85941, 5.52882 ) ]
-}
-tracks/2/type = "value"
-tracks/2/path = NodePath("../Ponteiros/PonteiroMeias:transform")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/keys = {
-"times": PoolRealArray( 0, 41, 42.5, 44 ),
-"transitions": PoolRealArray( -4, -4, -4, 1 ),
-"update": 0,
-"values": [ Transform( 0.335206, 0, -0.942145, 0, 1, 0, 0.942145, 0, 0.335206, 0, 0, 0 ), Transform( 0.335206, 0, -0.942145, 0, 1, 0, 0.942145, 0, 0.335206, 0, 0, 0 ), Transform( -0.708565, 0, -0.705645, 0, 1, 0, 0.705645, 0, -0.708565, 0, 0, 0 ), Transform( 0.173935, 0, -0.984757, 0, 1, 0, 0.984757, 0, 0.173935, 0, 0, 0 ) ]
-}
-tracks/3/type = "method"
-tracks/3/path = NodePath("../UI")
-tracks/3/interp = 1
-tracks/3/loop_wrap = true
-tracks/3/imported = false
-tracks/3/enabled = true
-tracks/3/keys = {
 "times": PoolRealArray( 0, 2, 4, 6, 8, 11, 12.5, 15, 18, 26, 31.5, 37.5 ),
 "transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
 "values": [ {
@@ -108,6 +67,47 @@ tracks/3/keys = {
 "method": "set_subtitle"
 } ]
 }
+tracks/1/type = "method"
+tracks/1/path = NodePath("Camera")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 45.9 ),
+"transitions": PoolRealArray( 1, 1 ),
+"values": [ {
+"args": [  ],
+"method": "make_current"
+}, {
+"args": [  ],
+"method": "clear_current"
+} ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Camera:transform")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 2, 4, 6, 8, 11, 12.5, 15, 26, 31.5, 37.5, 39.5, 40 ),
+"transitions": PoolRealArray( 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1 ),
+"update": 0,
+"values": [ Transform( 0.731221, 0.119048, -0.671672, 0, 0.984653, 0.174521, 0.682141, -0.127613, 0.719999, -17.9878, 7.42002, 12.4682 ), Transform( 0.21145, 0.170575, -0.962389, 0, 0.984653, 0.174521, 0.977389, -0.0369025, 0.208205, -19.1271, 7.42002, 10.1303 ), Transform( 0.731221, 0.119048, -0.671672, 0, 0.984653, 0.174521, 0.682141, -0.127613, 0.719999, -17.9878, 7.42002, 12.4682 ), Transform( 0.21145, 0.170575, -0.962389, 0, 0.984653, 0.174521, 0.977389, -0.0369025, 0.208205, -19.1271, 7.42002, 10.1303 ), Transform( 0.731221, 0.119048, -0.671672, 0, 0.984653, 0.174521, 0.682141, -0.127613, 0.719999, -17.9878, 7.42002, 12.4682 ), Transform( 0.355816, -0.295227, -0.886699, 0, 0.948792, -0.315901, 0.934556, 0.112402, 0.337595, -3.57468, 2.62475, 11.6909 ), Transform( 0.731221, 0.119048, -0.671672, 0, 0.984653, 0.174521, 0.682141, -0.127613, 0.719999, -17.9878, 7.42002, 12.4682 ), Transform( 0.21145, 0.170575, -0.962389, 0, 0.984653, 0.174521, 0.977389, -0.0369025, 0.208205, -19.1271, 7.42002, 10.1303 ), Transform( 0.21145, 0.170575, -0.962389, 0, 0.984653, 0.174521, 0.977389, -0.0369025, 0.208205, -19.1271, 7.42002, 10.1303 ), Transform( -0.569143, 0.143498, -0.80962, 0, 0.984653, 0.174521, 0.822239, 0.0993272, -0.560408, -18.5549, 6.95596, 8.50997 ), Transform( -0.998749, 0.010054, 0.048994, 0, 0.979587, -0.20102, -0.050015, -0.200768, -0.978361, -17.027, 5.67525, 8.22202 ), Transform( -0.998749, 0.010054, 0.048994, 0, 0.979587, -0.20102, -0.050015, -0.200768, -0.978361, -17.027, 5.67525, 8.22202 ), Transform( 0.307017, 0.247206, -0.919037, 0, 0.965675, 0.259751, 0.951704, -0.0797481, 0.296479, -13.9858, 5.85941, 5.52882 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("../Ponteiros/PonteiroMeias:transform")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0, 41, 42.5, 44 ),
+"transitions": PoolRealArray( -4, -4, -4, 1 ),
+"update": 0,
+"values": [ Transform( 0.335206, 0, -0.942145, 0, 1, 0, 0.942145, 0, 0.335206, 0, 0, 0 ), Transform( 0.335206, 0, -0.942145, 0, 1, 0, 0.942145, 0, 0.335206, 0, 0, 0 ), Transform( -0.708565, 0, -0.705645, 0, 1, 0, 0.705645, 0, -0.708565, 0, 0, 0 ), Transform( 0.173935, 0, -0.984757, 0, 1, 0, 0.984757, 0, 0.173935, 0, 0, 0 ) ]
+}
 tracks/4/type = "method"
 tracks/4/path = NodePath("..")
 tracks/4/interp = 1
@@ -123,7 +123,7 @@ tracks/4/keys = {
 } ]
 }
 
-[node name="Level3" type="Spatial"]
+[node name="Level3" type="Spatial" index="0"]
 
 script = ExtResource( 1 )
 LEVEL = 3

@@ -20,55 +20,12 @@ length = 32.0
 loop = false
 step = 0.1
 tracks/0/type = "method"
-tracks/0/path = NodePath("..")
+tracks/0/path = NodePath("../UI")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = {
-"times": PoolRealArray( 31.9 ),
-"transitions": PoolRealArray( 1 ),
-"values": [ {
-"args": [  ],
-"method": "on_cutscene_ended"
-} ]
-}
-tracks/1/type = "method"
-tracks/1/path = NodePath("Camera")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/keys = {
-"times": PoolRealArray( 0, 31.9 ),
-"transitions": PoolRealArray( 1, 1 ),
-"values": [ {
-"args": [  ],
-"method": "make_current"
-}, {
-"args": [  ],
-"method": "clear_current"
-} ]
-}
-tracks/2/type = "value"
-tracks/2/path = NodePath("Camera:transform")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/keys = {
-"times": PoolRealArray( 0, 1.5, 2.5, 26.5, 29.5 ),
-"transitions": PoolRealArray( 1, -2, 1, 1, 1 ),
-"update": 0,
-"values": [ Transform( -0.351034, 0.32159, -0.879406, 0, 0.939172, 0.343446, 0.936363, 0.120561, -0.329681, -4.067, 4.79636, 8.32862 ), Transform( -0.351034, 0.32159, -0.879406, 0, 0.939172, 0.343446, 0.936363, 0.120561, -0.329681, -4.067, 4.79636, 8.32862 ), Transform( -0.253302, 0.0578186, -0.965658, -9.31322e-09, 0.998212, 0.0597678, 0.967387, 0.0151393, -0.252849, 22.729, 8.8141, 12.1509 ), Transform( -0.253302, 0.0578186, -0.965658, -9.31322e-09, 0.998212, 0.0597678, 0.967387, 0.0151393, -0.252849, 22.729, 8.8141, 12.1509 ), Transform( 0.873579, -0.265016, 0.408199, -0.0935612, 0.731644, 0.675235, -0.477605, -0.628063, 0.614353, 5.50601, 7.39292, 4.14382 ) ]
-}
-tracks/3/type = "method"
-tracks/3/path = NodePath("../UI")
-tracks/3/interp = 1
-tracks/3/loop_wrap = true
-tracks/3/imported = false
-tracks/3/enabled = true
-tracks/3/keys = {
 "times": PoolRealArray( 3, 6, 13.6, 19.5, 26.5 ),
 "transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
 "values": [ {
@@ -87,6 +44,49 @@ tracks/3/keys = {
 "args": [ "O ponteiro da bússola!" ],
 "method": "set_subtitle"
 } ]
+}
+tracks/1/type = "method"
+tracks/1/path = NodePath("..")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 31.9 ),
+"transitions": PoolRealArray( 1 ),
+"values": [ {
+"args": [  ],
+"method": "on_cutscene_ended"
+} ]
+}
+tracks/2/type = "method"
+tracks/2/path = NodePath("Camera")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 31.9 ),
+"transitions": PoolRealArray( 1, 1 ),
+"values": [ {
+"args": [  ],
+"method": "make_current"
+}, {
+"args": [  ],
+"method": "clear_current"
+} ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("Camera:transform")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0, 1.5, 2.5, 26.5, 29.5 ),
+"transitions": PoolRealArray( 1, -2, 1, 1, 1 ),
+"update": 0,
+"values": [ Transform( -0.351034, 0.32159, -0.879406, 0, 0.939172, 0.343446, 0.936363, 0.120561, -0.329681, -4.067, 4.79636, 8.32862 ), Transform( -0.351034, 0.32159, -0.879406, 0, 0.939172, 0.343446, 0.936363, 0.120561, -0.329681, -4.067, 4.79636, 8.32862 ), Transform( -0.253302, 0.0578186, -0.965658, -9.31322e-09, 0.998212, 0.0597678, 0.967387, 0.0151393, -0.252849, 22.729, 8.8141, 12.1509 ), Transform( -0.253302, 0.0578186, -0.965658, -9.31322e-09, 0.998212, 0.0597678, 0.967387, 0.0151393, -0.252849, 22.729, 8.8141, 12.1509 ), Transform( 0.873579, -0.265016, 0.408199, -0.0935612, 0.731644, 0.675235, -0.477605, -0.628063, 0.614353, 5.50601, 7.39292, 4.14382 ) ]
 }
 tracks/4/type = "value"
 tracks/4/path = NodePath("../Ponteiros/Ponteiro:transform")
@@ -113,7 +113,7 @@ tracks/5/keys = {
 "values": [ Transform( -0.884404, 0, -0.466723, 0, 1, 0, 0.466723, 0, -0.884404, 0, 0, 0 ) ]
 }
 
-[node name="Level2" type="Spatial" index="0"]
+[node name="Level2" type="Spatial"]
 
 script = ExtResource( 1 )
 LEVEL = 2
@@ -125,6 +125,8 @@ LEVEL = 2
 [node name="Timers" parent="." index="2" instance=ExtResource( 4 )]
 
 [node name="Cutscene" type="Node" parent="." index="3"]
+
+editor/display_folded = true
 
 [node name="Camera" type="Camera" parent="Cutscene" index="0"]
 
