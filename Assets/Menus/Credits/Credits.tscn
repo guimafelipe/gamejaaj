@@ -46,7 +46,7 @@ expand = true
 stretch_mode = 5
 _sections_unfolded = [ "Rect", "Size Flags" ]
 
-[node name="RichTextLabel" type="RichTextLabel" parent="Background" index="0"]
+[node name="Part1" type="RichTextLabel" parent="Background" index="0"]
 
 anchor_left = 0.0
 anchor_top = 0.0
@@ -73,8 +73,6 @@ Usamos a Godot Engine 3.0.5 para o jogo.
 Os gnomos, os ponteiros e o relógio principal foram modelados por Nathália Hohl.
 O código foi escrito por Felipe Guimarães.
 
-Os outros assets e os sons foram obtidos na internet de forma lícita.
-
 O código do jogo se encontra aqui: https://github.com/guimafelipe/gamejaaj
 
 Visite nosso site para ver outros projetos nossos: https://guimafelipe.github.io/ghgames/"
@@ -90,11 +88,82 @@ Usamos a Godot Engine 3.0.5 para o jogo.
 Os gnomos, os ponteiros e o relógio principal foram modelados por Nathália Hohl.
 O código foi escrito por Felipe Guimarães.
 
-Os outros assets e os sons foram obtidos na internet de forma lícita.
-
 O código do jogo se encontra aqui: https://github.com/guimafelipe/gamejaaj
 
 Visite nosso site para ver outros projetos nossos: https://guimafelipe.github.io/ghgames/"
+scroll_active = false
+scroll_following = false
+selection_enabled = false
+override_selected_font_color = false
+_sections_unfolded = [ "BBCode", "custom_colors", "custom_fonts" ]
+
+[node name="Part2" type="RichTextLabel" parent="Background" index="1"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 748.0
+margin_top = 121.0
+margin_right = 1043.0
+margin_bottom = 567.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = true
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+custom_fonts/normal_font = SubResource( 1 )
+custom_colors/default_color = Color( 0, 0, 0, 1 )
+bbcode_enabled = false
+bbcode_text = "Músicas:
+\"Rhinocerus\" (editada), \"Glasslamp Funworks\", \"Cipher2\"  Kevin MacLeod (incompetech.com)
+Licensed under Creative Commons: By Attribution 3.0 License
+http://creativecommons.org/licenses/by/3.0/
+
+Meshes 3D de sketchfab.com sob CC Attribution:
+
+Paper Airplane - gloryfish
+Potted Plant - Pixel-bit
+Wooden Bench and Table - Vyacheslav_SD
+Paper Low - bargin_bill_bradly
+Books - igor-tkachenko - Editado
+3D Origami crane - JuanG3D
+Alarm Clock - sirkitree - Editado
+
+Efeitos de freesound.org sob CC Attribution:
+Jingle_Achievement_00.wav - LittleRobotSoundFactory
+
+Algumas texturas de textures.com. Uso permitido segundo o site.
+
+Demais meshes e efeitos sonoros utilizado sob licença Creative Commons 0.
+"
+visible_characters = -1
+percent_visible = 1.0
+meta_underlined = true
+tab_size = 4
+text = "Músicas:
+\"Rhinocerus\" (editada), \"Glasslamp Funworks\", \"Cipher2\"  Kevin MacLeod (incompetech.com)
+Licensed under Creative Commons: By Attribution 3.0 License
+http://creativecommons.org/licenses/by/3.0/
+
+Meshes 3D de sketchfab.com sob CC Attribution:
+
+Paper Airplane - gloryfish
+Potted Plant - Pixel-bit
+Wooden Bench and Table - Vyacheslav_SD
+Paper Low - bargin_bill_bradly
+Books - igor-tkachenko - Editado
+3D Origami crane - JuanG3D
+Alarm Clock - sirkitree - Editado
+
+Efeitos de freesound.org sob CC Attribution:
+Jingle_Achievement_00.wav - LittleRobotSoundFactory
+
+Algumas texturas de textures.com. Uso permitido segundo o site.
+
+Demais meshes e efeitos sonoros utilizado sob licença Creative Commons 0.
+"
 scroll_active = false
 scroll_following = false
 selection_enabled = false
