@@ -7,3 +7,9 @@ func _process(delta):
 
 func on_end_cutscene():
 	SceneLoader.goto_credits()
+
+func play_door():
+	AudioManager.play_door()
+
+func play_footsteps():
+	AudioManager.play_footsteps()

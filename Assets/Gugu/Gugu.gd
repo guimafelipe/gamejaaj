@@ -38,7 +38,6 @@ func reset_position(spawn_position):
 	set_center(rotation_center)
 	$GuguMesh/AnimationPlayer.play("Idle")
 	$EffectsPlayer.play("Idle")
-	
 
 # Hp fuctions
 func reset_hp():
@@ -53,15 +52,16 @@ func take_damage(value):
 	if invulnerable: return
 	if(value >= 0 and lifes > 0):
 		lifes = max(0, lifes - value)
-	if(lifes == 0 and can_move):
-		can_move = false
-		# Play death animation here
-		$GuguMesh/AnimationPlayer.stop()
-		$EffectsPlayer.play("DeathAnim")
-		emit_signal('died')
-	elif can_move:
-		start_invulnerability()
-	emit_signal("lifes_update", lifes)
+		AudioManager.play_hurt()
+		if(lifes == 0):
+			can_move = false
+			# Play death animation here
+			$GuguMesh/AnimationPlayer.stop()
+			$EffectsPlayer.play("DeathAnim")
+			emit_signal('died')
+		else:
+			start_invulnerability()
+		emit_signal("lifes_update", lifes)
 
 func liberate_movement():
 	start_invulnerability()
@@ -114,6 +114,7 @@ func _physics_process(delta):
 	if can_move and is_on_floor() and Input.is_action_pressed("jump"):
 		velocity.y = 10 #jump
 		$GuguMesh/AnimationPlayer.play("Jump")
+		AudioManager.play_jump()
 	elif (not $GuguMesh/AnimationPlayer.is_playing()):
 		if(velocity.x or velocity.z != 0):
 			$GuguMesh/AnimationPlayer.play("Walk")

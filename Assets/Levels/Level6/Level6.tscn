@@ -34,9 +34,12 @@ tracks/1/loop_wrap = true
 tracks/1/imported = false
 tracks/1/enabled = true
 tracks/1/keys = {
-"times": PoolRealArray( 5, 10, 16.5, 22.5, 27.8, 36.5, 42.5, 51 ),
-"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1 ),
+"times": PoolRealArray( 1, 5, 10, 16.5, 22.5, 27.8, 36.5, 41, 45, 52 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
 "values": [ {
+"args": [ "*som de porta abrindo*" ],
+"method": "set_subtitle"
+}, {
 "args": [ "Ih, chegou a autoridade..." ],
 "method": "set_subtitle"
 }, {
@@ -53,6 +56,9 @@ tracks/1/keys = {
 "method": "set_subtitle"
 }, {
 "args": [ "....." ],
+"method": "set_subtitle"
+}, {
+"args": [ "*som de passos humanos*" ],
 "method": "set_subtitle"
 }, {
 "args": [ "Ih, acho que to ouvindo gnomos... Tenho que parar de usar essas ervas..." ],
@@ -213,20 +219,28 @@ tracks/14/loop_wrap = true
 tracks/14/imported = false
 tracks/14/enabled = true
 tracks/14/keys = {
-"times": PoolRealArray( 59.9 ),
-"transitions": PoolRealArray( 1 ),
+"times": PoolRealArray( 1.5, 42.5, 59.9 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
 "values": [ {
+"args": [  ],
+"method": "play_door"
+}, {
+"args": [  ],
+"method": "play_footsteps"
+}, {
 "args": [  ],
 "method": "on_end_cutscene"
 } ]
 }
 
-[node name="FinalCutscene" type="Spatial"]
+[node name="FinalCutscene" type="Spatial" index="0"]
 
 script = ExtResource( 1 )
 _sections_unfolded = [ "Transform" ]
 
 [node name="UI" parent="." index="0" instance=ExtResource( 2 )]
+
+editor/display_folded = true
 
 [node name="PlayerUI" parent="UI" index="0"]
 
@@ -239,6 +253,10 @@ visible = false
 [node name="CountdownUI" parent="UI" index="3"]
 
 visible = false
+
+[node name="SkipButton" parent="UI" index="4"]
+
+margin_left = 1083.0
 
 [node name="PauseUI" parent="." index="1" instance=ExtResource( 3 )]
 
