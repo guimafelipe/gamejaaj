@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/RhinocerosLoopClock.ogg-2fbb8260fa1aa29dd9e295380626e9fd.oggstr"
+
+[deps]
+
+source_file="res://Assets/Audio/RhinocerosLoopClock.ogg"
+dest_files=[ "res://.import/RhinocerosLoopClock.ogg-2fbb8260fa1aa29dd9e295380626e9fd.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

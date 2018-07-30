@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/GnomoA2.wav-00a1121e2f0ffdb6456900164a0f9503.sample"
+
+[deps]
+
+source_file="res://Assets/Audio/FalasGnomo/GnomoA2.wav"
+dest_files=[ "res://.import/GnomoA2.wav-00a1121e2f0ffdb6456900164a0f9503.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0

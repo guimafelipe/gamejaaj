@@ -50,7 +50,7 @@ func set_hp(value):
 
 func take_damage(value):
 	if invulnerable: return
-	if(value >= 0 and lifes > 0):
+	if(value >= 0 and lifes > 0 and can_move):
 		lifes = max(0, lifes - value)
 		AudioManager.play_sound("Hurt")
 		if(lifes == 0):

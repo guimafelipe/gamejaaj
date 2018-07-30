@@ -251,7 +251,7 @@ tracks/14/keys = {
 } ]
 }
 
-[node name="FinalCutscene" type="Spatial" index="0"]
+[node name="FinalCutscene" type="Spatial"]
 
 script = ExtResource( 1 )
 _sections_unfolded = [ "Transform" ]

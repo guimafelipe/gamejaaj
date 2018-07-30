@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/Gaslamp Funworks.ogg-c5b7cf45d7dfbc72368ce8722f59a3fb.oggstr"
+
+[deps]
+
+source_file="res://Assets/Audio/Gaslamp Funworks.ogg"
+dest_files=[ "res://.import/Gaslamp Funworks.ogg-c5b7cf45d7dfbc72368ce8722f59a3fb.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

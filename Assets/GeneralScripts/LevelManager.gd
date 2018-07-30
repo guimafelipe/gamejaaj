@@ -38,6 +38,7 @@ func restart_level():
 	level_setup()
 	countdown_timer.start()
 	$UI.set_countdown_timer(countdown_timer)
+	AudioManager.play_background_music()
 	# 3 seconds countdown here
 
 func restart_pointers():
@@ -55,10 +56,12 @@ func start_cutscene():
 	$Cutscene/CutsceneAnim.play("Cutscene")
 	
 	$UI.show_skip_button()
+	AudioManager.play_background_cutscene()
 	GameState.set_max_level_reached(LEVEL)
 
 func on_cutscene_ended():
 	$Cutscene/CutsceneAnim.stop()
+	AudioManager.stop_background_cutscene()
 	$UI.enter_gameplay()
 	restart_level()
 
@@ -67,6 +70,7 @@ func level_win():
 	for pointer in $Ponteiros.get_children():
 		pointer.stop_movement()
 	winanim_timer.start()
+	AudioManager.play_sound("Victory")
 	# call next level
 
 func on_player_died():
@@ -87,6 +91,7 @@ func on_lose_anim_ended():
 
 func on_win_anim_ended():
 	print("win anim ended")
+	AudioManager.stop_background_music()
 	SceneLoader.goto_level(LEVEL + 1)
 
 func _process(delta):
