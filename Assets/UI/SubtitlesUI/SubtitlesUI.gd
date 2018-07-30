@@ -27,7 +27,7 @@ func end_cutscene():
 	$SubtitlesUI.set_visible(false)
 
 func subtitle_check(text):
-	var allowed = ['.', '*']
+	var allowed = ['.', '*','~']
 	for el in allowed:
 		if text.begins_with(el):
 			return false

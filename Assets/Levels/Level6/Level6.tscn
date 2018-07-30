@@ -61,10 +61,10 @@ tracks/1/keys = {
 "args": [ "*som de passos humanos*" ],
 "method": "set_subtitle"
 }, {
-"args": [ "Ih, acho que to ouvindo gnomos... Tenho que parar de usar essas ervas..." ],
+"args": [ "~Ih, acho que to ouvindo gnomos... Tenho que parar de usar essas ervas...~" ],
 "method": "set_subtitle"
 }, {
-"args": [ "Se bem que eu podia fazer um jogo sobre isso..." ],
+"args": [ "~Se bem que eu podia fazer um jogo sobre isso...~" ],
 "method": "set_subtitle"
 } ]
 }
@@ -257,8 +257,6 @@ script = ExtResource( 1 )
 _sections_unfolded = [ "Transform" ]
 
 [node name="UI" parent="." index="0" instance=ExtResource( 2 )]
-
-editor/display_folded = true
 
 [node name="PlayerUI" parent="UI" index="0"]
 

@@ -3,7 +3,7 @@
 [ext_resource path="res://Logo/Logo.gd" type="Script" id=1]
 [ext_resource path="res://Logo/GuimaHohlLogo.png" type="Texture" id=2]
 
-[node name="Logo" type="ColorRect" index="0"]
+[node name="Logo" type="ColorRect"]
 
 anchor_left = 0.0
 anchor_top = 0.0
