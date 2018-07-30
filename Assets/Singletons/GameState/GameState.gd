@@ -28,4 +28,4 @@ func set_max_level_reached(value):
 	save()
 
 func _ready():
-	pass
+	load_game()
