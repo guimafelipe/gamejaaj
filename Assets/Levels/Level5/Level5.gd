@@ -3,7 +3,7 @@ extends "res://Assets/GeneralScripts/LevelManager.gd"
 const SURVIVAL_TIME = 25
 
 const MAX_ARREGOS = 3
-const MINDEATHSTOARREGO = 1
+const MINDEATHSTOARREGO = 5
 
 var death_count = 0
 var arregos = 0
