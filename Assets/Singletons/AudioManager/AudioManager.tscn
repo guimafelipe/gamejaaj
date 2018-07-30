@@ -12,7 +12,7 @@
 [ext_resource path="res://Assets/Audio/Poof.wav" type="AudioStream" id=10]
 [ext_resource path="res://Assets/Singletons/AudioManager/FalasGnomo.tscn" type="PackedScene" id=11]
 
-[node name="AudioManager" type="Node" index="0"]
+[node name="AudioManager" type="Node"]
 
 script = ExtResource( 1 )
 
@@ -38,7 +38,7 @@ bus = "Master"
 [node name="Jump" type="AudioStreamPlayer" parent="." index="2"]
 
 stream = ExtResource( 4 )
-volume_db = 0.0
+volume_db = -5.0
 pitch_scale = 1.0
 autoplay = false
 mix_target = 0
@@ -83,7 +83,7 @@ bus = "Master"
 [node name="Victory" type="AudioStreamPlayer" parent="." index="7"]
 
 stream = ExtResource( 9 )
-volume_db = 0.0
+volume_db = -5.0
 pitch_scale = 1.0
 autoplay = false
 mix_target = 0

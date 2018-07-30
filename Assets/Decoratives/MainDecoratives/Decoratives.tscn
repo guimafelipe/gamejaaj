@@ -1185,7 +1185,7 @@ surfaces/6 = {
 }
 _sections_unfolded = [ "surface_4", "surface_5" ]
 
-[node name="Decoratives" type="Spatial" index="0"]
+[node name="Decoratives" type="Spatial"]
 
 _sections_unfolded = [ "Transform" ]
 
